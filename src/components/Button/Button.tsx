@@ -1,5 +1,7 @@
 import { FC } from "react";
 import * as cn from "./ButtonStyles";
+import * as HeroIcons from "@heroicons/react/outline";
+import Icon from "../Icon/Icon";
 
 export type ButtonProps = {
   /**
@@ -7,9 +9,9 @@ export type ButtonProps = {
    */
   kind?: "primary" | "secondary";
   /**
-   * How large should the button be?
+   * outline button
    */
-  size?: "small" | "medium" | "large";
+  subKind?: "outline" | "solid";
   /**
    * Button contents
    */
@@ -22,25 +24,31 @@ export type ButtonProps = {
    * Class Name override
    */
   className?: string;
+  /**
+   * Optional icon
+   */
+  icon?: keyof typeof HeroIcons;
+  /**
+   * Icon direction
+   */
+  iconDirection?: "left" | "right";
 };
 
 /**
  * Primary UI component for user interaction
  */
 
-const Button: FC<ButtonProps> = ({
-  kind = "secondary",
-  size = "medium",
-  label,
-  className,
-  ...props
-}) => {
-  const mode = `${cn.kind[kind]} ${cn.size[size]}`;
+const Button: FC<ButtonProps> = ({ label, ...props }) => {
+  const { iconDirection, subKind = "solid", className, icon, kind = "primary" } = props;
+  const base = subKind === "outline" ? cn.outline : cn.solid;
+  const mode = `flex items-center ${base[kind]} ${cn.size.default}`;
   const styles = className ?? mode;
 
   return (
     <button type="button" className={styles} {...props}>
-      {label}
+      {icon && iconDirection === "left" && <Icon icon={icon} size="xsmall" />}
+      <span className={cn.title}>{label}</span>{" "}
+      {icon && iconDirection === "right" && <Icon icon={icon} size="xsmall" />}
     </button>
   );
 };

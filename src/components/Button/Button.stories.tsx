@@ -29,6 +29,22 @@ export const Secondary = Template.bind({});
 
 Secondary.args = {
   label: "Button",
+  kind: "secondary",
+};
+
+export const Outline = Template.bind({});
+
+Outline.args = {
+  label: "Button",
+  subKind: "outline",
+};
+
+export const WithIcon = Template.bind({});
+
+WithIcon.args = {
+  label: "Button",
+  icon: "AcademicCapIcon",
+  iconDirection: "right",
 };
 
 export const CustomClass = Template.bind({});
@@ -36,4 +52,13 @@ export const CustomClass = Template.bind({});
 CustomClass.args = {
   label: "Button",
   className: "bg-red-500 px-4 py-2 rounded text-white",
+};
+
+export const CustomClassWithIcon = Template.bind({});
+
+CustomClassWithIcon.args = {
+  label: "Button",
+  className: "flex items-center bg-green-600 px-2 py-3 rounded-full text-white font-bold",
+  icon: "AcademicCapIcon",
+  iconDirection: "right",
 };
