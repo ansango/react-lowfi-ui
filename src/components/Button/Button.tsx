@@ -38,8 +38,15 @@ export type ButtonProps = {
  * Primary UI component for user interaction
  */
 
-const Button: FC<ButtonProps> = ({ label, ...props }) => {
-  const { iconDirection, subKind = "solid", className, icon, kind = "primary" } = props;
+const Button: FC<ButtonProps> = ({
+  label,
+  iconDirection,
+  subKind = "solid",
+  className,
+  icon,
+  kind = "primary",
+  ...props
+}) => {
   const base = subKind === "outline" ? cn.outline : cn.solid;
   const mode = `flex items-center ${base[kind]} ${cn.size.default}`;
   const styles = className ?? mode;
@@ -47,7 +54,7 @@ const Button: FC<ButtonProps> = ({ label, ...props }) => {
   return (
     <button type="button" className={styles} {...props}>
       {icon && iconDirection === "left" && <Icon icon={icon} size="xsmall" />}
-      <span className={cn.title}>{label}</span>{" "}
+      <span className={cn.title}>{label}</span>
       {icon && iconDirection === "right" && <Icon icon={icon} size="xsmall" />}
     </button>
   );
