@@ -1,15 +1,15 @@
 {
-  "name": "rtb-starter",
+  "name": "react-lowfi-ui",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ansango/rtb-starter.git"
+    "url": "https://github.com/ansango/react-lowfi-ui.git"
   },
-  "homepage": "https://rtb-starter.vercel.app/",
+  "homepage": "",
   "keywords": [
     "react",
     "typescript",
