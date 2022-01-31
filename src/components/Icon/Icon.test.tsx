@@ -3,10 +3,15 @@
  */
 
 import { render } from "@testing-library/react";
-
+import { mount } from "enzyme";
 import Icon from "./Icon";
 
 describe("<Icon />", () => {
+  it("should render", () => {
+    const wrapper = mount(<Icon icon="AcademicCapIcon" />);
+    expect(wrapper.props().icon).toBe("AcademicCapIcon");
+    expect(wrapper.find("svg").length).toBe(1);
+  });
   it("should render by default", () => {
     const { container } = render(<Icon icon="ArchiveIcon" />);
     expect(container.firstChild).toHaveClass("h-9 w-9");
