@@ -21,12 +21,7 @@ export const parameters = {
         "Readme/Build and Deploy",
         "Readme/Contributing",
         "Components/Icon",
-        "Components/Icon/Icon Base",
-        "Components/Icon/Custom Class",
         "Components/Button",
-        "Components/Button/Primary",
-        "Components/Button/Secondary",
-        "Components/Button/Outline",
         "Components/Button Icon",
       ]);
     },
