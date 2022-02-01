@@ -22,6 +22,7 @@ Primary.args = {
 
 export const ClassButton = Template.bind({});
 
+
 ClassButton.args = {
   icon: "ArchiveIcon",
   classButton: "bg-yellow-500 text-white font-bold py-3 px-3 rounded max-w-lg cursor-pointer",

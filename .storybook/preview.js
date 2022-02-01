@@ -1,3 +1,4 @@
+import anysort from "anysort";
 import "../src/tailwind.css";
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -9,7 +10,25 @@ export const parameters = {
     },
   },
   options: {
-    storySort: (a, b) =>
-      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
+    storySort: (previous, next) => {
+      const [previousStory, previousMeta] = previous;
+      const [nextStory, nextMeta] = next;
+      return anysort(previousMeta.kind, nextMeta.kind, [
+        "Readme/Introduction",
+        "Readme/Getting Started",
+        "Readme/Create a Component",
+        "Readme/Test and Lint",
+        "Readme/Build and Deploy",
+        "Readme/Contributing",
+        "Components/Icon",
+        "Components/Icon/Icon Base",
+        "Components/Icon/Custom Class",
+        "Components/Button",
+        "Components/Button/Primary",
+        "Components/Button/Secondary",
+        "Components/Button/Outline",
+        "Components/Button Icon",
+      ]);
+    },
   },
 };
