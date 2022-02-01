@@ -13,6 +13,7 @@ export default {
   parameters: {
     layout: "centered",
   },
+  includeStories: ["Primary", "Secondary", "Outline"],
 } as ComponentMeta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
