@@ -1,4 +1,5 @@
 import { HeroIcons } from "../../lib";
+import { Colors } from "../../lib/colors";
 /**
  * ?Icon Component
  */
@@ -19,6 +20,11 @@ export type IconProps = {
    * Class Name override
    */
   className?: string;
+  /**
+   * color
+   */
+
+  color?: keyof typeof Colors;
 };
 
 /**
