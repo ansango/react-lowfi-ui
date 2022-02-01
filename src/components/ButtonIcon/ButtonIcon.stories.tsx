@@ -41,4 +41,3 @@ ClassIconButton.args = {
   classButton: "bg-green-800 text-white font-bold py-3 px-3 rounded-lg max-w-lg cursor-pointer",
   classIcon: "text-green-300 h-6 w-6",
 };
-
