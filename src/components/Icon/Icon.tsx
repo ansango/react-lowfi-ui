@@ -1,4 +1,4 @@
-import * as HeroIcons from "@heroicons/react/outline";
+import { HeroIcons } from "../../lib";
 /**
  * ?Icon Component
  */

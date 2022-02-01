@@ -21,5 +21,6 @@ IconBase.args = {
 export const CustomClass = Template.bind({});
 
 CustomClass.args = {
+  icon: "AcademicCapIcon",
   className: "text-red-800 h-16 w-16",
 };

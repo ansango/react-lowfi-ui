@@ -1,9 +1,20 @@
+/**
+ * ?ButtonIcon Component
+ */
+
 import { FC } from "react";
-import * as cn from "./ButtonStyles";
+import * as cn from "./ButtonIconStyles";
 import { HeroIcons } from "../../lib";
 import Icon from "../Icon/Icon";
-
-export type ButtonProps = {
+export type ButtonIconProps = {
+  /**
+   * Icon
+   */
+  icon: keyof typeof HeroIcons;
+  /**
+   * Icon Size
+   */
+  iconSize?: "xsmall" | "small" | "medium" | "large" | "xlarge";
   /**
    * Is this the principal call to action on the page?
    */
@@ -15,49 +26,41 @@ export type ButtonProps = {
   /**
    * Button contents
    */
-  label: string;
   /**
    * Optional click handler
    */
   onClick?: () => void;
   /**
-   * Class Name override
+   * Class Button Name override
    */
-  className?: string;
+  classButton?: string;
   /**
-   * Optional icon
+   * Class Icon Name override
    */
-  icon?: keyof typeof HeroIcons;
-  /**
-   * Icon direction
-   */
-  iconDirection?: "left" | "right";
+  classIcon?: string;
 };
 
 /**
- * Primary UI component for user interaction
+ * Description of ButtonIcon component displayed in Storybook
  */
 
-const Button: FC<ButtonProps> = ({
-  label,
-  iconDirection,
-  subKind = "solid",
-  className,
+const ButtonIcon: FC<ButtonIconProps> = ({
   icon,
+  iconSize = "xsmall",
+  classButton,
+  subKind = "solid",
   kind = "primary",
+  classIcon,
   ...props
 }) => {
   const base = subKind === "outline" ? cn.outline : cn.solid;
   const mode = `flex items-center ${base[kind]} ${cn.size.default}`;
-  const styles = className ?? mode;
-
+  const styles = classButton ?? mode;
   return (
     <button type="button" className={styles} {...props}>
-      {icon && iconDirection === "left" && <Icon icon={icon} size="xsmall" />}
-      <span className={cn.title}>{label}</span>
-      {icon && iconDirection === "right" && <Icon icon={icon} size="xsmall" />}
+      <Icon icon={icon} size={iconSize} className={classIcon} />
     </button>
   );
 };
 
-export default Button;
+export default ButtonIcon;
