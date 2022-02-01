@@ -8,6 +8,9 @@ import Icon from "./Icon";
 export default {
   title: "Components/Icon",
   component: Icon,
+  argTypes: {
+    className: { control: false },
+  },
 } as ComponentMeta<typeof Icon>;
 
 const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;

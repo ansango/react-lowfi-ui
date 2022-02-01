@@ -8,6 +8,10 @@ import ButtonIcon from "./ButtonIcon";
 export default {
   title: "Components/Button Icon",
   component: ButtonIcon,
+  argTypes: {
+    classIcon: { control: false },
+    classButton: { control: false },
+  },
 } as ComponentMeta<typeof ButtonIcon>;
 
 const Template: ComponentStory<typeof ButtonIcon> = (args) => <ButtonIcon {...args} />;
