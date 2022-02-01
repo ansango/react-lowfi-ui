@@ -12,15 +12,15 @@ export default {
 
 const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
-export const IconBase = Template.bind({});
+export const A_IconBase = Template.bind({});
 
-IconBase.args = {
+A_IconBase.args = {
   icon: "AcademicCapIcon",
 };
 
-export const CustomClass = Template.bind({});
+export const B_CustomClass = Template.bind({});
 
-CustomClass.args = {
+B_CustomClass.args = {
   icon: "AcademicCapIcon",
   className: "text-red-800 h-16 w-16",
 };

@@ -12,32 +12,32 @@ export default {
 
 const Template: ComponentStory<typeof ButtonIcon> = (args) => <ButtonIcon {...args} />;
 
-export const Primary = Template.bind({});
+export const A_Primary = Template.bind({});
 
-Primary.args = {
+A_Primary.args = {
   icon: "ArrowLeftIcon",
   kind: "primary",
   subKind: "solid",
 };
 
-export const ClassButton = Template.bind({});
+export const B_ClassButton = Template.bind({});
 
 
-ClassButton.args = {
+B_ClassButton.args = {
   icon: "ArchiveIcon",
   classButton: "bg-yellow-500 text-white font-bold py-3 px-3 rounded max-w-lg cursor-pointer",
 };
 
-export const ClassIcon = Template.bind({});
+export const C_ClassIcon = Template.bind({});
 
-ClassIcon.args = {
+C_ClassIcon.args = {
   icon: "ArrowCircleUpIcon",
   classIcon: "text-yellow-500 h-6 w-6",
 };
 
-export const ClassIconButton = Template.bind({});
+export const D_ClassIconButton = Template.bind({});
 
-ClassIconButton.args = {
+D_ClassIconButton.args = {
   icon: "ArrowUpIcon",
   classButton: "bg-green-800 text-white font-bold py-3 px-3 rounded-lg max-w-lg cursor-pointer",
   classIcon: "text-green-300 h-6 w-6",
