@@ -16,6 +16,8 @@ export type ButtonProps = {
   loading?: boolean;
   onClick?: () => void;
   classButton?: string;
+  classIcon?: string;
+  classSpinner?: string;
 };
 
 /**
@@ -42,10 +44,14 @@ const Button: FC<ButtonProps> = ({
   const loaderSize = size === "xsmall" || size === "small" ? "xsmall" : "small";
   return (
     <button type="button" className={className} {...props}>
-      {icon && iconDirection === "left" && !loading && <Icon icon={icon} size="xsmall" />}
+      {icon && iconDirection === "left" && !loading && (
+        <Icon icon={icon} size="xsmall" {...props} />
+      )}
       <span className={iconOrLoading}>{label}</span>
-      {icon && iconDirection === "right" && !loading && <Icon icon={icon} size="xsmall" />}
-      {loading && <Spinner kind={kind} style={style} size={loaderSize} />}
+      {icon && iconDirection === "right" && !loading && (
+        <Icon icon={icon} size="xsmall" {...props} />
+      )}
+      {loading && <Spinner kind={kind} style={style} size={loaderSize} {...props} />}
     </button>
   );
 };

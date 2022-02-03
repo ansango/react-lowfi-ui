@@ -1,5 +1,5 @@
 import { HeroIcons } from "../../lib";
-import { Colors } from "../../lib/colors";
+
 /**
  * ?Icon Component
  */
@@ -19,21 +19,19 @@ export type IconProps = {
   /**
    * Class Name override
    */
-  className?: string;
+  classIcon?: string;
   /**
    * color
    */
-
-  color?: keyof typeof Colors;
 };
 
 /**
  * Description of Icon component displayed in Storybook
  */
 
-const Icon: FC<IconProps> = ({ icon, size = "medium", className }) => {
+const Icon: FC<IconProps> = ({ icon, size = "medium", classIcon }) => {
   const cnSize = cn.size[size];
-  const styles = className ?? cnSize;
+  const styles = classIcon ?? cnSize;
   const RIcon = HeroIcons[icon];
   return <RIcon className={styles} />;
 };

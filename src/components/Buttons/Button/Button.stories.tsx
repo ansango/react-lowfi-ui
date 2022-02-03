@@ -75,3 +75,22 @@ H_CustomClassWithIcon.args = {
   icon: "AcademicCapIcon",
   iconDirection: "right",
 };
+
+export const I_CustomClassButtonIcon = Template.bind({});
+
+I_CustomClassButtonIcon.args = {
+  label: "Button",
+  classButton: "flex items-center bg-purple-600 px-4 py-2 rounded text-white",
+  classIcon: "text-purple-200 w-5 h-5",
+  icon: "AcademicCapIcon",
+  iconDirection: "right",
+};
+
+export const J_CustomClassLoader = Template.bind({});
+
+J_CustomClassLoader.args = {
+  label: "Button",
+  classButton: "flex items-center bg-red-500 px-4 py-2 rounded text-white",
+  classSpinner: "w-6 h-6 text-red-400 fill-red-800 animate-spin",
+  loading: true,
+};

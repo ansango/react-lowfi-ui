@@ -17,7 +17,7 @@ describe("<Icon />", () => {
     expect(container.firstChild).toHaveClass("h-9 w-9");
   });
   it("should render with custom class", () => {
-    const { container } = render(<Icon icon="ArrowDownIcon" className="text-red-800" />);
+    const { container } = render(<Icon icon="ArrowDownIcon" classIcon="text-red-800" />);
     expect(container.firstChild).toHaveClass("text-red-800");
   });
   it("should render with small size", () => {
