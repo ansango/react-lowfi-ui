@@ -1,22 +1,67 @@
 import { FC } from "react";
 import * as cn from "./ButtonStyles";
-import { HeroIcons } from "../../../lib";
+import * as HeroIcons from "@heroicons/react/solid";
 import Icon from "../../Icon/Icon";
 import Spinner from "../../Spinner/Spinner";
 
 export type ButtonProps = {
+  /**
+   * Label of the button
+   */
   label: string;
+  /**
+   * xsmall | small | base | large | xlarge
+   * @default "base"
+   */
   size?: keyof typeof cn.size;
+  /**
+   * solid | outline
+   * @default "solid"
+   */
   kind?: "solid" | "outline";
+  /**
+   * default | alternative | dark | light | green | red | yellow | purple
+   * @default "default"
+   */
   style?: "default" | "alternative" | "dark" | "light" | "green" | "red" | "yellow" | "purple";
+  /**
+   * pill | rounded
+   * @default "rounded"
+   */
   rounded?: keyof typeof cn.rounded;
+  /**
+   * HeroIcons
+   */
   icon?: keyof typeof HeroIcons;
+  /**
+   * right | left
+   */
   iconDirection?: "left" | "right";
+  /**
+   * disabled
+   * @default false
+   */
   disabled?: boolean;
+  /**
+   * loading
+   * @default false
+   */
   loading?: boolean;
+  /**
+   * onClick event
+   */
   onClick?: () => void;
+  /**
+   * className override
+   */
   classButton?: string;
+  /**
+   * className override
+   */
   classIcon?: string;
+  /**
+   * className override
+   */
   classSpinner?: string;
 };
 

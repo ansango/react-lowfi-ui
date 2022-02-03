@@ -5,17 +5,24 @@
 import { FC } from "react";
 import * as cn from "./SpinnerStyles";
 export type SpinnerProps = {
+  /**
+   * solid | outline
+   * @default "outline"
+   */
   kind?: "solid" | "outline";
-  style?:
-    | "default"
-    | "alternative"
-    | "dark"
-    | "light"
-    | "green"
-    | "red"
-    | "yellow"
-    | "purple";
+  /**
+   * default | alternative | dark | light | green | red | yellow | purple
+   * @default "default"
+   */
+  style?: "default" | "alternative" | "dark" | "light" | "green" | "red" | "yellow" | "purple";
+  /**
+   * xsmall | small | base | large | xlarge
+   * @default "base"
+   */
   size?: keyof typeof cn.size;
+  /**
+   * className override
+   */
   classSpinner?: string;
 };
 

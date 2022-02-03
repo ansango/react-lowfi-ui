@@ -1,4 +1,4 @@
-import { HeroIcons } from "../../lib";
+import * as HeroIcons from "@heroicons/react/solid";
 
 /**
  * ?Icon Component
@@ -13,16 +13,13 @@ export type IconProps = {
    */
   icon: keyof typeof HeroIcons;
   /**
-   * Size
+   * xsmall | small | base | large | xlarge
    */
   size?: keyof typeof cn.size;
   /**
-   * Class Name override
+   * className override
    */
   classIcon?: string;
-  /**
-   * color
-   */
 };
 
 /**

@@ -25,5 +25,5 @@ export const B_CustomClass = Template.bind({});
 
 B_CustomClass.args = {
   icon: "AcademicCapIcon",
-  className: "text-red-800 h-16 w-16",
+  classIcon: "text-red-800 h-16 w-16",
 };
