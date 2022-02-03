@@ -12,7 +12,11 @@ describe("<ButtonIcon />", () => {
     expect(screen.getByRole("button")).toBeInTheDocument();
   });
   it("should render with outline", () => {
-    render(<ButtonIcon icon="ArchiveIcon" subKind="outline" />);
+    render(<ButtonIcon icon="ArchiveIcon" kind="outline" />);
+    expect(screen.getByRole("button")).toBeInTheDocument();
+  });
+  it("should render disabled", () => {
+    render(<ButtonIcon icon="ArchiveIcon" disabled />);
     expect(screen.getByRole("button")).toBeInTheDocument();
   });
 });

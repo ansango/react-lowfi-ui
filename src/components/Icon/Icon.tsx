@@ -15,7 +15,7 @@ export type IconProps = {
   /**
    * Size
    */
-  size?: "xsmall" | "small" | "medium" | "large" | "xlarge";
+  size?: keyof typeof cn.size;
   /**
    * Class Name override
    */
