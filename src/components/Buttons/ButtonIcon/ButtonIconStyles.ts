@@ -1,3 +1,7 @@
+/**
+ *? Button Icon Styles
+ */
+
 export enum size {
   small = "p-2 text-sm font-medium",
   base = "p-2.5 text-sm font-medium",

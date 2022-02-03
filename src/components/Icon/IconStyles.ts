@@ -2,10 +2,6 @@
  *? Icon Styles
  */
 
-/**
- ** Write your tailwind classes as objects and strings and import them in your component
- */
-
 export enum size {
   xsmall = "w-6 h-6",
   small = "h-7 w-7",

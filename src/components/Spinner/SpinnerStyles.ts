@@ -2,12 +2,32 @@
  *? Spinner Styles
  */
 
-/**
- ** Write your tailwind classes as objects and strings and import them in your component
- */
+export enum outline {
+  default = "inline text-gray-200 animate-spin dark:text-gray-600 fill-blue-600",
+  alternative = "inline text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300",
+  dark = "inline text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300",
+  light = "inline text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300",
+  green = "inline text-gray-200 animate-spin dark:text-gray-600 fill-green-500",
+  red = "inline text-gray-200 animate-spin dark:text-gray-600 fill-red-600",
+  yellow = "inline text-gray-200 animate-spin dark:text-gray-600 fill-yellow-400",
+  purple = "inline text-gray-200 animate-spin dark:text-gray-600 fill-purple-600",
+}
 
-export const options = {
-  option__one: "bg-red-500 text-white font-bold py-2 px-4 rounded max-w-xs cursor-pointer",
-  option__two: "bg-green-500 text-white font-bold py-2 px-4 rounded max-w-sm cursor-pointer",
-  option__three: "bg-blue-500 text-white font-bold py-2 px-4 rounded max-w-md cursor-pointer",
-};
+export enum solid {
+  default = "inline text-blue-800 animate-spin dark:text-gray-600 fill-blue-400",
+  alternative = "inline text-gray-800 animate-spin dark:text-gray-600 fill-gray-300",
+  dark = "inline text-gray-800 animate-spin dark:text-gray-600 fill-gray-300",
+  light = "inline text-gray-800 animate-spin dark:text-gray-600 fill-gray-300",
+  green = "inline text-green-800 animate-spin dark:text-gray-600 fill-green-400",
+  red = "inline text-red-800 animate-spin dark:text-gray-600 fill-red-400",
+  yellow = "inline text-yellow-800 animate-spin dark:text-gray-600 fill-yellow-400",
+  purple = "inline text-purple-800 animate-spin dark:text-gray-600 fill-purple-400",
+}
+
+export enum size { 
+  xsmall = "w-4 h-4",
+  small = "w-6 h-6",
+  base = "w-8 h-8",
+  large = "w-10 h-10",
+  xlarge = "w-12 h-12",
+}

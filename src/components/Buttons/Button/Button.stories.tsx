@@ -39,6 +39,7 @@ export const D_Round = Template.bind({});
 
 D_Round.args = {
   label: "Button",
+  style: "purple",
   rounded: "pill",
 };
 
@@ -50,18 +51,27 @@ E_WithIcon.args = {
   iconDirection: "right",
 };
 
-export const F_CustomClass = Template.bind({});
+export const F_WithLoader = Template.bind({});
 
-F_CustomClass.args = {
+F_WithLoader.args = {
   label: "Button",
-  className: "bg-red-500 px-4 py-2 rounded text-white",
+  loading: true,
+  kind: "solid",
+  style: "yellow",
 };
 
-export const G_CustomClassWithIcon = Template.bind({});
+export const G_CustomClass = Template.bind({});
 
-G_CustomClassWithIcon.args = {
+G_CustomClass.args = {
   label: "Button",
-  className: "flex items-center bg-green-600 px-2 py-3 rounded-full text-white font-bold",
+  classButton: "bg-red-500 px-4 py-2 rounded text-white",
+};
+
+export const H_CustomClassWithIcon = Template.bind({});
+
+H_CustomClassWithIcon.args = {
+  label: "Button",
+  classButton: "flex items-center bg-green-600 px-2 py-3 rounded-full text-white font-bold",
   icon: "AcademicCapIcon",
   iconDirection: "right",
 };

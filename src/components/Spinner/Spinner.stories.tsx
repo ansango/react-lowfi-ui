@@ -6,32 +6,18 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Spinner from "./Spinner";
 
 export default {
-  title: 'Components/Spinner',
+  title: "Components/Spinner",
   component: Spinner,
 } as ComponentMeta<typeof Spinner>;
 
 const Template: ComponentStory<typeof Spinner> = (args) => <Spinner {...args} />;
 
-export const OptionOne = Template.bind({});
+export const A_Regular_Spinner = Template.bind({});
 
-OptionOne.args = {
-  option: "option__one",
-};
+A_Regular_Spinner.args = {};
 
-export const OptionTwo = Template.bind({});
+export const B_Custom_Spinner = Template.bind({});
 
-OptionTwo.args = {
-  option: "option__two",
-};
-
-export const OptionThree = Template.bind({});
-
-OptionThree.args = {
-  option: "option__three",
-};
-
-export const CustomClass = Template.bind({});
-
-CustomClass.args = {
-  className: "bg-yellow-500 text-white font-bold py-2 px-4 rounded max-w-lg cursor-pointer",
+B_Custom_Spinner.args = {
+  classSpinner: "inline h-10 w-10 mr-2 text-purple-300 animate-spin fill-purple-800",
 };
