@@ -32,7 +32,7 @@ const SpinnerGradient: FC<SpinnerGradientProps> = ({
   size = "base",
 }) => {
   const cnKind = kind === "monochrome" ? cn.monochrome[style] : cn.duotone[style];
-  const className = `${cnKind} ${cn.size[size]}`;
+  const className = `${cn.base} ${cnKind} ${cn.size[size]}`;
   return (
     <svg
       role="status"

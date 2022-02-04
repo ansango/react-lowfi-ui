@@ -113,19 +113,19 @@ describe("<SpinnerGradient />", () => {
   it("should render kind undefined", () => {
     const wrapper = mount(<SpinnerGradient style="blue" size="base" />);
     expect(wrapper.find("svg").props().className).toBe(
-      "inline text-blue-800 animate-spin dark:text-gray-600 fill-blue-400 w-8 h-8"
+      "inline animate-spin text-blue-800 dark:text-gray-600 fill-blue-400 w-8 h-8"
     );
   });
   it("should render style undefined", () => {
     const wrapper = mount(<SpinnerGradient kind="monochrome" size="base" />);
     expect(wrapper.find("svg").props().className).toBe(
-      "inline text-blue-800 animate-spin dark:text-gray-600 fill-blue-400 w-8 h-8"
+      "inline animate-spin text-blue-800 dark:text-gray-600 fill-blue-400 w-8 h-8"
     );
   });
   it("should render size undefined", () => {
     const wrapper = mount(<SpinnerGradient kind="monochrome" style="blue" />);
     expect(wrapper.find("svg").props().className).toBe(
-      "inline text-blue-800 animate-spin dark:text-gray-600 fill-blue-400 w-8 h-8"
+      "inline animate-spin text-blue-800 dark:text-gray-600 fill-blue-400 w-8 h-8"
     );
   });
 });

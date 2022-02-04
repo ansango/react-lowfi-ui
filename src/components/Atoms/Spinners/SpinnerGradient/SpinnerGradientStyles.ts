@@ -2,26 +2,28 @@
  *? SpinnerGradient Styles
  */
 
+export const base = "inline animate-spin";
+
 export enum monochrome {
-  blue = "inline text-blue-800 animate-spin dark:text-gray-600 fill-blue-400",
-  green = "inline text-green-800 animate-spin dark:text-gray-600 fill-green-300",
-  cyan = "inline text-blue-800 animate-spin dark:text-gray-600 fill-blue-300",
-  teal = "inline text-green-800 animate-spin dark:text-green-600 fill-green-300",
-  lime = "inline text-green-800 animate-spin dark:text-gray-600 fill-green-200",
-  red = "inline text-red-800 animate-spin dark:text-gray-600 fill-red-400",
-  pink = "inline text-pink-800 animate-spin dark:text-pink-600 fill-pink-400",
-  purple = "inline text-purple-800 animate-spin dark:text-gray-600 fill-purple-400",
+  blue = "text-blue-800 dark:text-gray-600 fill-blue-400",
+  green = "text-green-800 dark:text-gray-600 fill-green-300",
+  cyan = "text-blue-800 dark:text-gray-600 fill-blue-300",
+  teal = "text-green-800 dark:text-green-600 fill-green-300",
+  lime = "text-green-800 dark:text-gray-600 fill-green-200",
+  red = "text-red-800 dark:text-gray-600 fill-red-400",
+  pink = "text-pink-800 dark:text-pink-600 fill-pink-400",
+  purple = "text-purple-800 dark:text-gray-600 fill-purple-400",
 }
 
 export enum duotone {
-  blue = "inline text-blue-800 animate-spin dark:text-gray-600 fill-blue-400",
-  green = "inline text-green-500 animate-spin dark:text-gray-600 fill-green-200",
-  cyan = "inline text-blue-700 animate-spin dark:text-gray-600 fill-blue-200",
-  teal = "inline text-green-500 animate-spin dark:text-green-600 fill-green-900",
-  lime = "inline text-green-400 animate-spin dark:text-gray-600 fill-green-900",
-  red = "inline text-red-500 animate-spin dark:text-gray-600 fill-red-300",
-  pink = "inline text-pink-400 animate-spin dark:text-pink-600 fill-pink-800",
-  purple = "inline text-purple-300 animate-spin dark:text-gray-600 fill-purple-800",
+  blue = "text-blue-800 dark:text-gray-600 fill-blue-400",
+  green = "text-green-500 dark:text-gray-600 fill-green-200",
+  cyan = "text-blue-700 dark:text-gray-600 fill-blue-200",
+  teal = "text-green-500 dark:text-green-600 fill-green-900",
+  lime = "text-green-400 dark:text-gray-600 fill-green-900",
+  red = "text-red-500 dark:text-gray-600 fill-red-300",
+  pink = "text-pink-400 dark:text-pink-600 fill-pink-800",
+  purple = "text-purple-300 dark:text-gray-600 fill-purple-800",
 }
 
 export enum size {

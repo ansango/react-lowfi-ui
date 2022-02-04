@@ -37,7 +37,7 @@ const Spinner: FC<SpinnerProps> = ({
   classSpinner,
 }) => {
   const cnKind = kind === "solid" ? `${cn.solid[style]}` : cn.outline[style];
-  const className = classSpinner ?? `${cnKind} ${cn.size[size]}`;
+  const className = classSpinner ?? `${cn.base} ${cnKind} ${cn.size[size]}`;
   return (
     <svg
       role="status"
