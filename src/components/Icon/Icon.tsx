@@ -23,7 +23,7 @@ export type IconProps = {
 };
 
 /**
- * Description of Icon component displayed in Storybook
+ * Icon Component
  */
 
 const Icon: FC<IconProps> = ({ icon, size = "base", classIcon }) => {

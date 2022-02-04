@@ -27,7 +27,7 @@ export type SpinnerProps = {
 };
 
 /**
- * Description of Spinner component displayed in Storybook
+ * Spinner Component
  */
 
 const Spinner: FC<SpinnerProps> = ({

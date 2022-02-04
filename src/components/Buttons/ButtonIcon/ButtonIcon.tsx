@@ -56,7 +56,7 @@ export type ButtonIconProps = {
 };
 
 /**
- * Description of ButtonIcon component displayed in Storybook
+ * Button Icon Component
  */
 
 const ButtonIcon: FC<ButtonIconProps> = ({

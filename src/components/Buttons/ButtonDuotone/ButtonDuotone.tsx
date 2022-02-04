@@ -53,7 +53,7 @@ export type ButtonDuotoneProps = {
 };
 
 /**
- * Description of ButtonDuotone component displayed in Storybook
+ * ButtonDuotone Component
  */
 
 const ButtonDuotone: FC<ButtonDuotoneProps> = ({

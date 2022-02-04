@@ -53,7 +53,7 @@ export type ButtonPropsMonochrome = {
 };
 
 /**
- * Description
+ * Button Monochrome Component
  */
 
 const ButtonMonochrome: FC<ButtonPropsMonochrome> = ({

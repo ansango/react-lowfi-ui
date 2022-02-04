@@ -22,7 +22,7 @@ export const parameters = {
         "Readme/Contributing",
         "Components/Icon",
         "Components/Spinners/Spinner",
-        "Components/Spinners/Spinner Monochrome",
+        "Components/Spinners/Spinner Gradient",
         "Components/Buttons/Button",
         "Components/Buttons/Button Icon",
         "Components/Buttons/Gradient Monochrome",

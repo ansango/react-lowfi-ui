@@ -62,7 +62,7 @@ export type ButtonProps = {
 };
 
 /**
- * Description
+ * Main Button component
  */
 
 const Button: FC<ButtonProps> = ({

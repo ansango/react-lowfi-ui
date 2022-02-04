@@ -23,7 +23,7 @@ export type SpinnerGradientProps = {
 };
 
 /**
- * Description of SpinnerMonochrome component displayed in Storybook
+ * Spinner Gradient Component
  */
 
 const SpinnerGradient: FC<SpinnerGradientProps> = ({
