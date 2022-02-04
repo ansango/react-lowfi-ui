@@ -11,6 +11,10 @@ export default {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    classIcon: { control: false },
+    classButton: { control: false },
+  },
 } as ComponentMeta<typeof ButtonMonochrome>;
 
 const Template: ComponentStory<typeof ButtonMonochrome> = (args) => <ButtonMonochrome {...args} />;

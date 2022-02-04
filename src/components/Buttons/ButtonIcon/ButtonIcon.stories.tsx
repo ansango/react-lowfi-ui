@@ -15,7 +15,6 @@ export default {
     classIcon: { control: false },
     classButton: { control: false },
   },
-  
 } as ComponentMeta<typeof ButtonIcon>;
 
 const Template: ComponentStory<typeof ButtonIcon> = (args) => <ButtonIcon {...args} />;

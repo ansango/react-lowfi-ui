@@ -11,6 +11,10 @@ export default {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    classIcon: { control: false },
+    classButton: { control: false },
+  },
 } as ComponentMeta<typeof ButtonDuotone>;
 
 const Template: ComponentStory<typeof ButtonDuotone> = (args) => <ButtonDuotone {...args} />;

@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Spinner from "./Spinner";
 
 export default {
-  title: "Atoms/Spinners/Spinner",
+  title: "Atoms/Spinner",
   component: Spinner,
   parameters: {
     layout: "centered",

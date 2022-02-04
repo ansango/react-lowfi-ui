@@ -3,7 +3,7 @@ import * as cn from "./ButtonMonochromeStyles";
 import * as HeroIcons from "@heroicons/react/solid";
 import Icon from "../../Atoms/Icon/Icon";
 import SpinnerGradient from "../../Atoms/Spinners/SpinnerGradient/SpinnerGradient";
-import BadgeGradient from "../../Atoms/Badges/BadgeGradient/BadgeGradient";
+import BadgeCounterGradient from "../../Atoms/Badges/BadgeCounterGradient/BadgeCounterGradient";
 
 export type ButtonPropsMonochrome = {
   /**
@@ -83,7 +83,7 @@ const ButtonMonochrome: FC<ButtonPropsMonochrome> = ({
       <span className={iconOrLoading}>{label}</span>
       {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
       {loading && <SpinnerGradient kind="monochrome" style={style} size={reSize} />}
-      {!icon && !loading && <BadgeGradient counter={badge} style={style} kind="monochrome" />}
+      {!icon && !loading && <BadgeCounterGradient counter={badge} style={style} kind="monochrome" />}
     </button>
   );
 };

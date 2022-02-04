@@ -1,11 +1,11 @@
 /**
- * ?BadgeGradient Component
+ * ?BadgeCounterGradient Component
  */
 
 import { FC } from "react";
-import * as cn from "./BadgeGradientStyles";
+import * as cn from "./BadgeCounterGradientStyles";
 
-export type BadgeGradientProps = {
+export type BadgeCounterGradientProps = {
   /**
    * counter
    */
@@ -22,10 +22,10 @@ export type BadgeGradientProps = {
 };
 
 /**
- * Badge Gradient component
+ * Badge Counter Gradient component
  */
 
-const BadgeGradient: FC<BadgeGradientProps> = ({
+const BadgeCounterGradient: FC<BadgeCounterGradientProps> = ({
   counter = 0,
   kind = "monochrome",
   style = "blue",
@@ -37,4 +37,4 @@ const BadgeGradient: FC<BadgeGradientProps> = ({
   return <span className={className}>{badge}</span>;
 };
 
-export default BadgeGradient;
+export default BadgeCounterGradient;

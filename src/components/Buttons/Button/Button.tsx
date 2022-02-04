@@ -3,7 +3,7 @@ import * as cn from "./ButtonStyles";
 import * as HeroIcons from "@heroicons/react/solid";
 import Icon from "../../Atoms/Icon/Icon";
 import Spinner from "../../Atoms/Spinners/Spinner/Spinner";
-import Badge from "../../Atoms/Badges/Badge/Badge";
+import BadgeCounter from "../../Atoms/Badges/BadgeCounter/BadgeCounter";
 
 export type ButtonProps = {
   /**
@@ -97,7 +97,7 @@ const Button: FC<ButtonProps> = ({
       <span className={iconOrLoading}>{label}</span>
       {loading && <Spinner kind={kind} style={style} size={reSize} {...props} />}
       {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
-      {!icon && !loading && <Badge counter={badge} style={style} {...props} />}
+      {!icon && !loading && <BadgeCounter counter={badge} style={style} {...props} />}
     </button>
   );
 };

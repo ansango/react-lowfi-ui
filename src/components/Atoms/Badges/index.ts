@@ -1,2 +1,2 @@
-import Badge from "./Badge/Badge";
+import Badge from "./BadgeCounter/BadgeCounter";
 export { Badge };

@@ -1,5 +1,5 @@
 /**
- *? BadgeGradient Styles
+ *? BadgeCounterGradient Styles
  */
 
 export const base =
