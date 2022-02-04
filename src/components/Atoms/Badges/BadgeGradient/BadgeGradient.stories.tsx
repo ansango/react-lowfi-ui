@@ -8,6 +8,9 @@ import BadgeGradient from "./BadgeGradient";
 export default {
   title: "Atoms/Badges/Badge Gradient",
   component: BadgeGradient,
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof BadgeGradient>;
 
 const Template: ComponentStory<typeof BadgeGradient> = (args) => <BadgeGradient {...args} />;

@@ -8,10 +8,14 @@ import ButtonIcon from "./ButtonIcon";
 export default {
   title: "Components/Buttons/Button Icon",
   component: ButtonIcon,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     classIcon: { control: false },
     classButton: { control: false },
   },
+  
 } as ComponentMeta<typeof ButtonIcon>;
 
 const Template: ComponentStory<typeof ButtonIcon> = (args) => <ButtonIcon {...args} />;

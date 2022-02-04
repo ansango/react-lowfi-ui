@@ -8,6 +8,9 @@ import ButtonDuotone from "./ButtonDuotone";
 export default {
   title: "Components/Buttons/Gradient Duotone",
   component: ButtonDuotone,
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof ButtonDuotone>;
 
 const Template: ComponentStory<typeof ButtonDuotone> = (args) => <ButtonDuotone {...args} />;

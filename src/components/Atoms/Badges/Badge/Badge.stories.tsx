@@ -8,6 +8,12 @@ import Badge from "./Badge";
 export default {
   title: "Atoms/Badges/Badge",
   component: Badge,
+  parameters: {
+    layout: "centered",
+  },
+  argTypes: {
+    classBadge: { control: false },
+  },
 } as ComponentMeta<typeof Badge>;
 
 const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />;

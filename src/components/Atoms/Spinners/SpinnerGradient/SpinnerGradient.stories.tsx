@@ -8,6 +8,9 @@ import SpinnerGradient from "./SpinnerGradient";
 export default {
   title: "Atoms/Spinners/Spinner Gradient",
   component: SpinnerGradient,
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof SpinnerGradient>;
 
 const Template: ComponentStory<typeof SpinnerGradient> = (args) => <SpinnerGradient {...args} />;

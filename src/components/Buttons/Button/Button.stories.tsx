@@ -5,11 +5,13 @@ import Button from "./Button";
 export default {
   title: "Components/Buttons/Button",
   component: Button,
-  argTypes: {
-    className: { control: false },
-  },
   parameters: {
     layout: "centered",
+  },
+  argTypes: {
+    classIcon: { control: false },
+    classButton: { control: false },
+    classSpinner: { control: false },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -90,4 +92,13 @@ J_CustomClassLoader.args = {
   classButton: "flex items-center bg-red-500 px-4 py-2 rounded text-white",
   classSpinner: "w-6 h-6 text-red-400 fill-red-800 animate-spin",
   loading: true,
+};
+
+export const K_CustomClassBadge = Template.bind({});
+
+K_CustomClassBadge.args = {
+  label: "Button",
+  classButton: "flex items-center bg-red-500 px-4 py-2 rounded text-white",
+  badge: 2,
+  classBadge: "inline-flex justify-center items-center w-4 h-4 text-xs font-semibold rounded-full text-red-500 bg-red-100",
 };

@@ -8,8 +8,11 @@ import Icon from "./Icon";
 export default {
   title: "Atoms/Icon",
   component: Icon,
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
-    className: { control: false },
+    classIcon: { control: false },
   },
 } as ComponentMeta<typeof Icon>;
 

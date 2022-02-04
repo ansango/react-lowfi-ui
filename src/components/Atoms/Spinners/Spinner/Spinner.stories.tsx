@@ -8,6 +8,12 @@ import Spinner from "./Spinner";
 export default {
   title: "Atoms/Spinners/Spinner",
   component: Spinner,
+  parameters: {
+    layout: "centered",
+  },
+  argTypes: {
+    classSpinner: { control: false },
+  },
 } as ComponentMeta<typeof Spinner>;
 
 const Template: ComponentStory<typeof Spinner> = (args) => <Spinner {...args} />;

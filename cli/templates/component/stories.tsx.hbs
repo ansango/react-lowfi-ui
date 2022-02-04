@@ -8,6 +8,9 @@ import {{pascalCase name}} from "./{{pascalCase name}}";
 export default {
   title: 'Components/{{pascalCase name}}',
   component: {{pascalCase name}},
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof {{pascalCase name}}>;
 
 const Template: ComponentStory<typeof {{pascalCase name}}> = (args) => <{{pascalCase name}} {...args} />;

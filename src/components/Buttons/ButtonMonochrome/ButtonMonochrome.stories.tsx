@@ -8,6 +8,9 @@ import ButtonMonochrome from "./ButtonMonochrome";
 export default {
   title: "Components/Buttons/Gradient Monochrome",
   component: ButtonMonochrome,
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof ButtonMonochrome>;
 
 const Template: ComponentStory<typeof ButtonMonochrome> = (args) => <ButtonMonochrome {...args} />;

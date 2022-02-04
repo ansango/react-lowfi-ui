@@ -64,6 +64,10 @@ export type ButtonProps = {
    * className override
    */
   classSpinner?: string;
+  /**
+   * className override
+   */
+  classBadge?: string;
 };
 
 /**
@@ -93,7 +97,7 @@ const Button: FC<ButtonProps> = ({
       <span className={iconOrLoading}>{label}</span>
       {loading && <Spinner kind={kind} style={style} size={reSize} {...props} />}
       {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
-      {!icon && !loading && <Badge counter={badge} style={style} />}
+      {!icon && !loading && <Badge counter={badge} style={style} {...props} />}
     </button>
   );
 };

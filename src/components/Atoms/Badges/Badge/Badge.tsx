@@ -22,17 +22,18 @@ export type BadgeProps = {
   /**
    * Class Name override
    */
-  className?: string;
+  classBadge?: string;
 };
 
 /**
  * Description of Badge component displayed in Storybook
  */
 
-const Badge: FC<BadgeProps> = ({ counter = 0, style = "default" }) => {
+const Badge: FC<BadgeProps> = ({ counter = 0, style = "default", classBadge }) => {
   if (counter === 0) return null;
   const badge = counter > 99 ? 99 : counter;
-  const className = `${cn.base} ${cn.style[style]}`;
+  const cnStyle = `${cn.base} ${cn.style[style]}`;
+  const className = classBadge ?? cnStyle;
   return <span className={className}>{badge}</span>;
 };
 
