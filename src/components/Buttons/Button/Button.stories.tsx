@@ -48,7 +48,6 @@ export const E_WithIcon = Template.bind({});
 E_WithIcon.args = {
   label: "Button",
   icon: "AcademicCapIcon",
-  iconDirection: "right",
 };
 
 export const F_WithLoader = Template.bind({});
@@ -73,7 +72,6 @@ H_CustomClassWithIcon.args = {
   label: "Button",
   classButton: "flex items-center bg-green-600 px-2 py-3 rounded-full text-white font-bold",
   icon: "AcademicCapIcon",
-  iconDirection: "right",
 };
 
 export const I_CustomClassButtonIcon = Template.bind({});
@@ -83,7 +81,6 @@ I_CustomClassButtonIcon.args = {
   classButton: "flex items-center bg-purple-600 px-4 py-2 rounded text-white",
   classIcon: "text-purple-200 w-5 h-5",
   icon: "AcademicCapIcon",
-  iconDirection: "right",
 };
 
 export const J_CustomClassLoader = Template.bind({});
