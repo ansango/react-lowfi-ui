@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Icon from "./Icon";
 
 export default {
-  title: "Components/Icon",
+  title: "Atoms/Icon",
   component: Icon,
   argTypes: {
     className: { control: false },

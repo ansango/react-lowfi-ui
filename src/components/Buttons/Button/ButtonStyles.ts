@@ -17,7 +17,7 @@ export enum solid {
   light = "text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 text-center dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-800",
   green = "text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800",
   red = "text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300  text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900",
-  yellow = "text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 text-center dark:focus:ring-yellow-900",
+  yellow = "text-yellow-900 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 text-center dark:focus:ring-yellow-900",
   purple = "text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900",
 }
 

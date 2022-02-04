@@ -1,8 +1,9 @@
 import { FC } from "react";
 import * as cn from "./ButtonStyles";
 import * as HeroIcons from "@heroicons/react/solid";
-import Icon from "../../Icon/Icon";
-import Spinner from "../../Spinners/Spinner/Spinner";
+import Icon from "../../Atoms/Icon/Icon";
+import Spinner from "../../Atoms/Spinners/Spinner/Spinner";
+import Badge from "../../Atoms/Badges/Badge/Badge";
 
 export type ButtonProps = {
   /**
@@ -44,6 +45,10 @@ export type ButtonProps = {
    */
   loading?: boolean;
   /**
+   * badge, used for notifications count
+   */
+  badge?: number;
+  /**
    * onClick event
    */
   onClick?: () => void;
@@ -73,6 +78,7 @@ const Button: FC<ButtonProps> = ({
   rounded = "default",
   icon,
   loading = false,
+  badge = 0,
   classButton,
   ...props
 }) => {
@@ -80,13 +86,14 @@ const Button: FC<ButtonProps> = ({
   const mode = `flex items-center justify-between ${cnKind[style]} ${cn.size[size]} ${cn.rounded[rounded]}`;
   const styles = classButton ?? mode;
   const className = props.disabled ? `${styles} ${cn.disabled}` : styles;
-  const iconOrLoading = loading || icon ? "mr-2.5" : "";
+  const iconOrLoading = loading || icon || badge ? "mr-2.5" : "";
   const reSize = size === "xsmall" || size === "small" ? "xsmall" : "small";
   return (
     <button type="button" className={className} {...props}>
       <span className={iconOrLoading}>{label}</span>
-      {icon && !loading && <Icon icon={icon} size={ reSize} {...props} />}
       {loading && <Spinner kind={kind} style={style} size={reSize} {...props} />}
+      {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
+      {!icon && !loading && <Badge counter={badge} style={style} />}
     </button>
   );
 };
