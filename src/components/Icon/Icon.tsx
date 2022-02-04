@@ -26,7 +26,7 @@ export type IconProps = {
  * Description of Icon component displayed in Storybook
  */
 
-const Icon: FC<IconProps> = ({ icon, size = "medium", classIcon }) => {
+const Icon: FC<IconProps> = ({ icon, size = "base", classIcon }) => {
   const cnSize = cn.size[size];
   const styles = classIcon ?? cnSize;
   const RIcon = HeroIcons[icon];

@@ -1,7 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import Button from "./Button";
 import { mount } from "enzyme";
-import Spinner from "../../Spinner/Spinner";
+import Spinner from "../../Spinners/Spinner/Spinner";
+import Icon from "../../Icon/Icon";
 
 describe("Button Component", () => {
   it("should render", () => {
@@ -17,14 +18,6 @@ describe("Button Component", () => {
   it("should render outline", () => {
     const wrapper = mount(<Button label="Test" kind="outline" />);
     expect(wrapper.props().kind).toBe("outline");
-  });
-  it("should render with icon left", () => {
-    const wrapper = mount(<Button label="Test" icon="AcademicCapIcon" iconDirection="left" />);
-    expect(wrapper.props().icon).toBe("AcademicCapIcon");
-  });
-  it("should render with icon right", () => {
-    const wrapper = mount(<Button label="Test" icon="AcademicCapIcon" iconDirection="right" />);
-    expect(wrapper.props().icon).toBe("AcademicCapIcon");
   });
   it("should render disabled", () => {
     const wrapper = mount(<Button label="Test" disabled />);
@@ -47,5 +40,10 @@ describe("Button Component", () => {
     expect(wrapper.props().loading).toBe(true);
     expect(wrapper.find(Spinner)).toHaveLength(1);
     expect(wrapper.find(Spinner).props().size).toBe("small");
+  });
+  it("should render icon", () => {
+    const wrapper = mount(<Button label="Test" icon="ArchiveIcon" />);
+    expect(wrapper.find(Icon)).toHaveLength(1);
+    expect(wrapper.find(Icon).props().icon).toBe("ArchiveIcon");
   });
 });

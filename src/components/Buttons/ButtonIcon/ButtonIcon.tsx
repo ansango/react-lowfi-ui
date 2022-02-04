@@ -14,7 +14,7 @@ export type ButtonIconProps = {
    */
   icon: keyof typeof HeroIcons;
   /**
-   * xsmall | small | base | large | xlarge
+   * small | base | large 
    * @default "base"
    */
   size?: keyof typeof cn.size;

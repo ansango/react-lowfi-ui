@@ -1,10 +1,15 @@
-import { FC } from "react";
-import * as cn from "./ButtonStyles";
-import * as HeroIcons from "@heroicons/react/solid";
-import Icon from "../../Icon/Icon";
-import Spinner from "../../Spinners/Spinner/Spinner";
+/**
+ * ?ButtonDuotone Component
+ */
 
-export type ButtonProps = {
+import { FC } from "react";
+import * as cn from "./ButtonDuotoneStyles";
+import * as HeroIcons from "@heroicons/react/solid";
+
+import Icon from "../../Icon/Icon";
+import SpinnerGradient from "../../Spinners/SpinnerGradient/SpinnerGradient";
+
+export type ButtonDuotoneProps = {
   /**
    * Label of the button
    */
@@ -15,20 +20,10 @@ export type ButtonProps = {
    */
   size?: keyof typeof cn.size;
   /**
-   * solid | outline
-   * @default "solid"
+   * purple | cyan | green | pink | orange | lime | yellow;
+   * @default "purple"
    */
-  kind?: "solid" | "outline";
-  /**
-   * default | alternative | dark | light | green | red | yellow | purple
-   * @default "default"
-   */
-  style?: "default" | "alternative" | "dark" | "light" | "green" | "red" | "yellow" | "purple";
-  /**
-   * pill | rounded
-   * @default "rounded"
-   */
-  rounded?: keyof typeof cn.rounded;
+  style?: "blue" | "green" | "cyan" | "teal" | "lime" | "red" | "pink" | "purple";
   /**
    * HeroIcons
    */
@@ -55,40 +50,34 @@ export type ButtonProps = {
    * className override
    */
   classIcon?: string;
-  /**
-   * className override
-   */
-  classSpinner?: string;
 };
 
 /**
- * Description
+ * Description of ButtonDuotone component displayed in Storybook
  */
 
-const Button: FC<ButtonProps> = ({
+const ButtonDuotone: FC<ButtonDuotoneProps> = ({
   label,
   size = "base",
-  kind = "solid",
-  style = "default",
-  rounded = "default",
+  style = "purple",
   icon,
   loading = false,
   classButton,
   ...props
 }) => {
-  const cnKind = kind === "solid" ? cn.solid : cn.outline;
-  const mode = `flex items-center justify-between ${cnKind[style]} ${cn.size[size]} ${cn.rounded[rounded]}`;
+  const mode = `flex items-center justify-between ${cn.solid[style]} ${cn.size[size]}`;
   const styles = classButton ?? mode;
   const className = props.disabled ? `${styles} ${cn.disabled}` : styles;
   const iconOrLoading = loading || icon ? "mr-2.5" : "";
   const reSize = size === "xsmall" || size === "small" ? "xsmall" : "small";
+
   return (
     <button type="button" className={className} {...props}>
       <span className={iconOrLoading}>{label}</span>
-      {icon && !loading && <Icon icon={icon} size={ reSize} {...props} />}
-      {loading && <Spinner kind={kind} style={style} size={reSize} {...props} />}
+      {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
+      {loading && <SpinnerGradient kind="duotone" style={style} size={reSize} />}
     </button>
   );
 };
 
-export default Button;
+export default ButtonDuotone;

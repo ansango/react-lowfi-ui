@@ -1,3 +1,3 @@
 import { Button, ButtonIcon } from "./components/Buttons";
-import Spinner from "./components/Spinner/Spinner";
+import { Spinner } from "./components/Spinners";
 export { Button, ButtonIcon, Spinner };
