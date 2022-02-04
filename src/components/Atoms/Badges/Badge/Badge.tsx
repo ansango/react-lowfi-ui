@@ -7,7 +7,7 @@ import * as cn from "./BadgeStyles";
 
 export type BadgeProps = {
   /**
-   * Counter
+   * counter
    */
   counter?: number;
   /**
@@ -16,17 +16,13 @@ export type BadgeProps = {
    */
   style?: "default" | "alternative" | "dark" | "light" | "green" | "red" | "yellow" | "purple";
   /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-  /**
    * Class Name override
    */
   classBadge?: string;
 };
 
 /**
- * Description of Badge component displayed in Storybook
+ * Badge component
  */
 
 const Badge: FC<BadgeProps> = ({ counter = 0, style = "default", classBadge }) => {

@@ -7,7 +7,7 @@ import * as cn from "./BadgeGradientStyles";
 
 export type BadgeGradientProps = {
   /**
-   * Counter
+   * counter
    */
   counter?: number;
   /**
@@ -19,18 +19,10 @@ export type BadgeGradientProps = {
    * @default "default"
    */
   style?: "blue" | "green" | "cyan" | "teal" | "lime" | "red" | "pink" | "purple";
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-  /**
-   * Class Name override
-   */
-  className?: string;
 };
 
 /**
- * Description of BadgeGradient component displayed in Storybook
+ * Badge Gradient component
  */
 
 const BadgeGradient: FC<BadgeGradientProps> = ({

@@ -23,3 +23,11 @@ export const A_Default = Template.bind({});
 A_Default.args = {
   counter: 1,
 }
+
+export const B_CustomBadge = Template.bind({});
+
+B_CustomBadge.args = {
+  counter: 1,
+  classBadge:
+    "inline-flex justify-center items-center w-4 h-4 text-xs font-semibold rounded-full text-red-200 bg-red-600",
+};
