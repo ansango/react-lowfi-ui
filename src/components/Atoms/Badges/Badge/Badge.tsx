@@ -15,7 +15,7 @@ export type BadgeProps = {
   /**
    * default | larger
    */
-  size?: "default" | "larger";
+  size?: "default" | "large";
   /**
    * default | withIcon | iconOnly
    */

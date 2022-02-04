@@ -17,9 +17,9 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const A_Regular = Template.bind({});
+export const A_Default = Template.bind({});
 
-A_Regular.args = {
+A_Default.args = {
   label: "Button",
 };
 
@@ -61,44 +61,61 @@ F_WithLoader.args = {
   style: "yellow",
 };
 
-export const G_CustomClass = Template.bind({});
+export const G_Disabled = Template.bind({});
 
-G_CustomClass.args = {
+G_Disabled.args = {
+  label: "Button",
+  disabled: true,
+  style: "green",
+};
+
+export const H_WithBadge = Template.bind({});
+
+H_WithBadge.args = {
+  label: "Button",
+  badge: 99,
+  style: "red",
+};
+
+export const I_CustomButton = Template.bind({});
+
+I_CustomButton.args = {
   label: "Button",
   classButton: "bg-red-500 px-4 py-2 rounded text-white",
 };
 
-export const H_CustomClassWithIcon = Template.bind({});
+export const J_CustomButtonWithIcon = Template.bind({});
 
-H_CustomClassWithIcon.args = {
+J_CustomButtonWithIcon.args = {
   label: "Button",
   classButton: "flex items-center bg-green-600 px-2 py-3 rounded-full text-white font-bold",
   icon: "AcademicCapIcon",
 };
 
-export const I_CustomClassButtonIcon = Template.bind({});
+export const K_CustomButtonCustomIcon = Template.bind({});
 
-I_CustomClassButtonIcon.args = {
+K_CustomButtonCustomIcon.args = {
   label: "Button",
   classButton: "flex items-center bg-purple-600 px-4 py-2 rounded text-white",
   classIcon: "text-purple-200 w-5 h-5",
   icon: "AcademicCapIcon",
 };
 
-export const J_CustomClassLoader = Template.bind({});
+export const L_CustomButtonCustomSpinner = Template.bind({});
 
-J_CustomClassLoader.args = {
+L_CustomButtonCustomSpinner.args = {
   label: "Button",
   classButton: "flex items-center bg-red-500 px-4 py-2 rounded text-white",
   classSpinner: "w-6 h-6 text-red-400 fill-red-800 animate-spin",
   loading: true,
 };
 
-export const K_CustomClassBadge = Template.bind({});
+export const M_CustomButtonCustomBadge = Template.bind({});
 
-K_CustomClassBadge.args = {
+M_CustomButtonCustomBadge.args = {
   label: "Button",
   classButton: "flex items-center bg-red-500 px-4 py-2 rounded text-white",
   badge: 2,
-  classBadge: "inline-flex justify-center items-center w-4 h-4 text-xs font-semibold rounded-full text-red-500 bg-red-100",
+  classBadge:
+    "inline-flex justify-center items-center w-4 h-4 text-xs font-semibold rounded-full text-red-500 bg-red-100",
 };

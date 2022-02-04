@@ -19,9 +19,9 @@ export default {
 
 const Template: ComponentStory<typeof ButtonIcon> = (args) => <ButtonIcon {...args} />;
 
-export const A_Regular = Template.bind({});
+export const A_Default = Template.bind({});
 
-A_Regular.args = {
+A_Default.args = {
   icon: "ArrowLeftIcon",
 };
 
@@ -46,17 +46,24 @@ D_Round.args = {
   rounded: "pill",
 };
 
-export const E_ClassButton = Template.bind({});
+export const E_Disabled = Template.bind({});
 
-E_ClassButton.args = {
+E_Disabled.args = {
+  icon: "ArrowLeftIcon",
+  disabled: true,
+};
+
+export const F_CustomButton = Template.bind({});
+
+F_CustomButton.args = {
   icon: "ArrowLeftIcon",
   classButton:
     "bg-red-500 px-4 py-2 rounded text-white hover:bg-red-600 focus:ring-4 focus:ring-red-300",
 };
 
-export const F_ClassButtonIcon = Template.bind({});
+export const G_CustomButtonCustomIcon = Template.bind({});
 
-F_ClassButtonIcon.args = {
+G_CustomButtonCustomIcon.args = {
   icon: "BookmarkIcon",
   classIcon: "text-yellow-800 h-5 w-5",
   classButton:

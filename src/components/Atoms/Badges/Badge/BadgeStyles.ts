@@ -4,7 +4,7 @@
 
 export enum size {
   default = "text-xs",
-  larger = "text-sm",
+  large = "text-sm",
 }
 
 export enum kind {

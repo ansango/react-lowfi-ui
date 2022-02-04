@@ -26,12 +26,13 @@ A_Default.args = {
   label: "Badge",
 };
 
-export const B_Larger = Template.bind({});
+export const B_Large = Template.bind({});
 
-B_Larger.args = {
+B_Large.args = {
   label: "Badge",
-  size: "larger",
-}
+  size: "large",
+  style: "yellow",
+};
 
 export const C_WithIcon = Template.bind({});
 
@@ -39,7 +40,8 @@ C_WithIcon.args = {
   label: "Badge",
   kind: "withIcon",
   icon: "ArrowLeftIcon",
-}
+  style: "dark",
+};
 
 export const D_IconOnly = Template.bind({});
 
@@ -47,20 +49,28 @@ D_IconOnly.args = {
   label: "Badge",
   kind: "iconOnly",
   icon: "ArrowLeftIcon",
-}
+  style: "green",
+};
 
-export const E_Link = Template.bind({});
+export const E_Style = Template.bind({});
 
-E_Link.args = {
+E_Style.args = {
+  label: "Badge",
+  style: "red",
+};
+
+export const F_Link = Template.bind({});
+
+F_Link.args = {
   label: "Badge",
   kind: "withIcon",
   icon: "ArrowLeftIcon",
   link: true,
-}
+};
 
-export const F_CustomClass = Template.bind({});
+export const G_CustomBadge = Template.bind({});
 
-F_CustomClass.args = {
+G_CustomBadge.args = {
   label: "Badge",
   kind: "withIcon",
   icon: "ArrowLeftIcon",
