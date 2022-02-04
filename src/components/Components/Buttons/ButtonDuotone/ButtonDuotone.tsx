@@ -1,11 +1,16 @@
-import { FC } from "react";
-import * as cn from "./ButtonMonochromeStyles";
-import * as HeroIcons from "@heroicons/react/solid";
-import Icon from "../../Atoms/Icon/Icon";
-import SpinnerGradient from "../../Atoms/Spinners/SpinnerGradient/SpinnerGradient";
-import BadgeCounterGradient from "../../Atoms/Badges/BadgeCounterGradient/BadgeCounterGradient";
+/**
+ * ?ButtonDuotone Component
+ */
 
-export type ButtonPropsMonochrome = {
+import { FC } from "react";
+import * as cn from "./ButtonDuotoneStyles";
+import * as HeroIcons from "@heroicons/react/solid";
+
+import Icon from "../../../Atoms/Icon/Icon";
+import SpinnerGradient from "../../../Atoms/Spinners/SpinnerGradient/SpinnerGradient";
+import BadgeCounterGradient from "../../../Atoms/Badges/BadgeCounterGradient/BadgeCounterGradient";
+
+export type ButtonDuotoneProps = {
   /**
    * Label of the button
    */
@@ -16,13 +21,8 @@ export type ButtonPropsMonochrome = {
    */
   size?: keyof typeof cn.size;
   /**
-   * solid | shadow
-   * @default "solid"
-   */
-  kind?: "solid" | "shadow";
-  /**
-   * blue | green | cyan | teal | lime | red | pink | purple
-   * @default "default"
+   * purple | cyan | green | pink | orange | lime | yellow;
+   * @default "purple"
    */
   style?: "blue" | "green" | "cyan" | "teal" | "lime" | "red" | "pink" | "purple";
   /**
@@ -58,34 +58,33 @@ export type ButtonPropsMonochrome = {
 };
 
 /**
- * Button Monochrome Component
+ * ButtonDuotone Component
  */
 
-const ButtonMonochrome: FC<ButtonPropsMonochrome> = ({
+const ButtonDuotone: FC<ButtonDuotoneProps> = ({
   label,
   size = "base",
-  kind = "solid",
-  style = "blue",
+  style = "purple",
   icon,
   loading = false,
   badge = 0,
   classButton,
   ...props
 }) => {
-  const cnKind = kind === "solid" ? cn.solid : cn.shadow;
-  const mode = `flex items-center justify-between ${cnKind[style]} ${cn.size[size]}`;
+  const mode = `flex items-center justify-between ${cn.solid[style]} ${cn.size[size]}`;
   const styles = classButton ?? mode;
   const className = props.disabled ? `${styles} ${cn.disabled}` : styles;
   const iconOrLoading = loading || icon || badge ? "mr-2.5" : "";
   const reSize = size === "xsmall" || size === "small" ? "xsmall" : "small";
+
   return (
     <button type="button" className={className} {...props}>
       <span className={iconOrLoading}>{label}</span>
       {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
-      {loading && <SpinnerGradient kind="monochrome" style={style} size={reSize} />}
-      {!icon && !loading && <BadgeCounterGradient counter={badge} style={style} kind="monochrome" />}
+      {loading && <SpinnerGradient kind="duotone" style={style} size={reSize} />}
+      {!icon && !loading && <BadgeCounterGradient counter={badge} style={style} kind="duotone" />}
     </button>
   );
 };
 
-export default ButtonMonochrome;
+export default ButtonDuotone;

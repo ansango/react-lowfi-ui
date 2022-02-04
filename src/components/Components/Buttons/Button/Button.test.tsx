@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import Button from "./Button";
 import { mount } from "enzyme";
-import Spinner from "../../Atoms/Spinners/Spinner/Spinner";
-import Icon from "../../Atoms/Icon/Icon";
+import Spinner from "../../../Atoms/Spinners/Spinner/Spinner";
+import Icon from "../../../Atoms/Icon/Icon";
 
 describe("Button Component", () => {
   it("should render", () => {

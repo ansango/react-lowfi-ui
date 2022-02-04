@@ -1,11 +1,11 @@
 import { FC } from "react";
-import * as cn from "./ButtonStyles";
+import * as cn from "./ButtonMonochromeStyles";
 import * as HeroIcons from "@heroicons/react/solid";
-import Icon from "../../Atoms/Icon/Icon";
-import Spinner from "../../Atoms/Spinners/Spinner/Spinner";
-import BadgeCounter from "../../Atoms/Badges/BadgeCounter/BadgeCounter";
+import Icon from "../../../Atoms/Icon/Icon";
+import SpinnerGradient from "../../../Atoms/Spinners/SpinnerGradient/SpinnerGradient";
+import BadgeCounterGradient from "../../../Atoms/Badges/BadgeCounterGradient/BadgeCounterGradient";
 
-export type ButtonProps = {
+export type ButtonPropsMonochrome = {
   /**
    * Label of the button
    */
@@ -16,20 +16,15 @@ export type ButtonProps = {
    */
   size?: keyof typeof cn.size;
   /**
-   * solid | outline
+   * solid | shadow
    * @default "solid"
    */
-  kind?: "solid" | "outline";
+  kind?: "solid" | "shadow";
   /**
-   * default | alternative | dark | light | green | red | yellow | purple
+   * blue | green | cyan | teal | lime | red | pink | purple
    * @default "default"
    */
-  style?: "default" | "alternative" | "dark" | "light" | "green" | "red" | "yellow" | "purple";
-  /**
-   * pill | rounded
-   * @default "rounded"
-   */
-  rounded?: keyof typeof cn.rounded;
+  style?: "blue" | "green" | "cyan" | "teal" | "lime" | "red" | "pink" | "purple";
   /**
    * HeroIcons
    */
@@ -60,34 +55,25 @@ export type ButtonProps = {
    * className override
    */
   classIcon?: string;
-  /**
-   * className override
-   */
-  classSpinner?: string;
-  /**
-   * className override
-   */
-  classBadge?: string;
 };
 
 /**
- * Main Button component
+ * Button Monochrome Component
  */
 
-const Button: FC<ButtonProps> = ({
+const ButtonMonochrome: FC<ButtonPropsMonochrome> = ({
   label,
   size = "base",
   kind = "solid",
-  style = "default",
-  rounded = "default",
+  style = "blue",
   icon,
   loading = false,
   badge = 0,
   classButton,
   ...props
 }) => {
-  const cnKind = kind === "solid" ? cn.solid : cn.outline;
-  const mode = `flex items-center justify-between ${cnKind[style]} ${cn.size[size]} ${cn.rounded[rounded]}`;
+  const cnKind = kind === "solid" ? cn.solid : cn.shadow;
+  const mode = `flex items-center justify-between ${cnKind[style]} ${cn.size[size]}`;
   const styles = classButton ?? mode;
   const className = props.disabled ? `${styles} ${cn.disabled}` : styles;
   const iconOrLoading = loading || icon || badge ? "mr-2.5" : "";
@@ -95,11 +81,11 @@ const Button: FC<ButtonProps> = ({
   return (
     <button type="button" className={className} {...props}>
       <span className={iconOrLoading}>{label}</span>
-      {loading && <Spinner kind={kind} style={style} size={reSize} {...props} />}
       {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
-      {!icon && !loading && <BadgeCounter counter={badge} style={style} {...props} />}
+      {loading && <SpinnerGradient kind="monochrome" style={style} size={reSize} />}
+      {!icon && !loading && <BadgeCounterGradient counter={badge} style={style} kind="monochrome" />}
     </button>
   );
 };
 
-export default Button;
+export default ButtonMonochrome;

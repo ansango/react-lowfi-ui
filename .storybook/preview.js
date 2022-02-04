@@ -27,6 +27,8 @@ export const parameters = {
         "Components/Buttons/Button Icon",
         "Components/Buttons/Gradient Monochrome",
         "Components/Buttons/Gradient Duotone",
+        "Components/Alerts/Alert",
+        "Components/Alerts/Alert Content",
       ]);
     },
   },
