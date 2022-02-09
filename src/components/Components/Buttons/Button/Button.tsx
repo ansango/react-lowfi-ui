@@ -35,10 +35,6 @@ export type ButtonProps = {
    */
   icon?: keyof typeof HeroIcons;
   /**
-   * left | right
-   */
-  iconPosition?: "left" | "right";
-  /**
    * disabled
    * @default false
    */
@@ -85,7 +81,6 @@ const Button: FC<ButtonProps> = ({
   style = "default",
   rounded = "default",
   icon,
-  iconPosition = "right",
   loading = false,
   badge = 0,
   classButton,
@@ -99,10 +94,9 @@ const Button: FC<ButtonProps> = ({
   const reSize = size === "xsmall" || size === "small" ? "xsmall" : "small";
   return (
     <button type="button" className={className} {...props}>
-      {icon && iconPosition === "left" && !loading && <Icon icon={icon} size={reSize} {...props} />}
       <span className={iconOrLoading}>{label}</span>
       {loading && <Spinner kind={kind} style={style} size={reSize} {...props} />}
-      {icon && iconPosition !== "left" && !loading && <Icon icon={icon} size={reSize} {...props} />}
+      {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
       {!icon && !loading && <BadgeCounter counter={badge} style={style} {...props} />}
     </button>
   );
