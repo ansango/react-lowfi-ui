@@ -9,12 +9,37 @@ import * as HeroIcons from "@heroicons/react/outline";
 import Icon from "../../../Atoms/Icon/Icon";
 
 export type AlertContentProps = {
+  /**
+   * string
+   */
   title: string;
+  /**
+   * HeroIcons
+   * */
   icon: keyof typeof HeroIcons;
+  /**
+   * string
+   */
   content: string;
+  /**
+   * info | danger | success | warning | dark
+   * @default "info"
+   */
   kind?: "info" | "danger" | "success" | "warning" | "dark";
-  opened: boolean;
+  /**
+   * true | false
+   * @default false
+   */
+  opened?: boolean;
+  /**
+   * true | false
+   * @default false
+   */
   dismissable?: boolean;
+  /**
+   * function
+   * @default undefined
+   */
   action?: () => void;
 };
 
@@ -34,7 +59,7 @@ const AlertContent: FC<AlertContentProps> = ({
   const [isOpen, setIsOpen] = useState<boolean>(opened);
   if (!isOpen) return null;
   return (
-    <div className={`${cn.aBase} ${cn.aContKind[kind]}`} role="alert">
+    <div className={`${cn.aBase} ${cn.aContKind[kind]}`} role="alert" data-testid="alert">
       <div className={cn.aTitleBase}>
         <Icon icon={icon} classIcon={`${cn.aTitleIcon} ${cn.aTitleIconKind[kind]}`} />
         <h3 className={`${cn.aTitle} ${cn.aTitleKind[kind]}`}>{title}</h3>
@@ -55,6 +80,7 @@ const AlertContent: FC<AlertContentProps> = ({
             label="Dismiss"
             classButton={`${cn.actionDismiss} ${cn.actionDismissKind[kind]}`}
             onClick={() => setIsOpen(false)}
+            data-testid="dismiss-button"
           />
         )}
       </div>

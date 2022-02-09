@@ -14,13 +14,46 @@ export type LinkProps = {
 };
 
 export type AlertProps = {
+  /**
+   * info | danger | success | warning | dark
+   * @default "info"
+   */
   kind?: "info" | "danger" | "success" | "warning" | "dark";
+  /**
+   * true | false
+   * @default false
+   */
   bordered?: boolean;
-  opened: boolean;
+  /**
+   * true | false
+   * @default false
+   */
+  opened?: boolean;
+  /**
+   * true | false
+   * @default false
+   */
   withIcon?: boolean;
+  /**
+   * HeroIcons
+   * */
   icon?: keyof typeof HeroIcons;
+  /**
+   * string
+   */
   text: string;
+  /**
+   * {
+   *  text: string,
+   *  href: string
+   * }
+   * @default undefined
+   */
   link?: LinkProps;
+  /**
+   * true | false
+   * @default false
+   */
   dismissable?: boolean;
 };
 
@@ -42,7 +75,7 @@ const Alert: FC<AlertProps> = ({
   if (!isOpen) return null;
   const isBorder = bordered ? cn.alertBorderKind[kind] : cn.alertKind[kind];
   return (
-    <div className={`${cn.alertBase} ${isBorder}`} role="alert">
+    <div className={`${cn.alertBase} ${isBorder}`} role="alert" data-testid="alert">
       {withIcon && icon && <Icon icon={icon} classIcon={cn.iconAlert} />}
       <div className={`${cn.textBase} ${cn.textKind[kind]}`}>
         {text}
@@ -56,6 +89,7 @@ const Alert: FC<AlertProps> = ({
           classButton={`${cn.btnCloseBase} ${cn.btnCloseKind[kind]}`}
           classIcon={cn.iconClose}
           onClick={() => setIsOpen(false)}
+          data-testid="dismiss-button"
         />
       )}
     </div>
