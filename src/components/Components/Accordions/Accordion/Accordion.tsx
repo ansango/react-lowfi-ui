@@ -6,7 +6,7 @@ import { FC, useRef, useState } from "react";
 
 import * as cn from "./AccordionStyles";
 import * as HeroIcons from "@heroicons/react/outline";
-import Icon from "../../Atoms/Icon/Icon";
+import Icon from "../../../Atoms/Icon/Icon";
 
 type ItemProps = {
   title: string;
