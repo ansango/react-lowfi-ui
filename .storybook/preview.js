@@ -29,6 +29,8 @@ export const parameters = {
         "Components/Buttons/Gradient Duotone",
         "Components/Alerts/Alert",
         "Components/Alerts/Alert Content",
+        "Components/Accordion/Accordion",
+        "Components/Accordion/Accordion Flush",
       ]);
     },
   },
