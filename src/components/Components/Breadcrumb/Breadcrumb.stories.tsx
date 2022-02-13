@@ -40,7 +40,7 @@ OptionOne.args = {
       level: 3,
       title: "React",
       path: "/react",
-      LinkElement: ({ children }: { children: ReactNode }) => <Link to="/course">{children}</Link>,
+      LinkElement: ({ children }: { children: ReactNode }) => <Link to="/course/react">{children}</Link>,
     },
     {
       level: 4,
