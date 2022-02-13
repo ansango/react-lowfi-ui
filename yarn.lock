@@ -13853,6 +13853,11 @@ store2@^2.12.0:
   resolved "https://registry.npmjs.org/store2/-/store2-2.13.1.tgz"
   integrity sha512-iJtHSGmNgAUx0b/MCS6ASGxb//hGrHHRgzvN+K5bvkBTN7A9RTpPSf1WSp+nPGvWCJ1jRnvY7MKnuqfoi3OEqg==
 
+storybook-tailwind-dark-mode@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/storybook-tailwind-dark-mode/-/storybook-tailwind-dark-mode-1.0.11.tgz#6e92a01434142972e4ce838fe99c8f8a00ddc5a0"
+  integrity sha512-Y0FP/aOxgdkSbzTQ9xoo346c1BKvp9WtxDVKg3P6S40wypOwK0dBxQEGehrLVB5gDuGiQru81UfitywI6clrcw==
+
 stream-browserify@^2.0.1:
   version "2.0.2"
   resolved "https://registry.npmjs.org/stream-browserify/-/stream-browserify-2.0.2.tgz"

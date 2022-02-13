@@ -7,6 +7,7 @@ module.exports = {
     "@storybook/addon-storysource",
     "@storybook/addon-a11y",
     "@storybook/preset-create-react-app",
+    "storybook-tailwind-dark-mode",
   ],
   framework: "@storybook/react",
   core: {

@@ -1,5 +1,10 @@
 import anysort from "anysort";
 import "../src/tailwind.css";
+
+export const globalTypes = {
+  darkMode: true,
+};
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   staticDirs: ["../assets"],
