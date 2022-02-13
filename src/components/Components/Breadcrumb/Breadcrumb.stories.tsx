@@ -3,10 +3,11 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { FC, ReactNode } from "react";
 import Breadcrumb from "./Breadcrumb";
 
 export default {
-  title: 'Components/Breadcrumb',
+  title: "Components/Breadcrumb",
   component: Breadcrumb,
   parameters: {
     layout: "centered",
@@ -17,24 +18,35 @@ const Template: ComponentStory<typeof Breadcrumb> = (args) => <Breadcrumb {...ar
 
 export const OptionOne = Template.bind({});
 
+const Link: FC<{ to: string; children?: ReactNode }> = ({ children, to }) => (
+  <a href={to}>{children}</a>
+);
+
 OptionOne.args = {
-  option: "option__one",
-};
-
-export const OptionTwo = Template.bind({});
-
-OptionTwo.args = {
-  option: "option__two",
-};
-
-export const OptionThree = Template.bind({});
-
-OptionThree.args = {
-  option: "option__three",
-};
-
-export const CustomClass = Template.bind({});
-
-CustomClass.args = {
-  className: "bg-yellow-500 text-white font-bold py-2 px-4 rounded max-w-lg cursor-pointer",
+  routes: [
+    {
+      level: 1,
+      title: "Home",
+      path: "/",
+      LinkElement: ({ children }: { children: ReactNode }) => <Link to="/">{children}</Link>,
+    },
+    {
+      level: 2,
+      title: "Course",
+      path: "/course",
+      LinkElement: ({ children }: { children: ReactNode }) => <Link to="/course">{children}</Link>,
+    },
+    {
+      level: 3,
+      title: "React",
+      path: "/react",
+      LinkElement: ({ children }: { children: ReactNode }) => <Link to="/course">{children}</Link>,
+    },
+    {
+      level: 4,
+      title: "React Hooks",
+      path: "/course",
+      current: true,
+    },
+  ],
 };
