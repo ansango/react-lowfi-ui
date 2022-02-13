@@ -7,7 +7,6 @@ import * as cn from "./AccordionFlushStyles";
 import Icon from "../../../Atoms/Icon/Icon";
 import * as HeroIcons from "@heroicons/react/outline";
 
-
 type ItemProps = {
   title: string;
   content: string[] | string;
@@ -15,7 +14,6 @@ type ItemProps = {
   icon?: keyof typeof HeroIcons;
   kind: "info" | "danger" | "success" | "warning" | "dark";
 };
-
 
 const Item: FC<ItemProps> = ({ title, content, position, icon, kind }) => {
   const [isActive, setIsActive] = useState(false);
@@ -31,8 +29,13 @@ const Item: FC<ItemProps> = ({ title, content, position, icon, kind }) => {
   const cont = isLast ? `${cn.cLast}` : `${cn.cBase}`;
   const simpleContent = typeof content === "string";
   return (
-    <div className={cn.itemBase}>
-      <button type="button" className={btn} onClick={() => setIsActive(!isActive)}>
+    <div className={cn.itemBase} data-testid={`accordion-item-${position.index + 1}`}>
+      <button
+        type="button"
+        className={btn}
+        onClick={() => setIsActive(!isActive)}
+        data-testid={`accordion-item-btn-${position.index + 1}`}
+      >
         <span className={cn.sBase}>
           {icon && <Icon icon={icon} classIcon={cn.iWithTitle} />} {title}
         </span>
@@ -43,6 +46,7 @@ const Item: FC<ItemProps> = ({ title, content, position, icon, kind }) => {
         ref={contentEl}
         className={cn.cAnimation}
         style={isActive ? { height: `${contentEl.current?.scrollHeight}px` } : { height: 0 }}
+        data-testid={`accordion-item-content-${position.index + 1}`}
       >
         <div className={cont}>
           {simpleContent ? (
