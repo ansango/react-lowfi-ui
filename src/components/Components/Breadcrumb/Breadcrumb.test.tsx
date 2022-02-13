@@ -40,7 +40,7 @@ const routes = [
 
 describe("<Breadcrumb />", () => {
   it("should render", () => {
-    render(<Breadcrumb routes={routes} />);
-    // expect(screen.getByText("Breadcrumb")).toBeInTheDocument();
+    const { container } = render(<Breadcrumb routes={routes} />);
+    expect(container).toBeInTheDocument();
   });
 });
