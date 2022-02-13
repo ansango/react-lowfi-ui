@@ -2,7 +2,8 @@
  *? Accordion Styles
  */
 
-export const itemBase = "text-gray-500 dark:text-gray-400 border-gray-200 dark:border-gray-700";
+export const itemBase =
+  "text-gray-500 dark:text-gray-400 dark:bg-gray-800 border-gray-200 dark:border-gray-700";
 
 export const bBase =
   "flex items-center focus:ring-4 justify-between p-5 w-full font-medium border text-left";

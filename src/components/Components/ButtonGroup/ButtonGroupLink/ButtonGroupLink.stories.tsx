@@ -1,19 +1,19 @@
 /**
- * ?ButtonGroup Story
+ * ?ButtonGroupLink Story
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import ButtonGroup from "./ButtonGroup";
+import ButtonGroupLink from "./ButtonGroupLink";
 
 export default {
-  title: 'Components/ButtonGroup',
-  component: ButtonGroup,
+  title: "Components/Button Group/Button Group Link",
+  component: ButtonGroupLink,
   parameters: {
     layout: "centered",
   },
-} as ComponentMeta<typeof ButtonGroup>;
+} as ComponentMeta<typeof ButtonGroupLink>;
 
-const Template: ComponentStory<typeof ButtonGroup> = (args) => <ButtonGroup {...args} />;
+const Template: ComponentStory<typeof ButtonGroupLink> = (args) => <ButtonGroupLink {...args} />;
 
 export const OptionOne = Template.bind({});
 

@@ -1,11 +1,11 @@
 /**
- * ?ButtonGroup Component
+ * ?ButtonGroupLink Component
  */
 
 import { FC } from "react";
-import * as cn from "./ButtonGroupStyles";
+import * as cn from "./ButtonGroupLinkStyles";
 
-export type ButtonGroupProps = {
+export type ButtonGroupLinkProps = {
   /**
    * Description of options in Storybook
    */
@@ -21,17 +21,17 @@ export type ButtonGroupProps = {
 };
 
 /**
- * Description of ButtonGroup component displayed in Storybook
+ * Description of ButtonGroupLink component displayed in Storybook
  */
 
-const ButtonGroup: FC<ButtonGroupProps> = ({ option = "option__one", className, ...props }) => {
+const ButtonGroupLink: FC<ButtonGroupLinkProps> = ({ option = "option__one", className, ...props }) => {
   const cnOption = cn.options[option];
   const styles = className ?? cnOption;
   return (
     <div className={styles} {...props}>
-      <span>ButtonGroup</span>
+      <span>ButtonGroupLink</span>
     </div>
   );
 };
 
-export default ButtonGroup;
+export default ButtonGroupLink;

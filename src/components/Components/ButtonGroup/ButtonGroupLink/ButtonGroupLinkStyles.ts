@@ -1,5 +1,5 @@
 /**
- *? ButtonGroup Styles
+ *? ButtonGroupLink Styles
  */
 
 /**
