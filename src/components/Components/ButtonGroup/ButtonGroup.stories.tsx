@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import ButtonGroup from "./ButtonGroup";
 
 export default {
-  title: "Components/Button Group/Button Group",
+  title: "Components/Button Group",
   component: ButtonGroup,
   parameters: {
     layout: "centered",
@@ -28,6 +28,11 @@ A_Default.args = {
       label: "Settings",
       withIcon: true,
       icon: "CogIcon",
+    },
+    {
+      label: "Downloads",
+      withIcon: true,
+      icon: "DownloadIcon"
     },
   ],
 };
