@@ -58,7 +58,7 @@ export type AlertProps = {
 };
 
 /**
- * Description of Alert component displayed in Storybook
+ * Alert Component
  */
 
 const Alert: FC<AlertProps> = ({

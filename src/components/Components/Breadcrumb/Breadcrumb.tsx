@@ -8,6 +8,10 @@ import Icon from "../../Atoms/Icon/Icon";
 import * as cn from "./BreadcrumbStyles";
 
 export type BreadcrumbProps = {
+  /**
+   * Routes to render
+   *| LinkElement as React Router Link or Next Link
+   */
   routes: {
     level: number;
     title: string;
@@ -15,8 +19,11 @@ export type BreadcrumbProps = {
     LinkElement?: FC<{ children: ReactNode }>;
     current?: boolean;
   }[];
+  /**
+   * solid | plain
+   * @default plain
+   */
   kind?: "solid" | "plain";
-  className?: string;
 };
 
 /**
