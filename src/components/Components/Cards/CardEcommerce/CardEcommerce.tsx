@@ -5,7 +5,7 @@
 import { FC } from "react";
 import * as cn from "./CardEcommerceStyles";
 import { Image } from "../../../Atoms/Blocks";
-import Icon from "../../../Atoms/Icon/Icon";
+import Icon from "../../../Atoms/Icons/Icon/Icon";
 import { Button } from "../../Buttons";
 import Badge from "../../../Atoms/Badges/Badge/Badge";
 

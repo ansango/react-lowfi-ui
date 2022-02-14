@@ -3,7 +3,7 @@
  */
 
 import { FC, ReactNode } from "react";
-import Icon from "../../Atoms/Icon/Icon";
+import Icon from "../../Atoms/Icons/Icon/Icon";
 
 import * as cn from "./BreadcrumbStyles";
 

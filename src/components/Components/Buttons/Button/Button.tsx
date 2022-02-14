@@ -1,7 +1,7 @@
 import { FC } from "react";
 import * as cn from "./ButtonStyles";
 import * as HeroIcons from "@heroicons/react/solid";
-import Icon from "../../../Atoms/Icon/Icon";
+import Icon from "../../../Atoms/Icons/Icon/Icon";
 import Spinner from "../../../Atoms/Spinners/Spinner/Spinner";
 import BadgeCounter from "../../../Atoms/Badges/BadgeCounter/BadgeCounter";
 

@@ -3,7 +3,7 @@
  */
 
 import { mount } from "enzyme";
-import Icon from "../../Icon/Icon";
+import Icon from "../../Icons/Icon/Icon";
 import Badge from "./Badge";
 
 describe("<Badge />", () => {

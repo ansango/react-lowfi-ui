@@ -25,7 +25,8 @@ export const parameters = {
         "Readme/Test and Lint",
         "Readme/Build and Deploy",
         "Readme/Contributing",
-        "Atoms/Icon",
+        "Atoms/Icons/Icon",
+        "Atoms/Icons/Icon Simple",
         "Atoms/Badge",
         "Atoms/Spinner",
         "Components/Alerts/Alert",
@@ -52,7 +53,6 @@ export const parameters = {
         "Components/Cards/Card Feature",
         "Components/Dropdowns/Dropdown",
         "Components/Dropdowns/Dropdown Icon",
-
       ]);
     },
   },

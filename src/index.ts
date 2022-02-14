@@ -1,3 +1,5 @@
+import { IconSimple, Icon } from "./components/Atoms/Icons";
+import { Badge } from "./components/Atoms/Badges";
 import { Spinner } from "./components/Atoms/Spinners";
 import { Accordion, AccordionFlush } from "./components/Components/Accordions";
 import { Alert, AlertContent } from "./components/Components/Alerts";
@@ -24,6 +26,9 @@ import {
 import { Dropdown, DropdownIcon } from "./components/Components/Dropdowns";
 
 export {
+  Icon,
+  IconSimple,
+  Badge,
   Spinner,
   Accordion,
   AccordionFlush,

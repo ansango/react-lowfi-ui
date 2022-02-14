@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Icon from "./Icon";
 
 export default {
-  title: "Atoms/Icon",
+  title: "Atoms/Icons/Icon",
   component: Icon,
   parameters: {
     layout: "centered",

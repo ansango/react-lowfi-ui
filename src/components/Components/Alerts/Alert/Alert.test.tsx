@@ -4,7 +4,7 @@
 
 import { render, fireEvent, queryByTestId, screen } from "@testing-library/react";
 import { mount } from "enzyme";
-import Icon from "../../../Atoms/Icon/Icon";
+import Icon from "../../../Atoms/Icons/Icon/Icon";
 import Alert from "./Alert";
 
 describe("<Alert />", () => {

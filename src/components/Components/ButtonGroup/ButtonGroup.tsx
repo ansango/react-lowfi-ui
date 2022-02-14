@@ -5,7 +5,7 @@
 import { FC } from "react";
 import * as cn from "./ButtonGroupStyles";
 import * as HeroIcons from "@heroicons/react/outline";
-import Icon from "../../Atoms/Icon/Icon";
+import Icon from "../../Atoms/Icons/Icon/Icon";
 export type ButtonGroupProps = {
   /**
    * solid | outline

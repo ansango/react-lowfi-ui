@@ -6,7 +6,7 @@ import { FC } from "react";
 import * as cn from "./ButtonIconStyles";
 import * as HeroIcons from "@heroicons/react/solid";
 
-import Icon from "../../../Atoms/Icon/Icon";
+import Icon from "../../../Atoms/Icons/Icon/Icon";
 
 export type ButtonIconProps = {
   /**

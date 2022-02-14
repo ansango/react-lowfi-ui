@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import CardCallAction from "./CardCallAction";
 
 export default {
-  title: 'Components/Cards/Card Call Action',
+  title: "Components/Cards/Card Call Action",
   component: CardCallAction,
   parameters: {
     layout: "centered",
@@ -15,26 +15,24 @@ export default {
 
 const Template: ComponentStory<typeof CardCallAction> = (args) => <CardCallAction {...args} />;
 
-export const OptionOne = Template.bind({});
+export const A_Default = Template.bind({});
 
-OptionOne.args = {
-  option: "option__one",
-};
-
-export const OptionTwo = Template.bind({});
-
-OptionTwo.args = {
-  option: "option__two",
-};
-
-export const OptionThree = Template.bind({});
-
-OptionThree.args = {
-  option: "option__three",
-};
-
-export const CustomClass = Template.bind({});
-
-CustomClass.args = {
-  className: "bg-yellow-500 text-white font-bold py-2 px-4 rounded max-w-lg cursor-pointer",
+A_Default.args = {
+  title: "Work fast from anywhere",
+  description:
+    "Stay up to date and move work forward with Flowbite on iOS & Android. Download the app today.",
+  actions: {
+    primary: {
+      icon: "Apple",
+      label: "Mac App Store",
+      description: "Download on the",
+      action: () => alert("Download on the Mac App Store"),
+    },
+    secondary: {
+      icon: "Googleplay",
+      label: "Google Play",
+      description: "Get it on the",
+      action: () => alert("Get it on the Google Play"),
+    },
+  },
 };

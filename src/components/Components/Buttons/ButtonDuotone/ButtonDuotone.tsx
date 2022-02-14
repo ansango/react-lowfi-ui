@@ -6,7 +6,7 @@ import { FC } from "react";
 import * as cn from "./ButtonDuotoneStyles";
 import * as HeroIcons from "@heroicons/react/solid";
 
-import Icon from "../../../Atoms/Icon/Icon";
+import Icon from "../../../Atoms/Icons/Icon/Icon";
 import SpinnerGradient from "../../../Atoms/Spinners/SpinnerGradient/SpinnerGradient";
 import BadgeCounterGradient from "../../../Atoms/Badges/BadgeCounterGradient/BadgeCounterGradient";
 

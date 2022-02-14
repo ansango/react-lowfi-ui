@@ -3,7 +3,7 @@
  */
 
 import { FC } from "react";
-import Icon from "../../Icon/Icon";
+import Icon from "../../Icons/Icon/Icon";
 import * as cn from "./BadgeStyles";
 import * as HeroIcons from "@heroicons/react/solid";
 

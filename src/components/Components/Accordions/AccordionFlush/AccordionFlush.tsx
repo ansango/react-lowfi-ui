@@ -4,7 +4,7 @@
 
 import { FC, useRef, useState } from "react";
 import * as cn from "./AccordionFlushStyles";
-import Icon from "../../../Atoms/Icon/Icon";
+import Icon from "../../../Atoms/Icons/Icon/Icon";
 import * as HeroIcons from "@heroicons/react/outline";
 
 type ItemProps = {

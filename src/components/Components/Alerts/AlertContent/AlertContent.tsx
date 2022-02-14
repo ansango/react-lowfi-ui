@@ -6,7 +6,7 @@ import { FC, useState } from "react";
 import { Button } from "../../Buttons";
 import * as cn from "./AlertContentStyles";
 import * as HeroIcons from "@heroicons/react/outline";
-import Icon from "../../../Atoms/Icon/Icon";
+import Icon from "../../../Atoms/Icons/Icon/Icon";
 
 export type AlertContentProps = {
   /**
