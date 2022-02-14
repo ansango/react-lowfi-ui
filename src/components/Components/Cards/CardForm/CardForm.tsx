@@ -1,11 +1,11 @@
 /**
- * ?Card Component
+ * ?CardForm Component
  */
 
 import { FC } from "react";
-import * as cn from "./CardStyles";
+import * as cn from "./CardFormStyles";
 
-export type CardProps = {
+export type CardFormProps = {
   /**
    * Description of options in Storybook
    */
@@ -21,17 +21,17 @@ export type CardProps = {
 };
 
 /**
- * Description of Card component displayed in Storybook
+ * Description of CardForm component displayed in Storybook
  */
 
-const Card: FC<CardProps> = ({ option = "option__one", className, ...props }) => {
+const CardForm: FC<CardFormProps> = ({ option = "option__one", className, ...props }) => {
   const cnOption = cn.options[option];
   const styles = className ?? cnOption;
   return (
     <div className={styles} {...props}>
-      <span>Card</span>
+      <span>CardForm</span>
     </div>
   );
 };
 
-export default Card;
+export default CardForm;

@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import AccordionFlush from "./AccordionFlush";
 
 export default {
-  title: "Components/Accordion/AccordionFlush",
+  title: "Components/Accordions/AccordionFlush",
   component: AccordionFlush,
   parameters: {
     layout: "centered",

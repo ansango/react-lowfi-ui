@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Accordion from "./Accordion";
 
 export default {
-  title: "Components/Accordion/Accordion",
+  title: "Components/Accordions/Accordion",
   component: Accordion,
   parameters: {
     layout: "centered",

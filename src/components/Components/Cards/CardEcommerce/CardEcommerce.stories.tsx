@@ -1,19 +1,19 @@
 /**
- * ?Card Story
+ * ?CardEcommerce Story
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Card from "./Card";
+import CardEcommerce from "./CardEcommerce";
 
 export default {
-  title: 'Components/Card',
-  component: Card,
+  title: 'Components/Cards/Card Ecommerce',
+  component: CardEcommerce,
   parameters: {
     layout: "centered",
   },
-} as ComponentMeta<typeof Card>;
+} as ComponentMeta<typeof CardEcommerce>;
 
-const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
+const Template: ComponentStory<typeof CardEcommerce> = (args) => <CardEcommerce {...args} />;
 
 export const OptionOne = Template.bind({});
 
