@@ -5,14 +5,12 @@
 import { FC, useEffect, useRef, useState } from "react";
 import * as cn from "./DropdownStyles";
 import { usePopper } from "react-popper";
-import { Placement } from "@popperjs/core";
 import { Button } from "../../Buttons";
 import { ButtonProps } from "../../Buttons/Button/Button";
 
 export type DropdownProps = {
   button: ButtonProps;
   size?: "small" | "base" | "large";
-  placement: Placement;
   options: {
     label: string;
     action: () => void;
@@ -45,19 +43,11 @@ export const Option = ({
   </span>
 );
 
-const Dropdown: FC<DropdownProps> = ({
-  button,
-  size = "base",
-  placement,
-  options,
-  divider,
-  header,
-}) => {
+const Dropdown: FC<DropdownProps> = ({ button, size = "base", options, divider, header }) => {
   const [showPopper, setShowPopper] = useState(false);
   const buttonRef = useRef(null);
   const popperRef = useRef(null);
-  const { styles, attributes } = usePopper(buttonRef.current, popperRef.current, {
-    placement,
+  const { attributes } = usePopper(buttonRef.current, popperRef.current, {
     modifiers: [
       {
         name: "offset",
@@ -84,15 +74,17 @@ const Dropdown: FC<DropdownProps> = ({
   };
 
   return (
-    <div ref={buttonRef}>
-      <Button
-        size={size}
-        action={() => setShowPopper(!showPopper)}
-        {...button}
-        data-testid="dropdown-button"
-      />
+    <div className={cn.container}>
+      <div ref={buttonRef}>
+        <Button
+          size={size}
+          action={() => setShowPopper(!showPopper)}
+          {...button}
+          data-testid="dropdown-button"
+        />
+      </div>
       {showPopper ? (
-        <div ref={popperRef} className={cn.base} style={styles.popper} {...attributes.popper}>
+        <div ref={popperRef} className={cn.base} {...attributes.popper}>
           {header && (
             <div className={cn.hContainer}>
               <span className={cn.hLabel}>{header.label}</span>
