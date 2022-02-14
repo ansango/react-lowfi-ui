@@ -88,7 +88,7 @@ const Alert: FC<AlertProps> = ({
           icon="XIcon"
           classButton={`${cn.btnCloseBase} ${cn.btnCloseKind[kind]}`}
           classIcon={cn.iconClose}
-          onClick={() => setIsOpen(false)}
+          action={() => setIsOpen(false)}
           data-testid="dismiss-button"
         />
       )}

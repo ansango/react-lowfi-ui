@@ -14,7 +14,7 @@ export type ButtonIconProps = {
    */
   icon: keyof typeof HeroIcons;
   /**
-   * small | base | large 
+   * small | base | large
    * @default "base"
    */
   size?: keyof typeof cn.size;
@@ -41,7 +41,7 @@ export type ButtonIconProps = {
   /**
    * onClick event
    */
-  onClick?: () => void;
+  action?: () => void;
   /**
    * className override
    */
@@ -67,14 +67,16 @@ const ButtonIcon: FC<ButtonIconProps> = ({
   rounded = "default",
   classButton,
   classIcon,
+  disabled,
+  action,
   ...props
 }) => {
   const cnKind = kind === "solid" ? cn.solid : cn.outline;
   const mode = `${cnKind[style]} ${cn.size[size]} ${cn.rounded[rounded]}`;
   const styles = classButton ?? mode;
-  const className = props.disabled ? `${styles} ${cn.disabled}` : styles;
+  const className = disabled ? `${styles} ${cn.disabled}` : styles;
   return (
-    <button type="button" className={className} {...props}>
+    <button type="button" className={className} onClick={action} disabled={disabled} {...props}>
       <Icon icon={icon} size="xsmall" classIcon={classIcon} />
     </button>
   );

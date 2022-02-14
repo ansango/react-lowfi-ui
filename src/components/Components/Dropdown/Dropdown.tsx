@@ -77,7 +77,7 @@ const Dropdown: FC<DropdownProps> = ({
 
   return (
     <div ref={buttonRef}>
-      <Button size={size} onClick={() => setShowPopper(!showPopper)} {...button} />
+      <Button size={size} action={() => setShowPopper(!showPopper)} {...button} />
       {showPopper ? (
         <div ref={popperRef} className={cn.base} style={styles.popper} {...attributes.popper}>
           {header && (

@@ -71,7 +71,7 @@ const AlertContent: FC<AlertContentProps> = ({
           size="small"
           label="View more"
           classButton={`${cn.actionButton} ${cn.actionButtonKind[kind]}`}
-          onClick={action}
+          action={action}
         />
 
         {dismissable && (
@@ -79,7 +79,7 @@ const AlertContent: FC<AlertContentProps> = ({
             size="small"
             label="Dismiss"
             classButton={`${cn.actionDismiss} ${cn.actionDismissKind[kind]}`}
-            onClick={() => setIsOpen(false)}
+            action={() => setIsOpen(false)}
             data-testid="dismiss-button"
           />
         )}

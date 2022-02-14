@@ -46,7 +46,7 @@ export type ButtonPropsMonochrome = {
   /**
    * onClick event
    */
-  onClick?: () => void;
+  action?: () => void;
   /**
    * className override
    */
@@ -70,20 +70,25 @@ const ButtonMonochrome: FC<ButtonPropsMonochrome> = ({
   loading = false,
   badge = 0,
   classButton,
+  classIcon,
+  action,
+  disabled = false,
   ...props
 }) => {
   const cnKind = kind === "solid" ? cn.solid : cn.shadow;
   const mode = `flex items-center justify-between ${cnKind[style]} ${cn.size[size]}`;
   const styles = classButton ?? mode;
-  const className = props.disabled ? `${styles} ${cn.disabled}` : styles;
+  const className = disabled ? `${styles} ${cn.disabled}` : styles;
   const iconOrLoading = loading || icon || badge ? "mr-2.5" : "";
   const reSize = size === "xsmall" || size === "small" ? "xsmall" : "small";
   return (
-    <button type="button" className={className} {...props}>
+    <button type="button" className={className} onClick={action} disabled={disabled} {...props}>
       <span className={iconOrLoading}>{label}</span>
-      {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
+      {icon && !loading && <Icon icon={icon} size={reSize} classIcon={classIcon} />}
       {loading && <SpinnerGradient kind="monochrome" style={style} size={reSize} />}
-      {!icon && !loading && <BadgeCounterGradient counter={badge} style={style} kind="monochrome" />}
+      {!icon && !loading && (
+        <BadgeCounterGradient counter={badge} style={style} kind="monochrome" />
+      )}
     </button>
   );
 };

@@ -51,7 +51,7 @@ export type ButtonProps = {
   /**
    * onClick event
    */
-  onClick?: () => void;
+  action?: () => void;
   /**
    * className override
    */
@@ -84,20 +84,25 @@ const Button: FC<ButtonProps> = ({
   loading = false,
   badge = 0,
   classButton,
+  disabled = false,
+  action,
+  classIcon,
+  classBadge,
+  classSpinner,
   ...props
 }) => {
   const cnKind = kind === "solid" ? cn.solid : cn.outline;
   const mode = `flex items-center justify-between ${cnKind[style]} ${cn.size[size]} ${cn.rounded[rounded]}`;
   const styles = classButton ?? mode;
-  const className = props.disabled ? `${styles} ${cn.disabled}` : styles;
+  const className = disabled ? `${styles} ${cn.disabled}` : styles;
   const iconOrLoading = loading || icon || badge ? "mr-2.5" : "";
   const reSize = size === "xsmall" || size === "small" ? "xsmall" : "small";
   return (
-    <button type="button" className={className} {...props}>
+    <button type="button" className={className} disabled={disabled} onClick={action} {...props}>
       <span className={iconOrLoading}>{label}</span>
-      {loading && <Spinner kind={kind} style={style} size={reSize} {...props} />}
-      {icon && !loading && <Icon icon={icon} size={reSize} {...props} />}
-      {!icon && !loading && <BadgeCounter counter={badge} style={style} {...props} />}
+      {loading && <Spinner kind={kind} style={style} size={reSize} classSpinner={classSpinner} />}
+      {icon && !loading && <Icon icon={icon} size={reSize} classIcon={classIcon} />}
+      {!icon && !loading && <BadgeCounter counter={badge} style={style} classBadge={classBadge} />}
     </button>
   );
 };
