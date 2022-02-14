@@ -4,11 +4,13 @@
 
 import { render } from "@testing-library/react";
 
-// import Image from "./Image";
+import Image from "./Image";
 
 describe("<Image />", () => {
   it("should render", () => {
-    render(<div></div>);
-    // expect(screen.getByText("Image")).toBeInTheDocument();
+    render(<Image src="https://via.placeholder.com/150" alt="placeholder" />);
+  });
+  it("should render with Image NextJS", () => {
+    render(<Image src="https://via.placeholder.com/150" alt="placeholder" ImageNextJS={Image} />);
   });
 });
