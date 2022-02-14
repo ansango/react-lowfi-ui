@@ -3,33 +3,48 @@
  */
 
 import { FC } from "react";
+import { Button } from "../../Buttons";
+import { ButtonProps } from "../../Buttons/Button/Button";
+import { Image, Paragraph, Title } from "../Blocks";
 import * as cn from "./CardImageStyles";
 
 export type CardImageProps = {
   /**
-   * Description of options in Storybook
+   * string
    */
-  option?: "option__one" | "option__two" | "option__three";
+  title: string;
   /**
-   * Optional click handler
+   * string | string[]
    */
-  onClick?: () => void;
+  content: string | string[];
   /**
-   * Class Name override
+   * string
    */
-  className?: string;
+  imgUrl: string;
+  /**
+   *
+   */
+  action: ButtonProps;
 };
 
 /**
  * Description of CardImage component displayed in Storybook
  */
 
-const CardImage: FC<CardImageProps> = ({ option = "option__one", className, ...props }) => {
-  const cnOption = cn.options[option];
-  const styles = className ?? cnOption;
+const CardImage: FC<CardImageProps> = ({ title, content, action, imgUrl }) => {
+  const simpleContent = typeof content === "string";
   return (
-    <div className={styles} {...props}>
-      <span>CardImage</span>
+    <div className={cn.card}>
+      <Image src={imgUrl} alt="" />
+      <div className={cn.content}>
+        <Title title={title} />
+        {simpleContent ? (
+          <Paragraph content={content} />
+        ) : (
+          content.map((item, index) => <Paragraph key={index} content={item} />)
+        )}
+        <Button size="small" {...action} />
+      </div>
     </div>
   );
 };

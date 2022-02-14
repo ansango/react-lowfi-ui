@@ -18,10 +18,6 @@ export type CardActionProps = {
    */
   content: string | string[];
   /**
-   * string
-   */
-
-  /**
    *
    */
   action: ButtonProps;

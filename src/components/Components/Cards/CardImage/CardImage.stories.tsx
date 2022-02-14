@@ -4,9 +4,10 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import CardImage from "./CardImage";
+import img from "../../../../../assets/image-1.jpg";
 
 export default {
-  title: 'Components/Cards/Card Image',
+  title: "Components/Cards/Card Image",
   component: CardImage,
   parameters: {
     layout: "centered",
@@ -15,26 +16,33 @@ export default {
 
 const Template: ComponentStory<typeof CardImage> = (args) => <CardImage {...args} />;
 
-export const OptionOne = Template.bind({});
+export const A_Default = Template.bind({});
 
-OptionOne.args = {
-  option: "option__one",
+A_Default.args = {
+  title: "Noteworthy technology acquisitions 2021",
+  content:
+    "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+  imgUrl: img,
+  action: {
+    label: "Learn more",
+    icon: "ArrowRightIcon",
+    onClick: () => alert("Hey"),
+  },
 };
 
-export const OptionTwo = Template.bind({});
+export const B_MultpleParagraphs = Template.bind({});
 
-OptionTwo.args = {
-  option: "option__two",
-};
-
-export const OptionThree = Template.bind({});
-
-OptionThree.args = {
-  option: "option__three",
-};
-
-export const CustomClass = Template.bind({});
-
-CustomClass.args = {
-  className: "bg-yellow-500 text-white font-bold py-2 px-4 rounded max-w-lg cursor-pointer",
+B_MultpleParagraphs.args = {
+  title: "Noteworthy technology acquisitions 2021",
+  content: [
+    "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+    "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+  ],
+  imgUrl: img,
+  action: {
+    label: "Learn more",
+    icon: "ArrowRightIcon",
+    onClick: () => alert("Hey"),
+  },
 };
