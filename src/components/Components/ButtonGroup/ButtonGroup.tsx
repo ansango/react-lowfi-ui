@@ -28,7 +28,8 @@ export type ButtonGroupProps = {
     label: string;
     withIcon?: boolean;
     icon?: keyof typeof HeroIcons;
-    onClick?: () => void;
+    action?: () => void;
+    disabled?: boolean;
   }[];
 };
 
@@ -42,7 +43,7 @@ const ButtonGroup: FC<ButtonGroupProps> = ({ kind = "solid", style = "dark", but
   const cnBase = `${cn.bgBase} ${cn.bgKind[kind]} ${bgStyle}`;
   return (
     <div className={cn.bgContainer} role="group">
-      {buttons.map(({ label, icon, onClick, withIcon }, index) => {
+      {buttons.map(({ label, icon, action, withIcon, disabled = false }, index) => {
         const isFirst = index === 0;
         const isLast = index === length - 1;
         const cnRest = isLast ? cn.bgLast : cn.bgRest;
@@ -51,8 +52,8 @@ const ButtonGroup: FC<ButtonGroupProps> = ({ kind = "solid", style = "dark", but
           <button
             key={index}
             className={cnRender}
-            onClick={onClick}
-            aria-label={label}
+            onClick={action}
+            disabled={disabled}
             data-testid={`btn-group-btn-${index + 1}`}
           >
             {withIcon && icon && <Icon icon={icon} classIcon={cn.iBase} />}

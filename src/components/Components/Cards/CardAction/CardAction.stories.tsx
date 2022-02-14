@@ -24,7 +24,7 @@ A_Default.args = {
   action: {
     label: "Learn more",
     icon: "ArrowRightIcon",
-    onClick: () => alert("Hey"),
+    action: () => alert("Hey"),
   },
 };
 
@@ -40,6 +40,6 @@ B_MultpleParagraphs.args = {
   action: {
     label: "Learn more",
     icon: "ArrowRightIcon",
-    onClick: () => alert("Hey"),
+    action: () => alert("Hey"),
   },
 };

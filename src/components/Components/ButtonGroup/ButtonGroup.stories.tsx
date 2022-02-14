@@ -113,11 +113,11 @@ G_WithClick.args = {
   buttons: [
     {
       label: "Profile",
-      onClick: () => alert("Profile"),
+      action: () => alert("Profile"),
     },
     {
       label: "Settings",
-      onClick: () => alert("Settings"),
+      action: () => alert("Settings"),
     },
   ],
 };
