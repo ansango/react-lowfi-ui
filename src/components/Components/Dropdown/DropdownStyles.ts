@@ -2,12 +2,13 @@
  *? Dropdown Styles
  */
 
-/**
- ** Write your tailwind classes as objects and strings and import them in your component
- */
+export const base =
+  "w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700";
 
-export const options = {
-  option__one: "bg-red-500 text-white font-bold py-2 px-4 rounded max-w-xs cursor-pointer",
-  option__two: "bg-green-500 text-white font-bold py-2 px-4 rounded max-w-sm cursor-pointer",
-  option__three: "bg-blue-500 text-white font-bold py-2 px-4 rounded max-w-md cursor-pointer",
-};
+export const hContainer = "py-3 px-4 text-gray-900 dark:text-white";
+export const hLabel = "block text-sm";
+export const hContent = "block text-sm font-medium truncat";
+export const lBase = "py-1 my-1";
+export const oBase =
+  "block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white cursor-pointer";
+export const dBase = "py-1";

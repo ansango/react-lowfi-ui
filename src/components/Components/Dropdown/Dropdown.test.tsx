@@ -2,13 +2,27 @@
  * ?Dropdown Test
  */
 
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
-import Dropdown from "./Dropdown";
+import Dropdown, { DropdownProps } from "./Dropdown";
+
+const props: DropdownProps = {
+  button: {
+    label: "Dropdown",
+    icon: "ChevronDownIcon",
+    classIcon: "h-5 w-5",
+  },
+  placement: "bottom-start",
+  options: [
+    {
+      label: "Option 1",
+      action: () => alert("Option 1 clicked"),
+    },
+  ],
+};
 
 describe("<Dropdown />", () => {
   it("should render", () => {
-    render(<Dropdown />);
-    expect(screen.getByText("Dropdown")).toBeInTheDocument();
-  })
-})
+    render(<Dropdown {...props} />);
+  });
+});
