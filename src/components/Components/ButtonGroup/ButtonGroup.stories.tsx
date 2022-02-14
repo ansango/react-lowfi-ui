@@ -32,7 +32,7 @@ A_Default.args = {
     {
       label: "Downloads",
       withIcon: true,
-      icon: "DownloadIcon"
+      icon: "DownloadIcon",
     },
   ],
 };
@@ -118,6 +118,20 @@ G_WithClick.args = {
     {
       label: "Settings",
       action: () => alert("Settings"),
+    },
+  ],
+};
+
+export const H_Disabled = Template.bind({});
+
+H_Disabled.args = {
+  buttons: [
+    {
+      label: "Profile",
+    },
+    {
+      label: "Settings",
+      disabled: true,
     },
   ],
 };

@@ -48,10 +48,11 @@ const ButtonGroup: FC<ButtonGroupProps> = ({ kind = "solid", style = "dark", but
         const isLast = index === length - 1;
         const cnRest = isLast ? cn.bgLast : cn.bgRest;
         const cnRender = isFirst ? `${cnBase} ${cn.bgFirst}` : `${cnBase} ${cnRest}`;
+        const rendFull = disabled ? `${cnRender} ${cn.disabled}` : cnRender;
         return (
           <button
             key={index}
-            className={cnRender}
+            className={rendFull}
             onClick={action}
             disabled={disabled}
             data-testid={`btn-group-btn-${index + 1}`}

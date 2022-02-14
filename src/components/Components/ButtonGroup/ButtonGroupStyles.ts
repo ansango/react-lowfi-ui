@@ -32,3 +32,5 @@ export enum bgStyleOutline {
 }
 
 export const iBase = "mr-2 w-4 h-4 fill-current";
+
+export const disabled = "opacity-75 cursor-not-allowed";

@@ -18,6 +18,21 @@ const props: ButtonGroupProps = {
   ],
 };
 
+const props2: ButtonGroupProps = {
+  kind: "outline",
+  buttons: [
+    {
+      withIcon: true,
+      icon: "AcademicCapIcon",
+      label: "Profile",
+    },
+    {
+      label: "Settings",
+      disabled: true,
+    },
+  ],
+};
+
 describe("<ButtonGroup />", () => {
   it("should render", () => {
     const { container } = render(<ButtonGroup {...props} />);
@@ -27,7 +42,7 @@ describe("<ButtonGroup />", () => {
     expect(lastButton).toBeTruthy();
   });
   it("should render with kind=outline", () => {
-    const { container } = render(<ButtonGroup {...props} />);
+    const { container } = render(<ButtonGroup {...props2} />);
     const firstButton = queryByTestId(container, "btn-group-btn-1");
     const lastButton = queryByTestId(container, "btn-group-btn-2");
     expect(firstButton).toBeTruthy();
