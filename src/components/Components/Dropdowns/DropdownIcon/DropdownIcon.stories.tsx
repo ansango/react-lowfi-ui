@@ -19,7 +19,6 @@ export const A_Default = Template.bind({});
 
 A_Default.args = {
   button: {
-    label: "Dropdown",
     icon: "ChevronDownIcon",
     classIcon: "h-5 w-5",
   },
@@ -36,7 +35,6 @@ export const B_Divider = Template.bind({});
 
 B_Divider.args = {
   button: {
-    label: "Dropdown",
     icon: "ChevronDownIcon",
     classIcon: "h-5 w-5",
   },
@@ -57,7 +55,6 @@ export const C_Header = Template.bind({});
 
 C_Header.args = {
   button: {
-    label: "Dropdown",
     icon: "ChevronDownIcon",
     classIcon: "h-5 w-5",
   },
