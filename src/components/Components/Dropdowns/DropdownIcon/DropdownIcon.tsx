@@ -1,16 +1,17 @@
 /**
- * ?Dropdown Component
+ * ?DropdownIcon Component
  */
 
-import { FC, useEffect, useRef, useState } from "react";
-import * as cn from "./DropdownStyles";
-import { usePopper } from "react-popper";
 import { Placement } from "@popperjs/core";
-import { Button } from "../Buttons";
-import { ButtonProps } from "../Buttons/Button/Button";
+import { FC, useEffect, useRef, useState } from "react";
+import { usePopper } from "react-popper";
+import ButtonIcon, { ButtonIconProps } from "../../Buttons/ButtonIcon/ButtonIcon";
 
-export type DropdownProps = {
-  button: ButtonProps;
+import { Option } from "../Dropdown/Dropdown";
+import * as cn from "./DropdownIconStyles";
+
+export type DropdownIconProps = {
+  button: ButtonIconProps;
   size?: "small" | "base" | "large";
   placement: Placement;
   options: {
@@ -28,24 +29,10 @@ export type DropdownProps = {
 };
 
 /**
- * Description of Dropdown component displayed in Storybook
+ * Description of DropdownIcon component displayed in Storybook
  */
 
-export const Option = ({
-  label,
-  action,
-  index,
-}: {
-  label: string;
-  action: () => void;
-  index: number;
-}) => (
-  <span className={cn.oBase} onClick={action} data-testid={`dropdown-option-${index + 1}`}>
-    {label}
-  </span>
-);
-
-const Dropdown: FC<DropdownProps> = ({
+const DropdownIcon: FC<DropdownIconProps> = ({
   button,
   size = "base",
   placement,
@@ -85,7 +72,7 @@ const Dropdown: FC<DropdownProps> = ({
 
   return (
     <div ref={buttonRef}>
-      <Button
+      <ButtonIcon
         size={size}
         action={() => setShowPopper(!showPopper)}
         {...button}
@@ -117,4 +104,4 @@ const Dropdown: FC<DropdownProps> = ({
   );
 };
 
-export default Dropdown;
+export default DropdownIcon;

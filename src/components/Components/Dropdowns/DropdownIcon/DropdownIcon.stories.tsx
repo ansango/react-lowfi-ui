@@ -1,19 +1,19 @@
 /**
- * ?Dropdown Story
+ * ?DropdownIcon Story
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Dropdown from "./Dropdown";
+import DropdownIcon from "./DropdownIcon";
 
 export default {
-  title: "Components/Dropdown",
-  component: Dropdown,
+  title: "Components/Dropdowns/Dropdown Icon",
+  component: DropdownIcon,
   parameters: {
     layout: "centered",
   },
-} as ComponentMeta<typeof Dropdown>;
+} as ComponentMeta<typeof DropdownIcon>;
 
-const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
+const Template: ComponentStory<typeof DropdownIcon> = (args) => <DropdownIcon {...args} />;
 
 export const A_Default = Template.bind({});
 
@@ -82,7 +82,6 @@ export const D_Custom = Template.bind({});
 
 D_Custom.args = {
   button: {
-    label: "Dropdown",
     classButton: "flex items-center text-gray-800 dark:text-gray-600",
     icon: "ChevronDownIcon",
     classIcon: "h-4 w-4",
@@ -100,7 +99,6 @@ export const E_SizeSmall = Template.bind({});
 
 E_SizeSmall.args = {
   button: {
-    label: "Dropdown",
     icon: "ChevronDownIcon",
   },
   size: "small",
@@ -117,7 +115,6 @@ export const F_SizeLarge = Template.bind({});
 
 F_SizeLarge.args = {
   button: {
-    label: "Dropdown",
     icon: "ChevronDownIcon",
   },
   size: "large",

@@ -49,6 +49,8 @@ export const parameters = {
         "Components/Cards/Card List",
         "Components/Cards/Card Pricing",
         "Components/Cards/Card Feature",
+        "Components/Dropdowns/Dropdown",
+        "Components/Dropdowns/Dropdown Icon",
 
       ]);
     },
