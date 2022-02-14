@@ -6,11 +6,8 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import CardInteraction from "./CardInteraction";
 
 export default {
-  title: 'Components/Cards/Card Interaction',
+  title: "Components/Cards/Card Interaction",
   component: CardInteraction,
-  parameters: {
-    layout: "centered",
-  },
 } as ComponentMeta<typeof CardInteraction>;
 
 const Template: ComponentStory<typeof CardInteraction> = (args) => <CardInteraction {...args} />;
