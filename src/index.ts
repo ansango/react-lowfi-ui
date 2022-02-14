@@ -13,7 +13,13 @@ import {
 import ButtonGroup from "./components/Components/ButtonGroup/ButtonGroup";
 
 // TODO: Still import cards
-import { Card, CardAction, CardHorizontal, CardImage } from "./components/Components/Cards";
+import {
+  Card,
+  CardAction,
+  CardHorizontal,
+  CardImage,
+  CardInteraction,
+} from "./components/Components/Cards";
 
 import { Dropdown, DropdownIcon } from "./components/Components/Dropdowns";
 
@@ -33,6 +39,7 @@ export {
   CardAction,
   CardHorizontal,
   CardImage,
+  CardInteraction,
   Dropdown,
   DropdownIcon,
 };
