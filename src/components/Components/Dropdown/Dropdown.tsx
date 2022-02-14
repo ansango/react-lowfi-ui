@@ -31,8 +31,16 @@ export type DropdownProps = {
  * Description of Dropdown component displayed in Storybook
  */
 
-export const Option = ({ label, action }: { label: string; action: () => void }) => (
-  <span className={cn.oBase} onClick={action}>
+export const Option = ({
+  label,
+  action,
+  index,
+}: {
+  label: string;
+  action: () => void;
+  index: number;
+}) => (
+  <span className={cn.oBase} onClick={action} data-testid={`dropdown-option-${index + 1}`}>
     {label}
   </span>
 );
@@ -40,7 +48,7 @@ export const Option = ({ label, action }: { label: string; action: () => void })
 const Dropdown: FC<DropdownProps> = ({
   button,
   size = "base",
-  placement = "bottom",
+  placement,
   options,
   divider,
   header,
@@ -77,7 +85,12 @@ const Dropdown: FC<DropdownProps> = ({
 
   return (
     <div ref={buttonRef}>
-      <Button size={size} action={() => setShowPopper(!showPopper)} {...button} />
+      <Button
+        size={size}
+        action={() => setShowPopper(!showPopper)}
+        {...button}
+        data-testid="dropdown-button"
+      />
       {showPopper ? (
         <div ref={popperRef} className={cn.base} style={styles.popper} {...attributes.popper}>
           {header && (
@@ -89,13 +102,13 @@ const Dropdown: FC<DropdownProps> = ({
           <ul className={cn.lBase}>
             {options.map((option, index) => (
               <li key={index}>
-                <Option {...option} />
+                <Option {...{ ...option, index }} />
               </li>
             ))}
           </ul>
           {divider && (
             <div className={cn.dBase}>
-              <Option {...divider} />
+              <Option {...{ ...divider, index: 1 }} />
             </div>
           )}
         </div>
