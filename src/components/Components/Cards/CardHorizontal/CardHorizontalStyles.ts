@@ -2,12 +2,10 @@
  *? CardHorizontal Styles
  */
 
-/**
- ** Write your tailwind classes as objects and strings and import them in your component
- */
+export const card =
+  "flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700";
 
-export const options = {
-  option__one: "bg-red-500 text-white font-bold py-2 px-4 rounded max-w-xs cursor-pointer",
-  option__two: "bg-green-500 text-white font-bold py-2 px-4 rounded max-w-sm cursor-pointer",
-  option__three: "bg-blue-500 text-white font-bold py-2 px-4 rounded max-w-md cursor-pointer",
-};
+export const img =
+  "object-fill w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg";
+
+export const content = "flex flex-col justify-between p-4 leading-normal";

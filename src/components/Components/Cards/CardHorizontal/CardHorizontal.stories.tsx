@@ -4,9 +4,9 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import CardHorizontal from "./CardHorizontal";
-
+import img from "../../../../../assets/image-4.jpg";
 export default {
-  title: 'Components/Cards/Card Horizontal',
+  title: "Components/Cards/Card Horizontal",
   component: CardHorizontal,
   parameters: {
     layout: "centered",
@@ -15,26 +15,12 @@ export default {
 
 const Template: ComponentStory<typeof CardHorizontal> = (args) => <CardHorizontal {...args} />;
 
-export const OptionOne = Template.bind({});
+export const A_Default = Template.bind({});
 
-OptionOne.args = {
-  option: "option__one",
-};
-
-export const OptionTwo = Template.bind({});
-
-OptionTwo.args = {
-  option: "option__two",
-};
-
-export const OptionThree = Template.bind({});
-
-OptionThree.args = {
-  option: "option__three",
-};
-
-export const CustomClass = Template.bind({});
-
-CustomClass.args = {
-  className: "bg-yellow-500 text-white font-bold py-2 px-4 rounded max-w-lg cursor-pointer",
+A_Default.args = {
+  title: "Noteworthy technology acquisitions 2021",
+  content:
+    "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order. Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order. Here are the ",
+  imgUrl: img,
+  action: () => alert("Hey"),
 };

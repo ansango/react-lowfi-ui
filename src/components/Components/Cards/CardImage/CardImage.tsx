@@ -35,7 +35,7 @@ const CardImage: FC<CardImageProps> = ({ title, content, action, imgUrl }) => {
   const simpleContent = typeof content === "string";
   return (
     <div className={cn.card}>
-      <Image src={imgUrl} alt="" />
+      <Image src={imgUrl} alt="" className={cn.img} />
       <div className={cn.content}>
         <Title title={title} />
         {simpleContent ? (

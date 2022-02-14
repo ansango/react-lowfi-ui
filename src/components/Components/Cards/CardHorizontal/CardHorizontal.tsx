@@ -3,33 +3,43 @@
  */
 
 import { FC } from "react";
+import { Image, Paragraph, Title } from "../Blocks";
 import * as cn from "./CardHorizontalStyles";
 
 export type CardHorizontalProps = {
   /**
-   * Description of options in Storybook
+   * string
    */
-  option?: "option__one" | "option__two" | "option__three";
+  title: string;
   /**
-   * Optional click handler
+   * string
+   * max length: 210
    */
-  onClick?: () => void;
+  content: string;
   /**
-   * Class Name override
+   * string
    */
-  className?: string;
+  imgUrl: string;
+  /**
+   *
+   */
+  action: () => void;
 };
 
 /**
  * Description of CardHorizontal component displayed in Storybook
  */
 
-const CardHorizontal: FC<CardHorizontalProps> = ({ option = "option__one", className, ...props }) => {
-  const cnOption = cn.options[option];
-  const styles = className ?? cnOption;
+const CardHorizontal: FC<CardHorizontalProps> = ({ title, content, action, imgUrl }) => {
+  const textContent = content.length > 210 ? `${content.substring(0, 210)}...` : content;
   return (
-    <div className={styles} {...props}>
-      <span>CardHorizontal</span>
+    <div className={cn.card} onClick={action}>
+      <Image src={imgUrl} alt="" className={cn.img} />
+
+      <div className={cn.content}>
+        <Title title={title} />
+        <Paragraph content={textContent} />
+      </div>
     </div>
   );
 };
