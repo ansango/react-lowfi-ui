@@ -3,8 +3,11 @@
  */
 export const container = "relative";
 export const base =
-  "absolute mt-2 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700";
-
+  "absolute z-10 mt-2 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700";
+export enum placement {
+  start = "left-0",
+  end = "right-0",
+}
 export const hContainer = "py-3 px-4 text-gray-900 dark:text-white";
 export const hLabel = "block text-sm";
 export const hContent = "block text-sm font-medium truncat";

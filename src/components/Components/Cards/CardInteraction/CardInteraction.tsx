@@ -33,7 +33,7 @@ const CardInteraction: FC<CardInteractionProps> = () => {
           button={{
             icon: "DotsVerticalIcon",
           }}
-          placement="bottom-start"
+          placement="end"
           options={[
             {
               label: "Option One",

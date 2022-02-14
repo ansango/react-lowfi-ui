@@ -12,7 +12,22 @@ const props: DropdownProps = {
     icon: "ChevronDownIcon",
     classIcon: "h-5 w-5",
   },
-  placement: "bottom-start",
+  placement: "start",
+  options: [
+    {
+      label: "Option 1",
+      action: () => alert("Option 1 clicked"),
+    },
+  ],
+};
+
+const props2: DropdownProps = {
+  button: {
+    label: "Dropdown",
+    icon: "ChevronDownIcon",
+    classIcon: "h-5 w-5",
+  },
+  placement: "end",
   options: [
     {
       label: "Option 1",
@@ -71,6 +86,24 @@ describe("<Dropdown />", () => {
         }}
       />
     );
+    const dropdown = queryByTestId(container, "dropdown-button");
+    if (dropdown) {
+      dropdown.click();
+      const options = queryByTestId(container, "dropdown-option-1");
+      expect(options).toBeTruthy();
+    }
+  });
+  it("should render with placement start", () => {
+    const { container } = render(<Dropdown {...props} />);
+    const dropdown = queryByTestId(container, "dropdown-button");
+    if (dropdown) {
+      dropdown.click();
+      const options = queryByTestId(container, "dropdown-option-1");
+      expect(options).toBeTruthy();
+    }
+  });
+  it("should render with placement end", () => {
+    const { container } = render(<Dropdown {...props2} />);
     const dropdown = queryByTestId(container, "dropdown-button");
     if (dropdown) {
       dropdown.click();

@@ -11,6 +11,7 @@ import * as cn from "./DropdownIconStyles";
 
 export type DropdownIconProps = {
   button: ButtonIconProps;
+  placement: "start" | "end";
   size?: "small" | "base" | "large";
   options: {
     label: string;
@@ -32,6 +33,7 @@ export type DropdownIconProps = {
 
 const DropdownIcon: FC<DropdownIconProps> = ({
   button,
+  placement,
   size = "base",
   options,
   divider,
@@ -40,7 +42,7 @@ const DropdownIcon: FC<DropdownIconProps> = ({
   const [showPopper, setShowPopper] = useState(false);
   const buttonRef = useRef(null);
   const popperRef = useRef(null);
-  const { attributes } = usePopper(buttonRef.current, popperRef.current, {
+  const { styles, attributes } = usePopper(buttonRef.current, popperRef.current, {
     modifiers: [
       {
         name: "offset",
@@ -77,7 +79,12 @@ const DropdownIcon: FC<DropdownIconProps> = ({
         />
       </div>
       {showPopper ? (
-        <div ref={popperRef} className={cn.base} {...attributes.popper}>
+        <div
+          ref={popperRef}
+          className={`${cn.base} ${cn.placement[placement]}`}
+          style={styles}
+          {...attributes.popper}
+        >
           {header && (
             <div className={cn.hContainer}>
               <span className={cn.hLabel}>{header.label}</span>

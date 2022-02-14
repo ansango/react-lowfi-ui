@@ -23,7 +23,7 @@ A_Default.args = {
     icon: "ChevronDownIcon",
     classIcon: "h-5 w-5",
   },
-  placement: "bottom-start",
+  placement: "start",
   options: [
     {
       label: "Option 1",
@@ -40,7 +40,7 @@ B_Divider.args = {
     icon: "ChevronDownIcon",
     classIcon: "h-5 w-5",
   },
-  placement: "bottom-start",
+  placement: "start",
   options: [
     {
       label: "Option 1",
@@ -61,7 +61,7 @@ C_Header.args = {
     icon: "ChevronDownIcon",
     classIcon: "h-5 w-5",
   },
-  placement: "bottom-start",
+  placement: "start",
   options: [
     {
       label: "Option 1",
@@ -87,7 +87,7 @@ D_Custom.args = {
     icon: "ChevronDownIcon",
     classIcon: "h-4 w-4",
   },
-  placement: "bottom-start",
+  placement: "start",
   options: [
     {
       label: "Option 1",
@@ -104,7 +104,7 @@ E_SizeSmall.args = {
     icon: "ChevronDownIcon",
   },
   size: "small",
-  placement: "bottom-start",
+  placement: "start",
   options: [
     {
       label: "Option 1",
@@ -121,7 +121,7 @@ F_SizeLarge.args = {
     icon: "ChevronDownIcon",
   },
   size: "large",
-  placement: "bottom-start",
+  placement: "start",
   options: [
     {
       label: "Option 1",

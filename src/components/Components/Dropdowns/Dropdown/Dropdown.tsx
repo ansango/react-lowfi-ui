@@ -10,6 +10,7 @@ import { ButtonProps } from "../../Buttons/Button/Button";
 
 export type DropdownProps = {
   button: ButtonProps;
+  placement: "start" | "end";
   size?: "small" | "base" | "large";
   options: {
     label: string;
@@ -43,7 +44,14 @@ export const Option = ({
   </span>
 );
 
-const Dropdown: FC<DropdownProps> = ({ button, size = "base", options, divider, header }) => {
+const Dropdown: FC<DropdownProps> = ({
+  button,
+  placement,
+  size = "base",
+  options,
+  divider,
+  header,
+}) => {
   const [showPopper, setShowPopper] = useState(false);
   const buttonRef = useRef(null);
   const popperRef = useRef(null);
@@ -84,7 +92,11 @@ const Dropdown: FC<DropdownProps> = ({ button, size = "base", options, divider, 
         />
       </div>
       {showPopper ? (
-        <div ref={popperRef} className={cn.base} {...attributes.popper}>
+        <div
+          ref={popperRef}
+          className={`${cn.base} ${cn.placement[placement]}`}
+          {...attributes.popper}
+        >
           {header && (
             <div className={cn.hContainer}>
               <span className={cn.hLabel}>{header.label}</span>
