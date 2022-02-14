@@ -5,7 +5,7 @@
 import { FC } from "react";
 import { Button } from "../../Buttons";
 import { ButtonProps } from "../../Buttons/Button/Button";
-import { Image, Paragraph, Title } from "../Blocks";
+import { Image, Paragraph, Title } from "../../../Atoms/Blocks";
 import * as cn from "./CardImageStyles";
 
 export type CardImageProps = {

@@ -4,6 +4,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import CardInteraction from "./CardInteraction";
+import imgDemo from "../../../../../assets/profile-picture-3.jpg";
 
 export default {
   title: "Components/Cards/Card Interaction",
@@ -12,26 +13,109 @@ export default {
 
 const Template: ComponentStory<typeof CardInteraction> = (args) => <CardInteraction {...args} />;
 
-export const OptionOne = Template.bind({});
+export const A_Default = Template.bind({});
 
-OptionOne.args = {
-  option: "option__one",
+A_Default.args = {
+  header: {
+    activeHeader: false,
+  },
+  content: {
+    title: "Bonnie Green",
+    subtitle: "Visual Designer",
+  },
+  actions: {
+    activeActions: false,
+  },
 };
 
-export const OptionTwo = Template.bind({});
+export const B_With_Avatar = Template.bind({});
 
-OptionTwo.args = {
-  option: "option__two",
+B_With_Avatar.args = {
+  header: {
+    activeHeader: false,
+  },
+  content: {
+    avatar: imgDemo,
+    title: "Bonnie Green",
+    subtitle: "Visual Designer",
+  },
+  actions: {
+    activeActions: false,
+  },
+};
+    
+
+
+export const C_With_Header = Template.bind({});
+
+C_With_Header.args = {
+  header: {
+    activeHeader: true,
+    dropIcon: "DotsVerticalIcon",
+    options: [
+      {
+        label: "Edit",
+        action: () => alert("Edit"),
+      },
+    ],
+  },
+  content: {
+    avatar: imgDemo,
+    title: "Bonnie Green",
+    subtitle: "Visual Designer",
+  },
+  actions: {
+    activeActions: false,
+  },
 };
 
-export const OptionThree = Template.bind({});
+export const D_With_Actions = Template.bind({});
 
-OptionThree.args = {
-  option: "option__three",
+D_With_Actions.args = {
+  header: {
+    activeHeader: false,
+  },
+  content: {
+    avatar: imgDemo,
+    title: "Bonnie Green",
+    subtitle: "Visual Designer",
+  },
+  actions: {
+    activeActions: true,
+    primary: {
+      label: "Edit",
+      action: () => alert("Edit"),
+    },
+  },
 };
 
-export const CustomClass = Template.bind({});
+export const E_With_Header_And_Actions = Template.bind({});
 
-CustomClass.args = {
-  className: "bg-yellow-500 text-white font-bold py-2 px-4 rounded max-w-lg cursor-pointer",
+E_With_Header_And_Actions.args = {
+  header: {
+    activeHeader: true,
+    dropIcon: "DotsVerticalIcon",
+    options: [
+      {
+        label: "Edit",
+        action: () => alert("Edit"),
+      },
+    ],
+  },
+  content: {
+    avatar: imgDemo,
+    title: "Bonnie Green",
+    subtitle: "Visual Designer",
+  },
+  actions: {
+    activeActions: true,
+    primary: {
+      label: "Add friend",
+      action: () => alert("Add friend"),
+    },
+    secondary: {
+      label: "Message",
+      action: () => alert("Message"),
+    },
+  },
 };

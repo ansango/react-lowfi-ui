@@ -3,7 +3,7 @@
  */
 
 import { FC } from "react";
-import { Title, Paragraph } from "../Blocks";
+import { Title, Paragraph } from "../../../Atoms/Blocks";
 import * as cn from "./CardStyles";
 
 export type CardProps = {

@@ -5,7 +5,7 @@
 import { FC } from "react";
 import { Button } from "../../Buttons";
 import { ButtonProps } from "../../Buttons/Button/Button";
-import { Paragraph, Title } from "../Blocks";
+import { Paragraph, Title } from "../../../Atoms/Blocks";
 import * as cn from "./CardActionStyles";
 
 export type CardActionProps = {

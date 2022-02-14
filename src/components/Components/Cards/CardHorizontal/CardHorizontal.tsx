@@ -3,7 +3,7 @@
  */
 
 import { FC } from "react";
-import { Image, Paragraph, Title } from "../Blocks";
+import { Image, Paragraph, Title } from "../../../Atoms/Blocks";
 import * as cn from "./CardHorizontalStyles";
 
 export type CardHorizontalProps = {

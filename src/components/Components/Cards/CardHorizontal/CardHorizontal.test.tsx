@@ -5,7 +5,7 @@
 import { render } from "@testing-library/react";
 
 import CardHorizontal, { CardHorizontalProps } from "./CardHorizontal";
-import { Paragraph } from "../Blocks";
+import { Paragraph } from "../../../Atoms/Blocks";
 import { mount } from "enzyme";
 
 const props: CardHorizontalProps = {

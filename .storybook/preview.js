@@ -32,6 +32,7 @@ export const parameters = {
         "Components/Alerts/Alert Content",
         "Components/Accordions/Accordion",
         "Components/Accordions/Accordion Flush",
+        "Components/Avatar",
         "Components/Breadcrumb",
         "Components/Buttons/Button",
         "Components/Buttons/Button Icon",
