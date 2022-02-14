@@ -1,13 +1,15 @@
 /**
  *? CardEcommerce Styles
  */
-
-/**
- ** Write your tailwind classes as objects and strings and import them in your component
- */
-
-export const options = {
-  option__one: "bg-red-500 text-white font-bold py-2 px-4 rounded max-w-xs cursor-pointer",
-  option__two: "bg-green-500 text-white font-bold py-2 px-4 rounded max-w-sm cursor-pointer",
-  option__three: "bg-blue-500 text-white font-bold py-2 px-4 rounded max-w-md cursor-pointer",
-};
+export const nIcontainer = "flex justify-center cursor-pointer p-8";
+export const nImg = "p-8 rounded-t-lg h-72 object-fill bg-slate-200 dark:bg-slate-700 w-full";
+export const card = "max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700";
+export const cIcontainer = "flex justify-center cursor-pointer";
+export const cImg = "p-8 rounded-t-lg h-72 object-fill";
+export const cContainer = "px-5 pb-5";
+export const cTitle = "text-xl font-semibold tracking-tight text-gray-900 dark:text-white cursor-pointer";
+export const cRating = "flex items-center mt-2.5 mb-5";
+export const cStars = "flex items-center mr-2";
+export const cStar = "h-5 w-5 text-yellow-300";
+export const cPriceContainer = "flex justify-between items-center";
+export const cPrice = "text-3xl font-bold text-gray-900 dark:text-white";

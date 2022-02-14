@@ -4,9 +4,9 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import CardEcommerce from "./CardEcommerce";
-
+import imgDemo from "../../../../../assets/product-1.png";
 export default {
-  title: 'Components/Cards/Card Ecommerce',
+  title: "Components/Cards/Card Ecommerce",
   component: CardEcommerce,
   parameters: {
     layout: "centered",
@@ -15,26 +15,33 @@ export default {
 
 const Template: ComponentStory<typeof CardEcommerce> = (args) => <CardEcommerce {...args} />;
 
-export const OptionOne = Template.bind({});
+export const A_Default = Template.bind({});
 
-OptionOne.args = {
-  option: "option__one",
+A_Default.args = {
+  onDetail: () => alert("Detail"),
+  product: {
+    title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
+    price: 1299.0,
+    image: imgDemo,
+    rating: 5,
+  },
+  action: {
+    label: "Add to Cart",
+    action: () => alert("Add to cart"),
+  },
 };
 
-export const OptionTwo = Template.bind({});
+export const B_WithNoImage = Template.bind({});
 
-OptionTwo.args = {
-  option: "option__two",
-};
-
-export const OptionThree = Template.bind({});
-
-OptionThree.args = {
-  option: "option__three",
-};
-
-export const CustomClass = Template.bind({});
-
-CustomClass.args = {
-  className: "bg-yellow-500 text-white font-bold py-2 px-4 rounded max-w-lg cursor-pointer",
+B_WithNoImage.args = {
+  onDetail: () => alert("Detail"),
+  product: {
+    title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
+    price: 1299.0,
+    rating: 5,
+  },
+  action: {
+    label: "Add to Cart",
+    action: () => alert("Add to cart"),
+  },
 };
