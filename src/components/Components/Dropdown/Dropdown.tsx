@@ -2,7 +2,7 @@
  * ?Dropdown Component
  */
 
-import { FC, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import * as cn from "./DropdownStyles";
 import { usePopper } from "react-popper";
 import { Placement } from "@popperjs/core";
@@ -59,6 +59,21 @@ const Dropdown: FC<DropdownProps> = ({
       },
     ],
   });
+  useEffect(() => {
+    document.addEventListener("click", clickOut);
+    return () => {
+      document.removeEventListener("click", clickOut);
+    };
+  }, []);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const clickOut = (event: any) => {
+    const path = event.path || (event.composedPath && event.composedPath());
+
+    if (!path.includes(buttonRef.current)) {
+      setShowPopper(false);
+    }
+  };
 
   return (
     <div ref={buttonRef}>
