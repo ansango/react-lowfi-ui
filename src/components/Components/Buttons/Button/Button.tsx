@@ -31,6 +31,10 @@ export type ButtonProps = {
    */
   rounded?: keyof typeof cn.rounded;
   /**
+   * true | false
+   */
+  fullWidth?: boolean;
+  /**
    * HeroIcons
    */
   icon?: keyof typeof HeroIcons;
@@ -89,10 +93,12 @@ const Button: FC<ButtonProps> = ({
   classIcon,
   classBadge,
   classSpinner,
+  fullWidth = false,
   ...props
 }) => {
   const cnKind = kind === "solid" ? cn.solid : cn.outline;
-  const mode = `flex items-center justify-between ${cnKind[style]} ${cn.size[size]} ${cn.rounded[rounded]}`;
+  const cnFullWidth = fullWidth ? cn.fullWidth : "";
+  const mode = `flex items-center justify-between ${cnKind[style]} ${cn.size[size]} ${cn.rounded[rounded]} ${cnFullWidth}`;
   const styles = classButton ?? mode;
   const className = disabled ? `${styles} ${cn.disabled}` : styles;
   const iconOrLoading = loading || icon || badge ? "mr-2.5" : "";
