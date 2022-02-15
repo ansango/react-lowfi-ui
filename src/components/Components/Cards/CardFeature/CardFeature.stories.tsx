@@ -3,38 +3,71 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Icon, IconSimple } from "../../../..";
+import Badge from "../../../Atoms/Badges/Badge/Badge";
 import CardFeature from "./CardFeature";
 
 export default {
-  title: 'Components/Cards/Card Feature',
+  title: "Components/Cards/Card Feature",
   component: CardFeature,
-  parameters: {
-    layout: "centered",
-  },
 } as ComponentMeta<typeof CardFeature>;
 
 const Template: ComponentStory<typeof CardFeature> = (args) => <CardFeature {...args} />;
 
-export const OptionOne = Template.bind({});
+export const A_DefaultIcon = Template.bind({});
 
-OptionOne.args = {
-  option: "option__one",
+A_DefaultIcon.args = {
+  title: "Choose your plan",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  data: [
+    {
+      name: "Basic",
+      icon: <Icon icon="CubeIcon" />,
+    },
+    {
+      name: "Advanced",
+      icon: <Icon icon="BadgeCheckIcon" />,
+      featured: true,
+      badge: <Badge label="Popular" />,
+      onDetail: () => alert("Detail"),
+    },
+    {
+      name: "Pro",
+      icon: <Icon icon="CubeTransparentIcon" />,
+    },
+  ],
+  help: {
+    text: "Need help?",
+    onHelp: () => alert("Need help!"),
+  },
 };
 
-export const OptionTwo = Template.bind({});
+export const B_DefaultIconSimple = Template.bind({});
 
-OptionTwo.args = {
-  option: "option__two",
-};
-
-export const OptionThree = Template.bind({});
-
-OptionThree.args = {
-  option: "option__three",
-};
-
-export const CustomClass = Template.bind({});
-
-CustomClass.args = {
-  className: "bg-yellow-500 text-white font-bold py-2 px-4 rounded max-w-lg cursor-pointer",
+B_DefaultIconSimple.args = {
+  title: "Choose your partner",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  data: [
+    {
+      name: "Google Cloud",
+      icon: <IconSimple icon="Googlecloud" />,
+    },
+    {
+      name: "Amazon Web Services",
+      icon: <IconSimple icon="Amazonaws" />,
+      featured: true,
+      badge: <Badge label="Popular" />,
+      onDetail: () => alert("Detail"),
+    },
+    {
+      name: "Microsoft Azure",
+      icon: <IconSimple icon="Microsoftazure" />,
+    },
+  ],
+  help: {
+    text: "Need help?",
+    onHelp: () => alert("Need help!"),
+  },
 };

@@ -15,11 +15,11 @@ export type BadgeProps = {
   /**
    * default | larger
    */
-  size?: "default" | "large";
+  size?: keyof typeof cn.size
   /**
    * default | withIcon | iconOnly
    */
-  kind?: "default" | "withIcon" | "iconOnly";
+  kind?: keyof typeof cn.kind
   /**
    * Hero Icons
    */
@@ -27,7 +27,7 @@ export type BadgeProps = {
   /**
    * default | dark | red | green | yellow | indigo | purple | pink
    */
-  style?: "default" | "dark" | "red" | "green" | "yellow" | "indigo" | "purple" | "pink";
+  style?: keyof typeof cn.style
   /**
    * true | false
    * @default false
