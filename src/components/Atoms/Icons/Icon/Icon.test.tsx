@@ -4,7 +4,12 @@
 
 import { render } from "@testing-library/react";
 import { mount } from "enzyme";
-import Icon from "./Icon";
+import Icon, { IconProps } from "./Icon";
+
+const props: IconProps = {
+  icon: "ArchiveIcon",
+  size: "small",
+};
 
 describe("<Icon />", () => {
   it("should render", () => {
@@ -22,6 +27,10 @@ describe("<Icon />", () => {
   });
   it("should render with small size", () => {
     const { container } = render(<Icon icon="ArrowDownIcon" size="small" />);
+    expect(container.firstChild).toHaveClass("h-6 w-6");
+  });
+  it("should render with props passed", () => {
+    const { container } = render(<Icon {...props} />);
     expect(container.firstChild).toHaveClass("h-6 w-6");
   });
 });

@@ -46,4 +46,8 @@ describe("Button Component", () => {
     expect(wrapper.find(Icon)).toHaveLength(1);
     expect(wrapper.find(Icon).props().icon).toBe("ArchiveIcon");
   });
+  it("should render with fullWidth", () => {
+    const wrapper = mount(<Button label="Test" fullWidth />);
+    expect(wrapper.props().fullWidth).toBe(true);
+  });
 });

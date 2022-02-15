@@ -4,10 +4,19 @@
 
 import { render } from "@testing-library/react";
 
-import Spinner from "./Spinner";
+import Spinner, { SpinnerProps } from "./Spinner";
+
+const props: SpinnerProps = {
+  size: "small",
+};
+
+
 
 describe("<Spinner />", () => {
   it("should render", () => {
+    render(<Spinner {...props} />);
+  });
+  it("should render with no props passed", () => {
     render(<Spinner />);
   });
 });

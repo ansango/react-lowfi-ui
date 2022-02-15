@@ -2,29 +2,28 @@
  * ?Modal Component
  */
 
-import { Children, cloneElement, FC, isValidElement, ReactNode, useState } from "react";
+import { cloneElement, FC, ReactElement, useState } from "react";
 // import * as cn from "./ModalStyles";
 
 export type ModalProps = {
-  opened?: boolean;
-  children: ReactNode;
+  opened: boolean;
+  element: ReactElement;
 };
 
 /**
  * Description of Modal component displayed in Storybook
  */
 
-const Modal: FC<ModalProps> = ({ opened = false, children }) => {
+const Modal: FC<ModalProps> = ({ opened, element }) => {
   const [isOpen, setIsOpen] = useState<boolean>(opened);
-  const childrenWithProps = Children.map(children, (child) => {
-    if (isValidElement(child)) {
-      return cloneElement(child, { action: () => setIsOpen(true) });
-    }
-    return child;
+  const newElement = cloneElement(element, {
+    onClick: () => setIsOpen(false),
+    "data-testid": "open-modal-button",
   });
+
   return (
     <>
-      {childrenWithProps}
+      {newElement}
       {isOpen ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -40,6 +39,7 @@ const Modal: FC<ModalProps> = ({ opened = false, children }) => {
                     type="button"
                     className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     onClick={() => setIsOpen(false)}
+                    data-testid="close-button"
                   >
                     <svg
                       className="w-5 h-5"
@@ -55,7 +55,6 @@ const Modal: FC<ModalProps> = ({ opened = false, children }) => {
                     </svg>
                   </button>
                 </div>
-                {/*body*/}
                 <div className="p-6 space-y-6">
                   <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                     With less than a month to go before the European Union enacts new consumer
@@ -75,6 +74,7 @@ const Modal: FC<ModalProps> = ({ opened = false, children }) => {
                     onClick={() => setIsOpen(false)}
                     type="button"
                     className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    data-testid="accept-button"
                   >
                     I accept
                   </button>
@@ -82,6 +82,7 @@ const Modal: FC<ModalProps> = ({ opened = false, children }) => {
                     onClick={() => setIsOpen(false)}
                     type="button"
                     className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600"
+                    data-testid="decline-button"
                   >
                     Decline
                   </button>
