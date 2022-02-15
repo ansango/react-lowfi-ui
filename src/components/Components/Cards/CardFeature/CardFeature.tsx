@@ -36,7 +36,7 @@ export type CardFeatureProps = {
 };
 
 /**
- * Description of CardFeature component displayed in Storybook
+ * Get started with a large variety of Tailwind CSS card examples for your web project
  */
 
 const CardFeature: FC<CardFeatureProps> = ({ title, description, data, help }) => {

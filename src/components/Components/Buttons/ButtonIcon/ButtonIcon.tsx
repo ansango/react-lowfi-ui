@@ -56,7 +56,7 @@ export type ButtonIconProps = {
 };
 
 /**
- * Button Icon Component
+ * Use the button component inside forms, as links, social login, payment options with support for multiple styles, colors, sizes, gradients, and shadows
  */
 
 const ButtonIcon: FC<ButtonIconProps> = ({

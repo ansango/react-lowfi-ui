@@ -9,10 +9,25 @@ import * as HeroIcons from "@heroicons/react/outline";
 import Icon from "../../../Atoms/Icons/Icon/Icon";
 
 type ItemProps = {
+  /**
+   * string
+   */
   title: string;
+  /**
+   * string | string[]
+   */
   content: string[] | string;
+  /**
+   * { length: number; index: number; }
+   */
   position: { length: number; index: number };
+  /**
+   * Heroicons
+   */
   icon?: keyof typeof HeroIcons;
+  /**
+   * info | success | warning | danger | dark |
+   */
   kind: "info" | "danger" | "success" | "warning" | "dark";
 };
 
@@ -67,7 +82,7 @@ export const Item: FC<ItemProps> = ({ title, content, position, icon, kind }) =>
 
 export type AccordionProps = {
   /**
-   *
+   * info | success | warning | danger | dark
    */
   kind?: "info" | "danger" | "success" | "warning" | "dark";
   /**
@@ -88,7 +103,7 @@ export type AccordionProps = {
 };
 
 /**
- * Description of Accordion component displayed in Storybook
+ * Use the accordion component to show hidden information based on the collapse and expand state of the child elements using data attribute options
  */
 
 const Accordion: FC<AccordionProps> = ({ data, kind = "dark" }) => {

@@ -22,7 +22,7 @@ export type IconSimpleProps = {
 };
 
 /**
- * Description of IconSimple component displayed in Storybook
+ * Use this set of SVG powered icons for Tailwind CSS, based on Simple Icons
  */
 
 const IconSimple: FC<IconSimpleProps> = ({ icon, size = "base", classIcon }) => {

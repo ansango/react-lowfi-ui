@@ -9,8 +9,7 @@ import * as cn from "./BreadcrumbStyles";
 
 export type BreadcrumbProps = {
   /**
-   * Routes to render
-   *| LinkElement as React Router Link or Next Link
+   * Routes to render | LinkElement as React Router Link or Next Link
    */
   routes: {
     level: number;
@@ -27,7 +26,7 @@ export type BreadcrumbProps = {
 };
 
 /**
- * Description of Breadcrumb component displayed in Storybook
+ * Show the location of the current page in a hierarchical structure using the Tailwind CSS breadcrumb components
  */
 
 const Breadcrumb: FC<BreadcrumbProps> = ({ routes, kind = "plain" }) => {

@@ -24,7 +24,7 @@ export type CardActionProps = {
 };
 
 /**
- * Description of CardAction component displayed in Storybook
+ * Get started with a large variety of Tailwind CSS card examples for your web project
  */
 
 const CardAction: FC<CardActionProps> = ({ title, content, action }) => {

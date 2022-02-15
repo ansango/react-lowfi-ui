@@ -44,7 +44,7 @@ export type AlertContentProps = {
 };
 
 /**
- * Alert Content Component
+ * Show contextual information to your users using alert elements based on Tailwind CSS
  */
 
 const AlertContent: FC<AlertContentProps> = ({

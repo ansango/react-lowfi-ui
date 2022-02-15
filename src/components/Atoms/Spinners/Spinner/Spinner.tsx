@@ -27,7 +27,7 @@ export type SpinnerProps = {
 };
 
 /**
- * Spinner Component
+ * Use the spinner component as a loader indicator in your projects when fetching data based on an animated SVG using the utility classes from Tailwind CSS
  */
 
 const Spinner: FC<SpinnerProps> = ({

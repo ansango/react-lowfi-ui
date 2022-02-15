@@ -22,7 +22,7 @@ export type BadgeCounterGradientProps = {
 };
 
 /**
- * Badge Counter Gradient component
+ * Use Tailwind CSS badges as elements to show counts or labels separately or inside other components.
  */
 
 const BadgeCounterGradient: FC<BadgeCounterGradientProps> = ({

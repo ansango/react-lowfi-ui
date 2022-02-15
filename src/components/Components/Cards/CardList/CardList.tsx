@@ -7,12 +7,24 @@ import Avatar from "../../Avatar/Avatar";
 // import * as cn from "./CardListStyles";
 
 export type CardListProps = {
+  /**
+   * { title: string; onDetail: () => void; }
+   */
   detail: {
     title: string;
     onDetail: () => void;
   };
+  /**
+   * string
+   */
   title: string;
+  /**
+   * xsmall | small | medium | large | xlarge
+   */
   avatar: "xsmall" | "small" | "base" | "large" | "xlarge";
+  /**
+   * { name: string; image: string; description: string; bold?: boolean; }[]
+   */
   data: {
     name: string;
     description: string;
@@ -22,7 +34,7 @@ export type CardListProps = {
 };
 
 /**
- * Description of CardList component displayed in Storybook
+ * Get started with a large variety of Tailwind CSS card examples for your web project
  */
 
 const CardList: FC<CardListProps> = ({ title, data, detail, avatar }) => {

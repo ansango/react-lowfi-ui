@@ -21,7 +21,7 @@ export type CardFormProps = {
 };
 
 /**
- * Description of CardForm component displayed in Storybook
+ * Get started with a large variety of Tailwind CSS card examples for your web project
  */
 
 const CardForm: FC<CardFormProps> = ({ option = "option__one", className, ...props }) => {

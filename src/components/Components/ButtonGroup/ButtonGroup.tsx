@@ -34,7 +34,7 @@ export type ButtonGroupProps = {
 };
 
 /**
- * Description of ButtonGroup component displayed in Storybook
+ * Button groups are a Tailwind CSS powered set of buttons sticked together in a horizontal line
  */
 
 const ButtonGroup: FC<ButtonGroupProps> = ({ kind = "solid", style = "dark", buttons }) => {

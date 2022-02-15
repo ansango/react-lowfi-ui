@@ -23,7 +23,7 @@ export type IconProps = {
 };
 
 /**
- * Icon Component
+ * Use this set of SVG powered icons for Tailwind CSS absed on Hero Icons
  */
 
 const Icon: FC<IconProps> = ({ icon, size = "base", classIcon }) => {

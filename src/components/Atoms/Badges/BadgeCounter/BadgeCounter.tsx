@@ -22,7 +22,7 @@ export type BadgeCounterProps = {
 };
 
 /**
- * Badge Counter component
+ * Use Tailwind CSS badges as elements to show counts or labels separately or inside other components.
  */
 
 const Badge: FC<BadgeCounterProps> = ({ counter = 0, style = "default", classBadge }) => {

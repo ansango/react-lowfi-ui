@@ -30,7 +30,7 @@ export type CardEcommerceProps = {
 };
 
 /**
- * Description of CardEcommerce component displayed in Storybook
+ * Get started with a large variety of Tailwind CSS card examples for your web project
  */
 
 const CardEcommerce: FC<CardEcommerceProps> = ({ product, action, onDetail }) => {

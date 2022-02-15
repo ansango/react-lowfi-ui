@@ -8,14 +8,32 @@ import { Button } from "../../Buttons";
 // import * as cn from "./CardPricingStyles";
 
 export type CardPricingProps = {
+  /**
+   * string
+   */
   title: string;
+  /**
+   * string
+   */
   price: string;
+  /**
+   * string
+   */
   currency: string;
+  /**
+   * string
+   */
   period: string;
+  /**
+   * {title: string; included: boolean}[]
+   */
   features: {
     title: string;
     included: boolean;
   }[];
+  /**
+   * { title: string; action: () => void }
+   */
   action: {
     label: string;
     action: () => void;
@@ -23,7 +41,7 @@ export type CardPricingProps = {
 };
 
 /**
- * Description of CardPricing component displayed in Storybook
+ * Get started with a large variety of Tailwind CSS card examples for your web project
  */
 
 const CardPricing: FC<CardPricingProps> = ({

@@ -58,7 +58,7 @@ export type ButtonDuotoneProps = {
 };
 
 /**
- * ButtonDuotone Component
+ * Use the button component inside forms, as links, social login, payment options with support for multiple styles, colors, sizes, gradients, and shadows
  */
 
 const ButtonDuotone: FC<ButtonDuotoneProps> = ({

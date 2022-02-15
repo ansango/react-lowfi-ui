@@ -27,7 +27,7 @@ export type CardHorizontalProps = {
 };
 
 /**
- * Description of CardHorizontal component displayed in Storybook
+ * Get started with a large variety of Tailwind CSS card examples for your web project
  */
 
 const CardHorizontal: FC<CardHorizontalProps> = ({ title, content, action, imgUrl }) => {

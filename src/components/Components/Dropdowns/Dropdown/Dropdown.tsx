@@ -8,28 +8,6 @@ import { usePopper } from "react-popper";
 import { Button } from "../../Buttons";
 import { ButtonProps } from "../../Buttons/Button/Button";
 
-export type DropdownProps = {
-  button: ButtonProps;
-  placement: "start" | "end";
-  size?: "small" | "base" | "large";
-  options: {
-    label: string;
-    action: () => void;
-  }[];
-  divider?: {
-    label: string;
-    action: () => void;
-  };
-  header?: {
-    label: string;
-    content?: string;
-  };
-};
-
-/**
- * Description of Dropdown component displayed in Storybook
- */
-
 export const Option = ({
   label,
   action,
@@ -43,6 +21,46 @@ export const Option = ({
     {label}
   </span>
 );
+
+export type DropdownProps = {
+  /**
+   * ButtonProps
+   */
+  button: ButtonProps;
+  /**
+   * start | end
+   */
+  placement: "start" | "end";
+  /**
+   * small | base | large
+   */
+  size?: "small" | "base" | "large";
+  /**
+   * { label: string; action: () => void; }[]
+   */
+  options: {
+    label: string;
+    action: () => void;
+  }[];
+  /**
+   * { label: string; action: () => void; }
+   */
+  divider?: {
+    label: string;
+    action: () => void;
+  };
+  /**
+   * { label: string; content: string; }
+   */
+  header?: {
+    label: string;
+    content?: string;
+  };
+};
+
+/**
+ * Use the Tailwind CSS dropdown elements to show a list of items displayed as a menu
+ */
 
 const Dropdown: FC<DropdownProps> = ({
   button,
