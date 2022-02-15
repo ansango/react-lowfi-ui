@@ -14,7 +14,7 @@ export default {
   },
   argTypes: {
     opened: { control: false },
-    children: { control: false },
+    element: { control: false },
   },
 } as ComponentMeta<typeof Modal>;
 
@@ -24,5 +24,5 @@ export const A_Default = Template.bind({});
 
 A_Default.args = {
   opened: false,
-  children: <Button label="Open modal" />,
+  element: <Button label="Test" />,
 };

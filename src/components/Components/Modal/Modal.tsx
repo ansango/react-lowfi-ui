@@ -17,7 +17,7 @@ export type ModalProps = {
 const Modal: FC<ModalProps> = ({ opened, element }) => {
   const [isOpen, setIsOpen] = useState<boolean>(opened);
   const newElement = cloneElement(element, {
-    onClick: () => setIsOpen(false),
+    action: () => setIsOpen(true),
     "data-testid": "open-modal-button",
   });
 
