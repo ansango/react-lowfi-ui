@@ -3,11 +3,11 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Button } from "../Buttons";
+import { Button } from "../../Buttons";
 import Modal from "./Modal";
 
 export default {
-  title: "Components/Modal",
+  title: "Components/Modals/Modal",
   component: Modal,
   parameters: {
     layout: "centered",

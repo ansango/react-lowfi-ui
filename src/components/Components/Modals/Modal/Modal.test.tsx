@@ -5,7 +5,7 @@
 import { fireEvent, queryByTestId, render } from "@testing-library/react";
 
 import Modal, { ModalProps } from "./Modal";
-import Button from "../Buttons/Button/Button";
+import Button from "../../Buttons/Button/Button";
 
 const props: ModalProps = {
   opened: true,
