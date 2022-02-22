@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 import { Form } from "..";
-import Checkbox, { CheckboxProps } from "./Checkbox";
+import Checkbox, { CheckboxProps } from ".";
 
 const mockSubmit = jest.fn();
 

@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Avatar from "./Avatar";
+import Avatar from ".";
 import imgDemo from "../../../../assets/profile-picture-3.jpg";
 export default {
   title: "Components/Avatar",

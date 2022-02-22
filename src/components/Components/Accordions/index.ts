@@ -1,3 +1,3 @@
-import Accordion from "./Accordion/Accordion";
-import AccordionFlush from "./AccordionFlush/AccordionFlush";
+import Accordion from "./Accordion";
+import AccordionFlush from "./AccordionFlush";
 export { Accordion, AccordionFlush };

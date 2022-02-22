@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 
-import ButtonIcon from "./ButtonIcon";
+import ButtonIcon from ".";
 
 describe("<ButtonIcon />", () => {
   it("should render", () => {

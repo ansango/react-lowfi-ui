@@ -4,7 +4,7 @@
 
 import { mount } from "enzyme";
 
-import BadgeCounter from "./BadgeCounter";
+import BadgeCounter from ".";
 
 describe("<BadgeCounter />", () => {
   it("should not render", () => {

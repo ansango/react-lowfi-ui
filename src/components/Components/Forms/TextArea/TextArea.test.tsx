@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 import { Form } from "..";
-import TextArea, { TextAreaProps } from "./TextArea";
+import TextArea, { TextAreaProps } from ".";
 const mockSubmit = jest.fn();
 describe("<TextArea />", () => {
   it("should render", () => {

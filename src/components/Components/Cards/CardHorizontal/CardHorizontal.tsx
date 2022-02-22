@@ -3,28 +3,9 @@
  */
 
 import { FC } from "react";
+import { CardHorizontalProps } from ".";
 import { Image, Paragraph, Title } from "../../../Atoms/Blocks";
 import * as cn from "./CardHorizontalStyles";
-
-export type CardHorizontalProps = {
-  /**
-   * string
-   */
-  title: string;
-  /**
-   * string
-   * max length: 210
-   */
-  content: string;
-  /**
-   * string
-   */
-  imgUrl: string;
-  /**
-   *
-   */
-  action: () => void;
-};
 
 /**
  * Get started with a large variety of Tailwind CSS card examples for your web project

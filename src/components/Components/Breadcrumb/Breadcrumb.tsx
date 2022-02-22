@@ -2,28 +2,11 @@
  * ?Breadcrumb Component
  */
 
-import { FC, ReactNode } from "react";
-import Icon from "../../Atoms/Icons/Icon/Icon";
+import { FC } from "react";
+import { BreadcrumbProps } from ".";
+import { Icon } from "../../Atoms";
 
 import * as cn from "./BreadcrumbStyles";
-
-export type BreadcrumbProps = {
-  /**
-   * Routes to render | LinkElement as React Router Link or Next Link
-   */
-  routes: {
-    level: number;
-    title: string;
-    path: string;
-    LinkElement?: FC<{ children: ReactNode }>;
-    current?: boolean;
-  }[];
-  /**
-   * solid | plain
-   * @default plain
-   */
-  kind?: "solid" | "plain";
-};
 
 /**
  * Show the location of the current page in a hierarchical structure using the Tailwind CSS breadcrumb components

@@ -1,4 +1,4 @@
-import Title from "./Title/Title";
-import Paragraph from "./Paragraph/Paragraph";
-import Image from "./Image/Image";
+import Title from "./Title";
+import Paragraph from "./Paragraph";
+import Image from "./Image/";
 export { Title, Paragraph, Image };

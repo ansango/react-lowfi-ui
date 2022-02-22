@@ -3,23 +3,8 @@
  */
 
 import { FC } from "react";
+import BadgeCounterGradientProps from "./BadgeCounterGradientProps";
 import * as cn from "./BadgeCounterGradientStyles";
-
-export type BadgeCounterGradientProps = {
-  /**
-   * counter
-   */
-  counter?: number;
-  /**
-   * monochrome | duotone
-   */
-  kind?: "monochrome" | "duotone";
-  /**
-   * default | alternative | dark | light | green | red | yellow | purple
-   * @default "default"
-   */
-  style?: "blue" | "green" | "cyan" | "teal" | "lime" | "red" | "pink" | "purple";
-};
 
 /**
  * Use Tailwind CSS badges as elements to show counts or labels separately or inside other components.

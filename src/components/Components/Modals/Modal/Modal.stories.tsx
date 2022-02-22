@@ -3,8 +3,9 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+
+import Modal from ".";
 import { Button } from "../../Buttons";
-import Modal from "./Modal";
 
 export default {
   title: "Components/Modals/Modal",

@@ -1,2 +1,3 @@
-import Spinner from "./Spinner/Spinner";
-export { Spinner };
+import Spinner from "./Spinner";
+import SpinnerGradient from "./SpinnerGradient";
+export { Spinner, SpinnerGradient };

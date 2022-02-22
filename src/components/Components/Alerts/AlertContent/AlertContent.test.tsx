@@ -4,7 +4,7 @@
 import { render, fireEvent, queryByTestId, screen } from "@testing-library/react";
 import { mount } from "enzyme";
 
-import AlertContent from "./AlertContent";
+import AlertContent from ".";
 
 describe("<AlertContent />", () => {
   it("should render", () => {

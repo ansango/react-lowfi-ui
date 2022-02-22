@@ -2,13 +2,9 @@
  * ?ModalPopup Component
  */
 
-import { cloneElement, FC, ReactElement, useState } from "react";
+import { cloneElement, FC, useState } from "react";
+import { ModalPopupProps } from ".";
 // import * as cn from "./ModalPopupStyles";
-
-export type ModalPopupProps = {
-  opened: boolean;
-  element: ReactElement;
-};
 
 /**
  * Description of ModalPopup component displayed in Storybook

@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import ButtonDuotone from "./ButtonDuotone";
+import ButtonDuotone from ".";
 
 export default {
   title: "Components/Buttons/Gradient Duotone",

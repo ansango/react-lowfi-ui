@@ -4,7 +4,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Input, Date, File, Checkbox, RadioGroup, Select, Switch, TextArea } from "../";
-import Form from "./Form";
+import Form from ".";
 
 export default {
   title: "Components/Forms/Form",

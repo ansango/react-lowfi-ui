@@ -4,14 +4,8 @@
 
 import { FC } from "react";
 // import * as cn from "./FileStyles";
-
-import { RegisterOptions, useFormContext } from "react-hook-form";
-export type FileProps = {
-  label?: string;
-  name: string;
-  options?: RegisterOptions;
-  register?: any;
-};
+import { useFormContext } from "react-hook-form";
+import { FileProps } from ".";
 
 /**
  * Description of File component displayed in Storybook

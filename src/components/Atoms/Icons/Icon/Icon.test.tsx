@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 import { mount } from "enzyme";
-import Icon, { IconProps } from "./Icon";
+import Icon, { IconProps } from ".";
 
 const props: IconProps = {
   icon: "ArchiveIcon",

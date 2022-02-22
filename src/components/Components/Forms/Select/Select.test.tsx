@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 import { Form } from "..";
-import Select, { SelectProps } from "./Select";
+import Select, { SelectProps } from ".";
 const mockSubmit = jest.fn();
 describe("<Select />", () => {
   it("should render", () => {

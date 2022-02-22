@@ -73,6 +73,16 @@ module.exports = (plop) => {
           path: "../src/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx",
           templateFile: "./templates/component/test.tsx.hbs",
         });
+        actions.push({
+          type: "add",
+          path: "../src/components/{{pascalCase name}}/{{pascalCase name}}Props.ts",
+          templateFile: "./templates/component/props.ts.hbs",
+        });
+        actions.push({
+          type: "add",
+          path: "../src/components/{{pascalCase name}}/index.ts",
+          templateFile: "./templates/component/index.ts.hbs",
+        });
       } else if (data.kind === "docs") {
         actions.push({
           type: "add",

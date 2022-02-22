@@ -4,24 +4,18 @@
 
 import { FC } from "react";
 // import * as cn from "./DateStyles";
-import { RegisterOptions, useFormContext } from "react-hook-form";
-export type DateProps = {
-  type: "date" | "month" | "week" | "time" | "datetime-local";
-  label?: string;
-  name: string;
-  options?: RegisterOptions;
-  register?: any;
-};
+import { useFormContext } from "react-hook-form";
+import DateProps from "./DateProps";
 
 /**
  * Description of Date component displayed in Storybook
  */
 
 const Date: FC<DateProps> = ({ type, label, name, options, ...rest }) => {
- const {
-   register,
-   formState: { errors },
- } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
   return (
     <div className="mb-3">
       {label && (

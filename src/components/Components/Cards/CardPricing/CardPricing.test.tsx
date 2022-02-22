@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import CardPricing, { CardPricingProps } from "./CardPricing";
+import CardPricing, { CardPricingProps } from ".";
 
 const props: CardPricingProps = {
   action: {

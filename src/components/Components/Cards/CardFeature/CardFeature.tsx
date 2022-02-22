@@ -3,9 +3,10 @@
  */
 
 import { cloneElement, FC, ReactElement } from "react";
-import { BadgeProps } from "../../../Atoms/Badges/Badge/Badge";
-import { IconProps } from "../../../Atoms/Icons/Icon/Icon";
-import { IconSimpleProps } from "../../../Atoms/Icons/IconSimple/IconSimple";
+import { CardFeatureProps } from ".";
+import { BadgeProps } from "../../../Atoms/Badges/Badge";
+import { IconProps } from "../../../Atoms/Icons/Icon";
+import { IconSimpleProps } from "../../../Atoms/Icons/IconSimple";
 
 const newIcon = (icon: ReactElement<IconProps | IconSimpleProps>) =>
   cloneElement(icon, {
@@ -18,22 +19,6 @@ const newBadge = (badge: ReactElement<BadgeProps>) =>
     ...badge.props,
     style: "default",
   });
-
-export type CardFeatureProps = {
-  title: string;
-  description: string;
-  data: {
-    name: string;
-    icon: ReactElement<IconProps | IconSimpleProps>;
-    badge?: ReactElement<BadgeProps>;
-    featured?: boolean;
-    onDetail?: () => void;
-  }[];
-  help?: {
-    text: string;
-    onHelp?: () => void;
-  };
-};
 
 /**
  * Get started with a large variety of Tailwind CSS card examples for your web project

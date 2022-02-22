@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 
-import Paragraph from "./Paragraph";
+import Paragraph from ".";
 
 describe("<Paragraph />", () => {
   it("should render", () => {

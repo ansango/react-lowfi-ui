@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import CardEcommerce from "./CardEcommerce";
+import CardEcommerce from ".";
 import imgDemo from "../../../../../assets/product-1.png";
 export default {
   title: "Components/Cards/Card Ecommerce",

@@ -3,16 +3,9 @@
  */
 
 import { FC } from "react";
-import { RegisterOptions, useFormContext } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
+import { TextAreaProps } from ".";
 // import * as cn from "./TextAreaStyles";
-
-export type TextAreaProps = {
-  label?: string;
-  name: string;
-  rows?: number;
-  options?: RegisterOptions;
-  register?: any;
-};
 
 /**
  * Description of TextArea component displayed in Storybook

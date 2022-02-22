@@ -5,7 +5,7 @@
 import { render } from "@testing-library/react";
 import { FC, ReactNode } from "react";
 
-import Breadcrumb from "./Breadcrumb";
+import Breadcrumb from ".";
 
 const Link: FC<{ to: string; children?: ReactNode }> = ({ children, to }) => (
   <a href={to}>{children}</a>

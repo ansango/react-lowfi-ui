@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import CardEcommerce, { CardEcommerceProps } from "./CardEcommerce";
+import CardEcommerce, { CardEcommerceProps } from ".";
 
 const props: CardEcommerceProps = {
   onDetail: () => alert("Detail"),

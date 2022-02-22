@@ -1,61 +1,7 @@
 import { FC } from "react";
+import { BadgeCounterGradient, Icon, SpinnerGradient } from "../../../Atoms";
+import ButtonPropsMonochrome from "./ButtonMonochromeProps";
 import * as cn from "./ButtonMonochromeStyles";
-import * as HeroIcons from "@heroicons/react/solid";
-import Icon from "../../../Atoms/Icons/Icon/Icon";
-import SpinnerGradient from "../../../Atoms/Spinners/SpinnerGradient/SpinnerGradient";
-import BadgeCounterGradient from "../../../Atoms/Badges/BadgeCounterGradient/BadgeCounterGradient";
-
-export type ButtonPropsMonochrome = {
-  /**
-   * Label of the button
-   */
-  label: string;
-  /**
-   * xsmall | small | base | large | xlarge
-   * @default "base"
-   */
-  size?: keyof typeof cn.size;
-  /**
-   * solid | shadow
-   * @default "solid"
-   */
-  kind?: "solid" | "shadow";
-  /**
-   * blue | green | cyan | teal | lime | red | pink | purple
-   * @default "default"
-   */
-  style?: "blue" | "green" | "cyan" | "teal" | "lime" | "red" | "pink" | "purple";
-  /**
-   * HeroIcons
-   */
-  icon?: keyof typeof HeroIcons;
-  /**
-   * disabled
-   * @default false
-   */
-  disabled?: boolean;
-  /**
-   * loading
-   * @default false
-   */
-  loading?: boolean;
-  /**
-   * badge, used for notifications count
-   */
-  badge?: number;
-  /**
-   * onClick event
-   */
-  action?: () => void;
-  /**
-   * className override
-   */
-  classButton?: string;
-  /**
-   * className override
-   */
-  classIcon?: string;
-};
 
 /**
  * Use the button component inside forms, as links, social login, payment options with support for multiple styles, colors, sizes, gradients, and shadows

@@ -4,7 +4,7 @@
 
 import { queryByTestId, render, waitFor, fireEvent } from "@testing-library/react";
 
-import Dropdown, { DropdownProps } from "./Dropdown";
+import Dropdown, { DropdownProps } from ".";
 
 const props: DropdownProps = {
   button: {

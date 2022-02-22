@@ -3,23 +3,8 @@
  */
 
 import { FC } from "react";
+import BadgeCounterProps from "./BadgeCounterProps";
 import * as cn from "./BadgeCounterStyles";
-
-export type BadgeCounterProps = {
-  /**
-   * counter
-   */
-  counter?: number;
-  /**
-   * default | alternative | dark | light | green | red | yellow | purple
-   * @default "default"
-   */
-  style?: "default" | "alternative" | "dark" | "light" | "green" | "red" | "yellow" | "purple";
-  /**
-   * Class Name override
-   */
-  classBadge?: string;
-};
 
 /**
  * Use Tailwind CSS badges as elements to show counts or labels separately or inside other components.

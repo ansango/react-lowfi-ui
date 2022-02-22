@@ -3,23 +3,9 @@
  */
 
 import { FC } from "react";
-import { Title, Paragraph } from "../../../Atoms/Blocks";
+import { CardProps } from ".";
+import { Paragraph, Title } from "../../../Atoms";
 import * as cn from "./CardStyles";
-
-export type CardProps = {
-  /**
-   * string
-   */
-  title: string;
-  /**
-   * string | string[]
-   */
-  content: string | string[];
-  /**
-   * ()=> void
-   */
-  action?: () => void;
-};
 
 /**
  * Get started with a large variety of Tailwind CSS card examples for your web project

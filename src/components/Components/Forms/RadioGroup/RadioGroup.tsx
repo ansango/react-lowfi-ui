@@ -4,17 +4,8 @@
 
 import { FC } from "react";
 // import * as cn from "./RadioStyles";
-import { RegisterOptions, useFormContext } from "react-hook-form";
-
-export type RadioPropsGroup = {
-  label?: string;
-  name: string;
-  data: {
-    lab: string;
-    value: string;
-  }[];
-  options?: RegisterOptions;
-};
+import { useFormContext } from "react-hook-form";
+import RadioPropsGroup from "./RadioGroupProps";
 
 /**
  * Description of Radio component displayed in Storybook

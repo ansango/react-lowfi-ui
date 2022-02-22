@@ -4,19 +4,8 @@
 
 import { FC } from "react";
 // import * as cn from "./SelectStyles";
-import { RegisterOptions, useFormContext } from "react-hook-form";
-
-export type SelectProps = {
-  label?: string;
-  name: string;
-  data: {
-    label: string;
-    value?: string;
-    disabled?: boolean;
-  }[];
-  options?: RegisterOptions;
-  register?: any;
-};
+import { useFormContext } from "react-hook-form";
+import { SelectProps } from ".";
 
 /**
  * Description of Select component displayed in Storybook

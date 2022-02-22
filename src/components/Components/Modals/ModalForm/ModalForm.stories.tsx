@@ -5,7 +5,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Button } from "../../Buttons";
 import { Checkbox, Form, Input } from "../../Forms";
-import ModalForm from "./ModalForm";
+import ModalForm from ".";
 
 export default {
   title: "Components/Modals/Modal Form",

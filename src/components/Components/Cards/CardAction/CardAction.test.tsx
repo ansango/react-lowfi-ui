@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import CardAction, { CardActionProps } from "./CardAction";
+import CardAction, { CardActionProps } from ".";
 
 const props: CardActionProps = {
   title: "Noteworthy technology acquisitions 2021",

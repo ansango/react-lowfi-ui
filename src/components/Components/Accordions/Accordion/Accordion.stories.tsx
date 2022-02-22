@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Accordion from "./Accordion";
+import Accordion from ".";
 
 export default {
   title: "Components/Accordions/Accordion",

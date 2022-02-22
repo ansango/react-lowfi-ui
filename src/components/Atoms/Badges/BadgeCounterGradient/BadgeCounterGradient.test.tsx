@@ -4,7 +4,7 @@
 
 import { mount } from "enzyme";
 
-import BadgeCounterGradient from "./BadgeCounterGradient";
+import BadgeCounterGradient from ".";
 
 describe("<BadgeCounterGradient />", () => {
   it("should not render", () => {

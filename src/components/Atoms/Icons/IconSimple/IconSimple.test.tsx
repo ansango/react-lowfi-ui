@@ -4,8 +4,7 @@
 
 import { render } from "@testing-library/react";
 import { mount } from "enzyme";
-
-import IconSimple from "./IconSimple";
+import IconSimple from ".";
 
 describe("<IconSimple />", () => {
   it("should render", () => {

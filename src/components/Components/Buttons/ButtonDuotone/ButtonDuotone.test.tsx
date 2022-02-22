@@ -4,7 +4,7 @@
 
 import { mount } from "enzyme";
 
-import ButtonDuotone from "./ButtonDuotone";
+import ButtonDuotone from ".";
 
 describe("<ButtonDuotone />", () => {
   it("should render", () => {

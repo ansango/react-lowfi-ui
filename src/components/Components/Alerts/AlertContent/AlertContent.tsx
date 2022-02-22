@@ -3,45 +3,10 @@
  */
 
 import { FC, useState } from "react";
+import { AlertContentProps } from ".";
+import { Icon } from "../../../Atoms";
 import { Button } from "../../Buttons";
 import * as cn from "./AlertContentStyles";
-import * as HeroIcons from "@heroicons/react/outline";
-import Icon from "../../../Atoms/Icons/Icon/Icon";
-
-export type AlertContentProps = {
-  /**
-   * string
-   */
-  title: string;
-  /**
-   * HeroIcons
-   * */
-  icon: keyof typeof HeroIcons;
-  /**
-   * string
-   */
-  content: string;
-  /**
-   * info | danger | success | warning | dark
-   * @default "info"
-   */
-  kind?: "info" | "danger" | "success" | "warning" | "dark";
-  /**
-   * true | false
-   * @default false
-   */
-  opened?: boolean;
-  /**
-   * true | false
-   * @default false
-   */
-  dismissable?: boolean;
-  /**
-   * function
-   * @default undefined
-   */
-  action?: () => void;
-};
 
 /**
  * Show contextual information to your users using alert elements based on Tailwind CSS

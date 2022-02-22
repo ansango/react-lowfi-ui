@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 import { Form } from "..";
-import Switch, { SwitchProps } from "./Switch";
+import Switch, { SwitchProps } from ".";
 const mockSubmit = jest.fn();
 describe("<Switch />", () => {
   it("should render", () => {

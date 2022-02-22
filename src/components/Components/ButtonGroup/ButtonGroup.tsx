@@ -3,35 +3,9 @@
  */
 
 import { FC } from "react";
+import { ButtonGroupProps } from ".";
+import { Icon } from "../../Atoms";
 import * as cn from "./ButtonGroupStyles";
-import * as HeroIcons from "@heroicons/react/outline";
-import Icon from "../../Atoms/Icons/Icon/Icon";
-export type ButtonGroupProps = {
-  /**
-   * solid | outline
-   */
-  kind?: "solid" | "outline";
-  /**
-   * info | danger | success | warning | dark
-   */
-  style?: "info" | "success" | "warning" | "danger" | "dark";
-  /**
-   * The buttons to be displayed
-   * {
-   *  label: string,
-   *  withIcon: boolean,
-   *  icon: keyof typeof HeroIcons
-   *  onClick?: () => void
-   * }[]
-   */
-  buttons: {
-    label: string;
-    withIcon?: boolean;
-    icon?: keyof typeof HeroIcons;
-    action?: () => void;
-    disabled?: boolean;
-  }[];
-};
 
 /**
  * Button groups are a Tailwind CSS powered set of buttons sticked together in a horizontal line

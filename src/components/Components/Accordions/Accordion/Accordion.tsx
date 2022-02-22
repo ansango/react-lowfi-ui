@@ -6,7 +6,8 @@ import { FC, useRef, useState } from "react";
 
 import * as cn from "./AccordionStyles";
 import * as HeroIcons from "@heroicons/react/outline";
-import Icon from "../../../Atoms/Icons/Icon/Icon";
+import { Icon } from "../../../Atoms";
+import { AccordionProps } from ".";
 
 type ItemProps = {
   /**
@@ -78,28 +79,6 @@ export const Item: FC<ItemProps> = ({ title, content, position, icon, kind }) =>
       </div>
     </div>
   );
-};
-
-export type AccordionProps = {
-  /**
-   * info | success | warning | danger | dark
-   */
-  kind?: "info" | "danger" | "success" | "warning" | "dark";
-  /**
-   * Array of objects
-   * [
-   *  {
-   *   title: string,
-   *   content: string,
-   *   icon?: keyof typeof HeroIcons
-   *  }
-   * ]
-   */
-  data: {
-    title: string;
-    content: string[] | string;
-    icon?: keyof typeof HeroIcons;
-  }[];
 };
 
 /**

@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import Spinner, { SpinnerProps } from "./Spinner";
+import Spinner, { SpinnerProps } from ".";
 
 const props: SpinnerProps = {
   size: "small",

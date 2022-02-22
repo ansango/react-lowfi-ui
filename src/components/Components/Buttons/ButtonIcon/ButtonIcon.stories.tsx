@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import ButtonIcon from "./ButtonIcon";
+import ButtonIcon from ".";
 
 export default {
   title: "Components/Buttons/Button Icon",

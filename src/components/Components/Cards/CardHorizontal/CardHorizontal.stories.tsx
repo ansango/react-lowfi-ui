@@ -3,8 +3,9 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import CardHorizontal from "./CardHorizontal";
 import img from "../../../../../assets/image-4.jpg";
+import CardHorizontal from ".";
+
 export default {
   title: "Components/Cards/Card Horizontal",
   component: CardHorizontal,

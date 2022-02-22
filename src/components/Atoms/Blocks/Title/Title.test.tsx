@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 
-import Title from "./Title";
+import Title from ".";
 
 describe("<Title />", () => {
   it("should render", () => {

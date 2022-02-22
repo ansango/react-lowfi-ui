@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import AccordionFlush from "./AccordionFlush";
+import AccordionFlush from ".";
 
 export default {
   title: "Components/Accordions/AccordionFlush",

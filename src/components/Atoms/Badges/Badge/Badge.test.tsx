@@ -3,8 +3,8 @@
  */
 
 import { mount } from "enzyme";
-import Icon from "../../Icons/Icon/Icon";
-import Badge from "./Badge";
+import { Icon } from "../../Icons";
+import Badge from ".";
 
 describe("<Badge />", () => {
   it("should render", () => {

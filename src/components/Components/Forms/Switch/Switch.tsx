@@ -4,14 +4,8 @@
 
 import { FC, useState } from "react";
 // import * as cn from "./SwitchStyles";
-import { RegisterOptions, useFormContext } from "react-hook-form";
-
-export type SwitchProps = {
-  label?: string;
-  name: string;
-  options?: RegisterOptions;
-  register?: any;
-};
+import { useFormContext } from "react-hook-form";
+import { SwitchProps } from ".";
 
 /**
  * Description of Switch component displayed in Storybook

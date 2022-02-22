@@ -4,8 +4,9 @@
 
 import { render, fireEvent, queryByTestId, screen } from "@testing-library/react";
 import { mount } from "enzyme";
-import Icon from "../../../Atoms/Icons/Icon/Icon";
-import Alert from "./Alert";
+import { Icon } from "../../../Atoms";
+
+import Alert from ".";
 
 describe("<Alert />", () => {
   it("shouldn't render if opened is false", () => {

@@ -3,10 +3,10 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import ModalFeature from "./ModalFeature";
+import ModalFeature from ".";
 
 export default {
-  title: 'Components/Modals/Modal Feature',
+  title: 'Components/ModalFeature',
   component: ModalFeature,
   parameters: {
     layout: "centered",

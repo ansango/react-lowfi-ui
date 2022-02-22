@@ -2,16 +2,10 @@
  * ?Checkbox Component
  */
 
-import { FC, ReactElement } from "react";
+import { FC } from "react";
 // import * as cn from "./CheckboxStyles";
-import { RegisterOptions, useFormContext } from "react-hook-form";
-export type CheckboxProps = {
-  label: string;
-  link?: ReactElement;
-  name: string;
-  options?: RegisterOptions;
-  register?: any;
-};
+import { useFormContext } from "react-hook-form";
+import CheckboxProps from "./CheckboxProps";
 
 /**
  * Description of Checkbox component displayed in Storybook

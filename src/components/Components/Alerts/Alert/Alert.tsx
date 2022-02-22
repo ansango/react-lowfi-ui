@@ -3,59 +3,10 @@
  */
 
 import { FC, useState } from "react";
-import * as HeroIcons from "@heroicons/react/outline";
-import Icon from "../../../Atoms/Icons/Icon/Icon";
+import { AlertProps } from ".";
+import { Icon } from "../../../Atoms";
 import { ButtonIcon } from "../../Buttons";
 import * as cn from "./AlertStyles";
-
-export type LinkProps = {
-  text: string;
-  href: string;
-};
-
-export type AlertProps = {
-  /**
-   * info | danger | success | warning | dark
-   * @default "info"
-   */
-  kind?: "info" | "danger" | "success" | "warning" | "dark";
-  /**
-   * true | false
-   * @default false
-   */
-  bordered?: boolean;
-  /**
-   * true | false
-   * @default false
-   */
-  opened?: boolean;
-  /**
-   * true | false
-   * @default false
-   */
-  withIcon?: boolean;
-  /**
-   * HeroIcons
-   * */
-  icon?: keyof typeof HeroIcons;
-  /**
-   * string
-   */
-  text: string;
-  /**
-   * {
-   *  text: string,
-   *  href: string
-   * }
-   * @default undefined
-   */
-  link?: LinkProps;
-  /**
-   * true | false
-   * @default false
-   */
-  dismissable?: boolean;
-};
 
 /**
  * Show contextual information to your users using alert elements based on Tailwind CSS

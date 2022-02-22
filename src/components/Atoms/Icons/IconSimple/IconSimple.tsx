@@ -5,21 +5,7 @@
 import { FC } from "react";
 import * as cn from "./IconSimpleStyles";
 import * as SimpleIcons from "@icons-pack/react-simple-icons";
-
-export type IconSimpleProps = {
-  /**
-   * Icon
-   */
-  icon: keyof typeof SimpleIcons;
-  /**
-   * xsmall | small | base | large | xlarge
-   */
-  size?: keyof typeof cn.size;
-  /**
-   * className override
-   */
-  classIcon?: string;
-};
+import IconSimpleProps from "./IconSimpleProps";
 
 /**
  * Use this set of SVG powered icons for Tailwind CSS, based on Simple Icons

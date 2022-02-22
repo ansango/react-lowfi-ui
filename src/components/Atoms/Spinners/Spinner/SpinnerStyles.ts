@@ -26,7 +26,7 @@ export enum solid {
   purple = "text-purple-800 dark:text-gray-600 fill-purple-400",
 }
 
-export enum size { 
+export enum size {
   xsmall = "w-4 h-4",
   small = "w-6 h-6",
   base = "w-8 h-8",

@@ -3,29 +3,10 @@
  */
 
 import { FC } from "react";
+import { CardImageProps } from ".";
+import { Image, Paragraph, Title } from "../../../Atoms";
 import { Button } from "../../Buttons";
-import { ButtonProps } from "../../Buttons/Button/Button";
-import { Image, Paragraph, Title } from "../../../Atoms/Blocks";
 import * as cn from "./CardImageStyles";
-
-export type CardImageProps = {
-  /**
-   * string
-   */
-  title: string;
-  /**
-   * string | string[]
-   */
-  content: string | string[];
-  /**
-   * string
-   */
-  imgUrl: string;
-  /**
-   *
-   */
-  action: ButtonProps;
-};
 
 /**
  * Get started with a large variety of Tailwind CSS card examples for your web project

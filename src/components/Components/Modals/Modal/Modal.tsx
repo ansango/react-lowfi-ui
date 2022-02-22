@@ -2,13 +2,9 @@
  * ?Modal Component
  */
 
-import { cloneElement, FC, ReactElement, useState } from "react";
+import { cloneElement, FC, useState } from "react";
+import ModalProps from "./ModalProps";
 // import * as cn from "./ModalStyles";
-
-export type ModalProps = {
-  opened: boolean;
-  element: ReactElement;
-};
 
 /**
  * Description of Modal component displayed in Storybook

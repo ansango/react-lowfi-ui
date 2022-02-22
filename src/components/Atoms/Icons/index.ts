@@ -1,3 +1,3 @@
-import Icon from "./Icon/Icon";
-import IconSimple from "./IconSimple/IconSimple";
+import Icon from "./Icon/";
+import IconSimple from "./IconSimple";
 export { Icon, IconSimple };

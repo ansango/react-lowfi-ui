@@ -4,7 +4,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { FC, ReactNode } from "react";
-import Breadcrumb from "./Breadcrumb";
+import Breadcrumb from ".";
 
 export default {
   title: "Components/Breadcrumb",

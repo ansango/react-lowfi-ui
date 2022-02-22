@@ -3,10 +3,9 @@
  */
 
 import { render } from "@testing-library/react";
-
-import CardHorizontal, { CardHorizontalProps } from "./CardHorizontal";
-import { Paragraph } from "../../../Atoms/Blocks";
 import { mount } from "enzyme";
+import CardHorizontal, { CardHorizontalProps } from ".";
+import { Paragraph } from "../../../Atoms";
 
 const props: CardHorizontalProps = {
   title: "Noteworthy technology acquisitions 2021",

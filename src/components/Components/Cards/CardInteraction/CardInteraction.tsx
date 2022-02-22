@@ -4,11 +4,11 @@
 
 import { FC } from "react";
 import * as cn from "./CardInteractionStyles";
-
-import Avatar from "../../Avatar/Avatar";
-import { Button } from "../../Buttons";
-import { DropdownIcon } from "../../Dropdowns";
 import * as HeroIcons from "@heroicons/react/solid";
+import { CardInteractionProps } from ".";
+import { Button } from "../../Buttons";
+import Avatar from "../../Avatar";
+import { DropdownIcon } from "../../Dropdowns";
 
 const Header: FC<{
   dropIcon: keyof typeof HeroIcons;
@@ -60,42 +60,6 @@ const Actions: FC<{
     </div>
   </div>
 );
-
-export type CardInteractionProps = {
-  /**
-   * { activeHeader: boolean; dropIcon?: keyof typeof HeroIcons; options: { label: string; action: () => void; }[]; }
-   */
-  header: {
-    activeHeader: boolean;
-    dropIcon?: keyof typeof HeroIcons;
-    options?: {
-      label: string;
-      action: () => void;
-    }[];
-  };
-  /**
-   * { title: string; subtitle?: string; avatar?: string; }
-   */
-  content: {
-    avatar?: string;
-    title: string;
-    subtitle?: string;
-  };
-  /**
-   * { activeActions: boolean; primary: { label: string; action: () => void; }; secondary?: { label: string; action: () => void; }; }
-   */
-  actions: {
-    activeActions: boolean;
-    primary?: {
-      label: string;
-      action: () => void;
-    };
-    secondary?: {
-      label: string;
-      action: () => void;
-    };
-  };
-};
 
 /**
  * Get started with a large variety of Tailwind CSS card examples for your web project

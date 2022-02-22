@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import CardPricing from "./CardPricing";
+import CardPricing from ".";
 
 export default {
   title: "Components/Cards/Card Pricing",

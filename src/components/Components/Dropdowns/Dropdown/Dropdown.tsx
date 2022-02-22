@@ -5,8 +5,8 @@
 import { FC, useEffect, useRef, useState } from "react";
 import * as cn from "./DropdownStyles";
 import { usePopper } from "react-popper";
+import { DropdownProps } from ".";
 import { Button } from "../../Buttons";
-import { ButtonProps } from "../../Buttons/Button/Button";
 
 export const Option = ({
   label,
@@ -21,42 +21,6 @@ export const Option = ({
     {label}
   </span>
 );
-
-export type DropdownProps = {
-  /**
-   * ButtonProps
-   */
-  button: ButtonProps;
-  /**
-   * start | end
-   */
-  placement: "start" | "end";
-  /**
-   * small | base | large
-   */
-  size?: "small" | "base" | "large";
-  /**
-   * { label: string; action: () => void; }[]
-   */
-  options: {
-    label: string;
-    action: () => void;
-  }[];
-  /**
-   * { label: string; action: () => void; }
-   */
-  divider?: {
-    label: string;
-    action: () => void;
-  };
-  /**
-   * { label: string; content: string; }
-   */
-  header?: {
-    label: string;
-    content?: string;
-  };
-};
 
 /**
  * Use the Tailwind CSS dropdown elements to show a list of items displayed as a menu

@@ -4,7 +4,7 @@
 
 import { fireEvent, queryByTestId, render, waitFor } from "@testing-library/react";
 
-import DropdownIcon, { DropdownIconProps } from "./DropdownIcon";
+import DropdownIcon, { DropdownIconProps } from ".";
 
 const props: DropdownIconProps = {
   button: {

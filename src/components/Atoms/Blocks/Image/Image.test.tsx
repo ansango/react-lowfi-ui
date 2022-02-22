@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import Image from "./Image";
+import Image from ".";
 
 describe("<Image />", () => {
   it("should render", () => {

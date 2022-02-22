@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import CardImage from "./CardImage";
+import CardImage from ".";
 import img from "../../../../../assets/image-1.jpg";
 
 export default {

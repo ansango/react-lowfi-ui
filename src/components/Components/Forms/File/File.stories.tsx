@@ -4,7 +4,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Form } from "..";
-import File from "./File";
+import File from ".";
 
 export default {
   title: "Components/Forms/File",

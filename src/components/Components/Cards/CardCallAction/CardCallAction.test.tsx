@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import CardCallAction, { CardCallActionProps } from "./CardCallAction";
+import CardCallAction, { CardCallActionProps } from ".";
 
 const props: CardCallActionProps = {
   title: "Work fast from anywhere",

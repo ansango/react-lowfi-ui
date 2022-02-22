@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Alert from "./Alert";
+import Alert from ".";
 
 export default {
   title: "Components/Alerts/Alert",

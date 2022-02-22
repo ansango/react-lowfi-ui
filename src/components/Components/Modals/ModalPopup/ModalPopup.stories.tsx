@@ -4,7 +4,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Button } from "../../Buttons";
-import ModalPopup from "./ModalPopup";
+import ModalPopup from ".";
 
 export default {
   title: "Components/Modals/Modal Popup",

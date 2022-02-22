@@ -3,7 +3,7 @@
  */
 
 import { queryByTestId, render } from "@testing-library/react";
-import ButtonGroup, { ButtonGroupProps } from "./ButtonGroup";
+import ButtonGroup, { ButtonGroupProps } from ".";
 
 const props: ButtonGroupProps = {
   buttons: [

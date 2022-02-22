@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-// import CardFeature from "./CardFeature";
+// import CardFeature from ".";
 
 describe("<CardFeature />", () => {
   it("should render", () => {

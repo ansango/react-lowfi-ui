@@ -3,14 +3,8 @@
  */
 
 import { FC } from "react";
+import ParagraphProps from "./ParagraphProps";
 import * as cn from "./ParagraphStyles";
-
-export type ParagraphProps = {
-  /**
-   * string
-   */
-  content: string;
-};
 
 /**
  * Description of Paragraph component displayed in Storybook

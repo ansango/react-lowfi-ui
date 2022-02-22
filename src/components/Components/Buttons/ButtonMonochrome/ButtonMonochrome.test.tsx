@@ -4,7 +4,7 @@
 
 import { mount } from "enzyme";
 
-import ButtonMonochrome from "./ButtonMonochrome";
+import ButtonMonochrome from ".";
 
 describe("<ButtonMonochrome />", () => {
   it("should render", () => {

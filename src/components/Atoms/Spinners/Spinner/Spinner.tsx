@@ -3,28 +3,8 @@
  */
 
 import { FC } from "react";
+import SpinnerProps from "./SpinnerProps";
 import * as cn from "./SpinnerStyles";
-export type SpinnerProps = {
-  /**
-   * solid | outline
-   * @default "outline"
-   */
-  kind?: "solid" | "outline";
-  /**
-   * default | alternative | dark | light | green | red | yellow | purple
-   * @default "default"
-   */
-  style?: "default" | "alternative" | "dark" | "light" | "green" | "red" | "yellow" | "purple";
-  /**
-   * xsmall | small | base | large | xlarge
-   * @default "base"
-   */
-  size?: keyof typeof cn.size;
-  /**
-   * className override
-   */
-  classSpinner?: string;
-};
 
 /**
  * Use the spinner component as a loader indicator in your projects when fetching data based on an animated SVG using the utility classes from Tailwind CSS

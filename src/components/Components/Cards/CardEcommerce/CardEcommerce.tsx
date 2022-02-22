@@ -3,31 +3,16 @@
  */
 
 import { FC } from "react";
-import * as cn from "./CardEcommerceStyles";
-import { Image } from "../../../Atoms/Blocks";
-import Icon from "../../../Atoms/Icons/Icon/Icon";
+import { CardEcommerceProps } from ".";
+import { Badge, Icon, Image } from "../../../Atoms";
 import { Button } from "../../Buttons";
-import Badge from "../../../Atoms/Badges/Badge/Badge";
+import * as cn from "./CardEcommerceStyles";
 
 const NoImage = () => (
   <div className={cn.nIcontainer}>
     <div className={cn.nImg}></div>
   </div>
 );
-
-export type CardEcommerceProps = {
-  onDetail: () => void;
-  product: {
-    title: string;
-    price: number;
-    image?: string;
-    rating: number;
-  };
-  action: {
-    label: string;
-    action: () => void;
-  };
-};
 
 /**
  * Get started with a large variety of Tailwind CSS card examples for your web project

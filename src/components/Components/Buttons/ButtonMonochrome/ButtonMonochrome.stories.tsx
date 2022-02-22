@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import ButtonMonochrome from "./ButtonMonochrome";
+import ButtonMonochrome from ".";
 
 export default {
   title: "Components/Buttons/Gradient Monochrome",

@@ -3,27 +3,10 @@
  */
 
 import { FC } from "react";
-import { IconSimple } from "../../../..";
+import { CardCallActionProps } from ".";
+import { IconSimple } from "../../../Atoms";
+
 import * as cn from "./CardCallActionStyles";
-import * as SimpleIcons from "@icons-pack/react-simple-icons";
-export type CardCallActionProps = {
-  title: string;
-  description: string;
-  actions: {
-    primary: {
-      icon: keyof typeof SimpleIcons;
-      label: string;
-      description: string;
-      action: () => void;
-    };
-    secondary: {
-      icon: keyof typeof SimpleIcons;
-      label: string;
-      description: string;
-      action: () => void;
-    };
-  };
-};
 
 /**
  * Get started with a large variety of Tailwind CSS card examples for your web project

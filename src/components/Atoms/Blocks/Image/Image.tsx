@@ -3,26 +3,7 @@
  */
 
 import { FC } from "react";
-// import * as cn from "./ImageStyles";
-
-export type ImageProps = {
-  /**
-   * string
-   */
-  src: string;
-  /**
-   * string
-   */
-  alt: string;
-  /**
-   * ImageNextJS
-   */
-  ImageNextJS?: any;
-  /**
-   * className
-   */
-  className?: string;
-};
+import ImageProps from "./ImageProps";
 
 /**
  * Description of Image component displayed in Storybook

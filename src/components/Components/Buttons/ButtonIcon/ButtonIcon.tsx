@@ -3,57 +3,9 @@
  */
 
 import { FC } from "react";
+import { ButtonIconProps } from ".";
+import { Icon } from "../../../Atoms";
 import * as cn from "./ButtonIconStyles";
-import * as HeroIcons from "@heroicons/react/solid";
-
-import Icon from "../../../Atoms/Icons/Icon/Icon";
-
-export type ButtonIconProps = {
-  /**
-   * HeroIcons
-   */
-  icon: keyof typeof HeroIcons;
-  /**
-   * small | base | large
-   * @default "base"
-   */
-  size?: keyof typeof cn.size;
-  /**
-   * solid | outline
-   * @default "solid"
-   */
-  kind?: "solid" | "outline";
-  /**
-   * default | alternative | dark | light | green | red | yellow | purple
-   * @default "default"
-   */
-  style?: "default" | "alternative" | "dark" | "light" | "green" | "red" | "yellow" | "purple";
-  /**
-   * pill | rounded
-   * @default "rounded"
-   */
-  rounded?: keyof typeof cn.rounded;
-  /**
-   * disabled
-   * @default false
-   */
-  disabled?: boolean;
-  /**
-   * onClick event
-   */
-  action?: () => void;
-  /**
-   * className override
-   */
-  classButton?: string;
-  /**
-   * className override
-   */
-  classIcon?: string;
-  /**
-   * className override
-   */
-};
 
 /**
  * Use the button component inside forms, as links, social login, payment options with support for multiple styles, colors, sizes, gradients, and shadows

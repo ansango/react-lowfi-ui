@@ -1,26 +1,13 @@
-import * as HeroIcons from "@heroicons/react/solid";
+
 
 /**
  * ?Icon Component
  */
 
 import { FC } from "react";
+import * as HeroIcons from "@heroicons/react/solid";
+import IconProps from "./IconProps";
 import * as cn from "./IconStyles";
-
-export type IconProps = {
-  /**
-   * Icon
-   */
-  icon: keyof typeof HeroIcons;
-  /**
-   * xsmall | small | base | large | xlarge
-   */
-  size?: keyof typeof cn.size;
-  /**
-   * className override
-   */
-  classIcon?: string;
-};
 
 /**
  * Use this set of SVG powered icons for Tailwind CSS absed on Hero Icons

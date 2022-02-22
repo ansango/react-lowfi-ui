@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import Card, { CardProps } from "./Card";
+import Card, { CardProps } from ".";
 const props: CardProps = {
   title: "Noteworthy technology acquisitions 2021",
   content:

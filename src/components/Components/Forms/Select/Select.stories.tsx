@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Select from "./Select";
+import Select from ".";
 
 export default {
   title: "Components/Forms/Select",

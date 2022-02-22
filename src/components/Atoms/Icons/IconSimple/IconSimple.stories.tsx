@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import IconSimple from "./IconSimple";
+import IconSimple from ".";
 
 export default {
   title: "Atoms/Icons/Icon Simple",

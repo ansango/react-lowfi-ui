@@ -3,19 +3,9 @@
  */
 
 import { FC } from "react";
+import { AvatarProps } from ".";
 import { Image } from "../../Atoms/Blocks";
 import * as cn from "./AvatarStyles";
-
-export type AvatarProps = {
-  /**
-   * xsmall | small | medium | large | xlarge
-   */
-  size: "xsmall" | "small" | "base" | "large" | "xlarge";
-  /**
-   * string
-   */
-  imgUrl: string;
-};
 
 /**
  * Show image for user or products

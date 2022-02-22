@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import RadioGroup from "./RadioGroup";
+import RadioGroup from ".";
 
 export default {
   title: "Components/Forms/Radio",

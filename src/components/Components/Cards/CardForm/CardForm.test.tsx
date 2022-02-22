@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-// import CardForm from "./CardForm";
+// import CardForm from ".";
 
 describe("<CardForm />", () => {
   it("should render", () => {

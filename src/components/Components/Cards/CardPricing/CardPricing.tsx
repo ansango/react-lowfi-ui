@@ -3,42 +3,10 @@
  */
 
 import { FC } from "react";
+import { CardPricingProps } from ".";
 import { Icon } from "../../../..";
 import { Button } from "../../Buttons";
 // import * as cn from "./CardPricingStyles";
-
-export type CardPricingProps = {
-  /**
-   * string
-   */
-  title: string;
-  /**
-   * string
-   */
-  price: string;
-  /**
-   * string
-   */
-  currency: string;
-  /**
-   * string
-   */
-  period: string;
-  /**
-   * {title: string; included: boolean}[]
-   */
-  features: {
-    title: string;
-    included: boolean;
-  }[];
-  /**
-   * { title: string; action: () => void }
-   */
-  action: {
-    label: string;
-    action: () => void;
-  };
-};
 
 /**
  * Get started with a large variety of Tailwind CSS card examples for your web project

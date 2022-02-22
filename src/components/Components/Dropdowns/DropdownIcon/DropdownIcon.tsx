@@ -4,46 +4,10 @@
 
 import { FC, useEffect, useRef, useState } from "react";
 import { usePopper } from "react-popper";
-import ButtonIcon, { ButtonIconProps } from "../../Buttons/ButtonIcon/ButtonIcon";
-
+import { ButtonIcon } from "../../Buttons";
 import { Option } from "../Dropdown/Dropdown";
+import { DropdownIconProps } from "./DropdownIconProps";
 import * as cn from "./DropdownIconStyles";
-
-export type DropdownIconProps = {
-  /**
-   * ButtonProps
-   */
-  button: ButtonIconProps;
-  /**
-   * start | end
-   */
-  placement: "start" | "end";
-  /**
-   * small | base | large
-   */
-  size?: "small" | "base" | "large";
-  /**
-   * { label: string; action: () => void; }[]
-   */
-  options: {
-    label: string;
-    action: () => void;
-  }[];
-  /**
-   * { label: string; action: () => void; }
-   */
-  divider?: {
-    label: string;
-    action: () => void;
-  };
-  /**
-   * { label: string; content: string; }
-   */
-  header?: {
-    label: string;
-    content?: string;
-  };
-};
 
 /**
  * Use the Tailwind CSS dropdown elements to show a list of items displayed as a menu

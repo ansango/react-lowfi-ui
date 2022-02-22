@@ -2,14 +2,9 @@
  * ?ModalForm Component
  */
 
-import { cloneElement, FC, ReactElement, ReactNode, useState } from "react";
+import { cloneElement, FC, useState } from "react";
+import { ModalFormProps } from ".";
 // import * as cn from "./ModalFormStyles";
-
-export type ModalFormProps = {
-  opened: boolean;
-  element: ReactElement;
-  form: ReactNode;
-};
 
 /**
  * Description of ModalForm component displayed in Storybook

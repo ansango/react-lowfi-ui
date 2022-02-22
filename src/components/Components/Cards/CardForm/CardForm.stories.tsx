@@ -6,7 +6,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { FC } from "react";
 import { Button } from "../../Buttons";
 import { Checkbox, Form, Input } from "../../Forms";
-import CardForm from "./CardForm";
+import CardForm from ".";
 
 export default {
   title: "Components/Cards/Card Form",

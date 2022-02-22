@@ -4,11 +4,12 @@
 import { Form } from "..";
 import { render, screen } from "@testing-library/react";
 
-import Radio, { RadioPropsGroup } from "./RadioGroup";
+import Radio, { RadioGroupProps } from ".";
+
 const mockSubmit = jest.fn();
 describe("<Radio />", () => {
   it("should render", () => {
-    const props: RadioPropsGroup = {
+    const props: RadioGroupProps = {
       name: "radio",
       label: "Radio",
       data: [

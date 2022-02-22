@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import CardCallAction from "./CardCallAction";
+import CardCallAction from ".";
 
 export default {
   title: "Components/Cards/Card Call Action",

@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 import { Form } from "..";
-import Input, { InputProps } from "./Input";
+import Input, { InputProps } from ".";
 const mockSubmit = jest.fn();
 describe("<Input />", () => {
   it("should render", () => {

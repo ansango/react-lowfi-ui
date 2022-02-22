@@ -2,15 +2,10 @@
  * ?CardForm Component
  */
 
-import { FC, ReactNode, ReactChild } from "react";
+import { FC } from "react";
+import { CardFormProps } from "./CardFormProps";
 
 // import * as cn from "./CardFormStyles";
-
-export type CardFormProps = {
-  header?: ReactChild;
-  children: ReactNode;
-  footer?: ReactChild;
-};
 
 /**
  * Get started with a large variety of Tailwind CSS card examples for your web project

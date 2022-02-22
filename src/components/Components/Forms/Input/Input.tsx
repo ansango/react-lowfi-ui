@@ -3,16 +3,9 @@
  */
 
 import { FC } from "react";
-import { RegisterOptions, useFormContext } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
+import InputProps from "./InputProps";
 // import * as cn from "./InputStyles";
-
-export type InputProps = {
-  type: "text" | "number" | "email" | "password" | "search" | "tel";
-  label?: string;
-  name: string;
-  options?: RegisterOptions;
-  register?: any;
-};
 
 /**
  * Description of Input component displayed in Storybook

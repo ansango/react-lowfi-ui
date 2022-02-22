@@ -1,6 +1,6 @@
-import Card from "./Card/Card";
-import CardAction from "./CardAction/CardAction";
-import CardImage from "./CardImage/CardImage";
-import CardHorizontal from "./CardHorizontal/CardHorizontal";
-import CardInteraction from "./CardInteraction/CardInteraction";
+import Card from "./Card";
+import CardAction from "./CardAction";
+import CardImage from "./CardImage";
+import CardHorizontal from "./CardHorizontal";
+import CardInteraction from "./CardInteraction";
 export { Card, CardAction, CardImage, CardHorizontal, CardInteraction };

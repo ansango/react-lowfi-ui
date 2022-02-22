@@ -4,7 +4,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Form } from "..";
-import Date from "./Date";
+import Date from ".";
 
 export default {
   title: "Components/Forms/Date",

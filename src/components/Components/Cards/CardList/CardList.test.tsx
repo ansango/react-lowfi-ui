@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import CardList, { CardListProps } from "./CardList";
+import CardList, { CardListProps } from ".";
 
 const props: CardListProps = {
   title: "Card List",

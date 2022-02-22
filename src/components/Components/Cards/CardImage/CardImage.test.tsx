@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import CardImage, { CardImageProps } from "./CardImage";
+import CardImage, { CardImageProps } from ".";
 
 const props: CardImageProps = {
   title: "Noteworthy technology acquisitions 2021",

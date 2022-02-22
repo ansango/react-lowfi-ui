@@ -3,7 +3,7 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import ButtonGroup from "./ButtonGroup";
+import ButtonGroup from ".";
 
 export default {
   title: "Components/Button Group",

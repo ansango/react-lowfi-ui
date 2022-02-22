@@ -3,16 +3,15 @@
  */
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Icon, IconSimple } from "../../../..";
-import Badge from "../../../Atoms/Badges/Badge/Badge";
-import CardFeature from "./CardFeature";
+import CardFeature from ".";
+import { Icon, IconSimple, Badge } from "../../../Atoms";
 
 export default {
   title: "Components/Cards/Card Feature",
   component: CardFeature,
   parameters: {
     layout: "centered",
-  }
+  },
 } as ComponentMeta<typeof CardFeature>;
 
 const Template: ComponentStory<typeof CardFeature> = (args) => (

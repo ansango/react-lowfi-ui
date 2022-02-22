@@ -3,24 +3,8 @@
  */
 
 import { FC } from "react";
+import SpinnerGradientProps from "./SpinnerGradientProps";
 import * as cn from "./SpinnerGradientStyles";
-
-export type SpinnerGradientProps = {
-  /**
-   * monochrome | duotone
-   */
-  kind?: "monochrome" | "duotone";
-  /**
-   * blue | green | cyan | teal | lime | red | pink | purple
-   * @default "blue"
-   */
-  style?: "blue" | "green" | "cyan" | "teal" | "lime" | "red" | "pink" | "purple";
-  /**
-   * xsmall | small | base | large | xlarge
-   * @default "base"
-   */
-  size?: keyof typeof cn.size;
-};
 
 /**
  * Use the spinner component as a loader indicator in your projects when fetching data based on an animated SVG using the utility classes from Tailwind CSS

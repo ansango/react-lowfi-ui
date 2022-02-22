@@ -4,7 +4,7 @@
 
 import { render, screen } from "@testing-library/react";
 import { Form } from "..";
-import Date, { DateProps } from "./Date";
+import Date, { DateProps } from ".";
 
 const mockSubmit = jest.fn();
 

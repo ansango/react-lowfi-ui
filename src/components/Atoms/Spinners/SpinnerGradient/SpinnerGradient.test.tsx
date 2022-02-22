@@ -4,7 +4,7 @@
 
 import { mount } from "enzyme";
 
-import SpinnerGradient from "./SpinnerGradient";
+import SpinnerGradient from ".";
 
 describe("<SpinnerGradient />", () => {
   it("should render monochrome", () => {

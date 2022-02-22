@@ -4,7 +4,7 @@
 
 import { render } from "@testing-library/react";
 
-import CardInteraction, { CardInteractionProps } from "./CardInteraction";
+import CardInteraction, { CardInteractionProps } from ".";
 
 const props: CardInteractionProps = {
   header: {

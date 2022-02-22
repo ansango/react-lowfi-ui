@@ -3,14 +3,8 @@
  */
 
 import { FC } from "react";
+import TitleProps from "./TitleProps";
 import * as cn from "./TitleStyles";
-
-export type TitleProps = {
-  /**
-   * string
-   */
-  title: string;
-};
 
 /**
  * Description of Title component displayed in Storybook

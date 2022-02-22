@@ -4,21 +4,7 @@
 
 import { FC } from "react";
 import * as cn from "./ModalFeatureStyles";
-
-export type ModalFeatureProps = {
-  /**
-   * Description of options in Storybook
-   */
-  option?: "option__one" | "option__two" | "option__three";
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-  /**
-   * Class Name override
-   */
-  className?: string;
-};
+import ModalFeatureProps from "./ModalFeatureProps";
 
 /**
  * Description of ModalFeature component displayed in Storybook
