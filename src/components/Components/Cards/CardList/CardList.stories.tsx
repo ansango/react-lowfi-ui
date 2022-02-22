@@ -8,9 +8,16 @@ import CardList from "./CardList";
 export default {
   title: "Components/Cards/Card List",
   component: CardList,
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof CardList>;
 
-const Template: ComponentStory<typeof CardList> = (args) => <CardList {...args} />;
+const Template: ComponentStory<typeof CardList> = (args) => (
+  <div style={{ width: "500px" }}>
+    <CardList {...args} />
+  </div>
+);
 
 export const A_Default = Template.bind({});
 
@@ -68,31 +75,36 @@ B_SampleProducts.args = {
   data: [
     {
       name: "Travel Package 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "https://picsum.photos/203",
       bold: "100€",
     },
     {
       name: "Travel Package 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "https://picsum.photos/200",
       bold: "200€",
     },
     {
       name: "Travel Package 3",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "https://picsum.photos/207",
       bold: "300€",
     },
     {
       name: "Travel Package 4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "https://picsum.photos/209",
       bold: "400€",
     },
     {
       name: "Travel Package 5",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "https://picsum.photos/300",
       bold: "500€",
     },

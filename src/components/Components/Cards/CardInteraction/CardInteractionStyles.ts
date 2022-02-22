@@ -15,4 +15,4 @@ export const aContainer = "flex flex-col items-center pb-1";
 export const aWrapper = "flex mt-4 space-x-3 lg:mt-6";
 
 export const cardContainer =
-  "max-w-sm w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 p-4";
+  "max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 p-4";

@@ -9,9 +9,16 @@ import imgDemo from "../../../../../assets/profile-picture-3.jpg";
 export default {
   title: "Components/Cards/Card Interaction",
   component: CardInteraction,
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof CardInteraction>;
 
-const Template: ComponentStory<typeof CardInteraction> = (args) => <CardInteraction {...args} />;
+const Template: ComponentStory<typeof CardInteraction> = (args) => (
+  <div style={{ width: "500px" }}>
+    <CardInteraction {...args} />
+  </div>
+);
 
 export const A_Default = Template.bind({});
 
@@ -43,8 +50,6 @@ B_With_Avatar.args = {
     activeActions: false,
   },
 };
-    
-
 
 export const C_With_Header = Template.bind({});
 

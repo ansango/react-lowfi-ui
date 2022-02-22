@@ -8,9 +8,16 @@ import CardPricing from "./CardPricing";
 export default {
   title: "Components/Cards/Card Pricing",
   component: CardPricing,
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof CardPricing>;
 
-const Template: ComponentStory<typeof CardPricing> = (args) => <CardPricing {...args} />;
+const Template: ComponentStory<typeof CardPricing> = (args) => (
+  <div style={{ width: "500px" }}>
+    <CardPricing {...args} />
+  </div>
+);
 
 export const A_Default = Template.bind({});
 

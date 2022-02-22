@@ -10,9 +10,16 @@ import CardFeature from "./CardFeature";
 export default {
   title: "Components/Cards/Card Feature",
   component: CardFeature,
+  parameters: {
+    layout: "centered",
+  }
 } as ComponentMeta<typeof CardFeature>;
 
-const Template: ComponentStory<typeof CardFeature> = (args) => <CardFeature {...args} />;
+const Template: ComponentStory<typeof CardFeature> = (args) => (
+  <div style={{ width: "500px" }}>
+    <CardFeature {...args} />
+  </div>
+);
 
 export const A_DefaultIcon = Template.bind({});
 

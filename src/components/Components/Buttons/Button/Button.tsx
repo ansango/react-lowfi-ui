@@ -11,6 +11,10 @@ export type ButtonProps = {
    */
   label: string;
   /**
+   * 
+   */
+  type?: "button" | "submit" | "reset";
+  /**
    * xsmall | small | base | large | xlarge
    * @default "base"
    */
