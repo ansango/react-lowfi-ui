@@ -4,9 +4,10 @@
 
 import { FC, useEffect, useRef, useState } from "react";
 import { usePopper } from "react-popper";
+import { DropdownIconProps } from ".";
 import { ButtonIcon } from "../../Buttons";
 import { Option } from "../Dropdown/Dropdown";
-import { DropdownIconProps } from "./DropdownIconProps";
+
 import * as cn from "./DropdownIconStyles";
 
 /**

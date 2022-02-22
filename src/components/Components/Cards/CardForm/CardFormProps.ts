@@ -1,7 +1,9 @@
 import { ReactChild, ReactNode } from "react";
 
-export type CardFormProps = {
+type CardFormProps = {
   header?: ReactChild;
   children: ReactNode;
   footer?: ReactChild;
 };
+
+export default CardFormProps;

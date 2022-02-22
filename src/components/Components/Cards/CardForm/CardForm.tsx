@@ -3,7 +3,7 @@
  */
 
 import { FC } from "react";
-import { CardFormProps } from "./CardFormProps";
+import { CardFormProps } from ".";
 
 // import * as cn from "./CardFormStyles";
 

@@ -1,6 +1,6 @@
 import { ButtonIconProps } from "../../Buttons/ButtonIcon";
 
-export type DropdownIconProps = {
+type DropdownIconProps = {
   /**
    * ButtonProps
    */
@@ -35,3 +35,5 @@ export type DropdownIconProps = {
     content?: string;
   };
 };
+
+export default DropdownIconProps;
