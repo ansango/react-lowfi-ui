@@ -2,7 +2,7 @@ type CardListProps = {
   /**
    * { title: string; onDetail: () => void; }
    */
-  detail: {
+  detail?: {
     title: string;
     onDetail: () => void;
   };

@@ -9,6 +9,7 @@ import { CardInteractionProps } from ".";
 import { Button } from "../../Buttons";
 import Avatar from "../../Avatar";
 import { DropdownIcon } from "../../Dropdowns";
+import { ButtonProps } from "../../Buttons/Button";
 
 const Header: FC<{
   dropIcon: keyof typeof HeroIcons;
@@ -43,8 +44,8 @@ const Content: FC<{ title: string; subtitle?: string; img?: string }> = ({
 );
 
 const Actions: FC<{
-  primary: { label: string; action: () => void };
-  secondary?: { label: string; action: () => void };
+  primary: ButtonProps;
+  secondary?: ButtonProps;
 }> = ({ primary, secondary }) => (
   <div className={cn.aContainer}>
     <div className={cn.aWrapper}>

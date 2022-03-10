@@ -7,6 +7,10 @@ type ButtonPropsMonochrome = {
    */
   label: string;
   /**
+   *  button | submit | reset
+   */
+  type?: "button" | "submit" | "reset";
+  /**
    * xsmall | small | base | large | xlarge
    * @default "base"
    */

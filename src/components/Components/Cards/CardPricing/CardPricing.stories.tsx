@@ -4,6 +4,7 @@
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import CardPricing from ".";
+import { Button } from "../../Buttons";
 
 export default {
   title: "Components/Cards/Card Pricing",
@@ -48,8 +49,5 @@ A_Default.args = {
       included: false,
     },
   ],
-  action: {
-    label: "Choose plan",
-    action: () => alert("Button clicked"),
-  },
+  button: <Button label="Choose plan" fullWidth action={() => alert("Choose plan")} />,
 };

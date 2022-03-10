@@ -5,6 +5,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Input, Date, File, Checkbox, RadioGroup, Select, Switch, TextArea } from "../";
 import Form from ".";
+import { Button } from "../../Buttons";
 
 export default {
   title: "Components/Forms/Form",
@@ -51,7 +52,7 @@ A_Default.args = {
       <Switch label="Switch" name="switch1" />
       <TextArea label="Message" name="message1" />
       <Checkbox name="conditions1" label="I agree to the terms and conditions" />
-      <button type="submit">Send</button>
+      <Button label="Send" type="submit"/>
     </div>
   ),
 };
@@ -124,7 +125,7 @@ B_Validation.args = {
         label="I agree to the terms and conditions"
         options={{ required: { value: true, message: "" } }}
       />
-      <button type="submit">Send</button>
+      <Button label="Send" type="submit" />
     </div>
   ),
 };

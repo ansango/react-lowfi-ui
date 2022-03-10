@@ -110,3 +110,47 @@ B_SampleProducts.args = {
     },
   ],
 };
+
+export const C_WithNoDetailOption = Template.bind({});
+
+C_WithNoDetailOption.args = {
+  title: "Lastest Travel Packages",
+  avatar: "xsmall",
+  data: [
+    {
+      name: "Travel Package 1",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      image: "https://picsum.photos/203",
+      bold: "100€",
+    },
+    {
+      name: "Travel Package 2",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      image: "https://picsum.photos/200",
+      bold: "200€",
+    },
+    {
+      name: "Travel Package 3",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      image: "https://picsum.photos/207",
+      bold: "300€",
+    },
+    {
+      name: "Travel Package 4",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      image: "https://picsum.photos/209",
+      bold: "400€",
+    },
+    {
+      name: "Travel Package 5",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      image: "https://picsum.photos/300",
+      bold: "500€",
+    },
+  ],
+};

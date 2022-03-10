@@ -1,3 +1,5 @@
+import { ButtonProps } from "../../Buttons/Button";
+
 type CardEcommerceProps = {
   onDetail: () => void;
   product: {
@@ -6,10 +8,7 @@ type CardEcommerceProps = {
     image?: string;
     rating: number;
   };
-  action: {
-    label: string;
-    action: () => void;
-  };
+  action: ButtonProps
 };
 
 export default CardEcommerceProps;

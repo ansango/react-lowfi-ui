@@ -1,3 +1,6 @@
+import { ReactElement } from "react";
+import { ButtonProps } from "../../Buttons/Button";
+
 type CardPricingProps = {
   /**
    * string
@@ -23,12 +26,9 @@ type CardPricingProps = {
     included: boolean;
   }[];
   /**
-   * { title: string; action: () => void }
+   * ReactElement<ButtonProps>
    */
-  action: {
-    label: string;
-    action: () => void;
-  };
+  button: ReactElement<ButtonProps>;
 };
 
 export default CardPricingProps;

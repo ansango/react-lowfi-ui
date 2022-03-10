@@ -7,7 +7,7 @@ type ButtonProps = {
    */
   label: string;
   /**
-   *
+   * button | submit | reset
    */
   type?: "button" | "submit" | "reset";
   /**

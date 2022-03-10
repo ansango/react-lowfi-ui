@@ -7,6 +7,10 @@ type ButtonIconProps = {
    */
   icon: keyof typeof HeroIcons;
   /**
+   *  button | submit | reset
+   */
+  type?: "button" | "submit" | "reset";
+  /**
    * small | base | large
    * @default "base"
    */

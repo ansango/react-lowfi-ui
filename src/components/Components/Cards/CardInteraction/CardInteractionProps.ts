@@ -1,4 +1,5 @@
 import * as HeroIcons from "@heroicons/react/solid";
+import { ButtonProps } from "../../Buttons/Button";
 type CardInteractionProps = {
   /**
    * { activeHeader: boolean; dropIcon?: keyof typeof HeroIcons; options: { label: string; action: () => void; }[]; }
@@ -24,14 +25,8 @@ type CardInteractionProps = {
    */
   actions: {
     activeActions: boolean;
-    primary?: {
-      label: string;
-      action: () => void;
-    };
-    secondary?: {
-      label: string;
-      action: () => void;
-    };
+    primary?: ButtonProps;
+    secondary?: ButtonProps;
   };
 };
 
